@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Search in an HTML iframe</title>
+    <link rel="icon" href="favicon.ico">
+    <!-- my style.css file was wack so I got rid of it-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>   
+function changeChannel() {
+  event.preventDefault();
+  document.getElementById("searchFrame").src = document.getElementById("searchInput").value;
+}
+</script>
+<style>
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: #ced6e2;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+  </head>
+  <body>
+<center><h1>Search in an HTML iframe</h1></center>
+<center><h2>Description</h2></center>
+  <center><p1>This is a website that allows the user to search in an HTML iframe. If you download the original file, you can browse using it without being seen by most anti-privacy software that teachers/employers use. This website was originally a single offline HTML document, but I decided to go public with it just for the fun of it. You can download the original file using the link further down the page</p1></center>
+  <hr class="dotted">
+<div id="container">
+<div align="center">
+  <iframe
+  id="searchFrame"
+  src="https://www.bing.com"
+  width= 75%
+  height= "800px"
+  frameborder="0"
+  scrolling="yes"
+  allowfullscreen="true"> 
+</iframe></div>
+ <div>
+ <center><button class="button" id="modal" onclick="document.getElementById('id01').style.display='block'"><b>Enter URL</b></button></center>
+ <div class="modal" id="id01">
+    <form class="modal-content animate">
+   <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+   </div>
+   <div class="container">
+       <p>Enter the URL link for the site you would like to use then hit enter.</p>
+      <label for="input">Enter Link Here</label>
+      <center><input type="text" id="searchInput" name="input"></center>
+      <center><button class="button" onclick="changeChannel()">Go</button></center>
+   </div>
+      <div class="container" style="background-color:#f1f1f1">
+          <center><button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">close</button></center>
+        </div>
+    </form>
+    </div>
+   </div>
+ </div>
+ </div>
+ <script src="/fullscreen.js"></script>  
+
+<style>
+/* Dashed border */
+hr.dashed {
+  border-top: 8px dashed #bbb;
+}
+
+/* Dotted border */
+hr.dotted {
+  border-top: 8px dotted #bbb;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 8px solid #bbb;
+}
+
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+</style>
+
+
+  <center><div id="disqus_thread"></div></center>
+<script>
+</script>
+<center><p>If you would like to download the original HTML file, <a href="search-in-an-html-document-by-zane-sanders.html" download>please click here</a>.</p></center>
+<center>
+<hr class="rounded">
+<b><h2>PLEASE NOTE:</h2></b>
+<p>- When using google, try using "https://www.google.com/webhp?igu=1" instead of "https://www.google.com/"</p>
+<p>- Google images currently may not work</p>
+<p>- If you find a YouTube or Google Images clone/mirror that works, please contact me with the link</p>
+<p>- Your activity will still be attached to your IP Address, so please use a VPN if you insist on using this and don't want to be trackable</p>
+<p>- Nothing you do here will show up on your browser history, but it will show up on government and business databases</p>
+<p>- Feel free to use my code for the HTML iframe as you please, but make sure to give me credit for the code you decide to use.</p>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<center><h2>Website list</h2></center>
+<center><p><b>PLEASE NOTE:</b> These are <b>not the only</b> websites you can use!</p></center>
+<center><p>Please contact me if you find a website that does <b>not</b> work, or if you would like to add a website that <b>does</b> work, so I can add it to the list.</p></center>
+<style>
+/* Style the table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+/* Style table headers and table data */
+th, td {
+  text-align: center;
+  padding: 16px;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+}
+
+/* Zebra-striped table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-remove {
+  color: red;
+}
+</style>
+<table>
+  <tr>
+    <th style="width:50%">Tested websites</th>
+    <th>Does it work?</th>
+    <th>How well</th>
+  </tr>
+  <tr>
+    <td>youtube.com</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-minus"></i></td>
+  </tr>
+  <tr>
+    <td>google.com</td>
+    <td><i class="fa fa-minus"></i></td>
+    <td><i>variable</i></td>
+  </tr>
+  <tr>
+    <td>bing.com</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i>great</i></td>
+  </tr>
+  <tr>
+    <td>github.com</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-minus"></i></td>
+  </tr>
+  <tr>
+
+  </tr>
+</table>
+<b>You can contact me at supraboy981322@gmail.com. I rarely check this email, so it may take a while for me to respond</b>
+<p>if you have any issues, please post them on <a href="https://github.com/Supraboy981322/supraboy981322.github.io/issues">the github page for this website</a>.</p>
+</center>
+<center><h2>About the creator</h2></center>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+
+
+<div class="card">
+  <img src="profile_card/profile-card-image.jpg" alt="Zane" style="width:100%">
+  <h1>Zane Sanders</h1>
+  <p class="title">Teenager</p>
+  <p>Currently in high-school</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a>
+    <a href="https://github.com/Supraboy981322"><i class="fa fa-github"></i></a>
+    <a href="https://www.youtube.com/@g.r.a.s.gamingridesandsims6645"><i class="fa fa-youtube"></i></a> 
+    <a href="https://www.reddit.com/u/polloloco69666?utm_medium=android_app&utm_source=share"><i class="fa fa-reddit"></i></a>
+  </div>
+  <p><button>"Don't strive to be the best, rather strive to be the best you" - Zane Sanders</button></p>
+</div>
+
+  </body>
+</html>
