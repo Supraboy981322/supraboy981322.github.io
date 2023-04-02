@@ -1,0 +1,65 @@
+<html>
+  <div id="game">
+  <div id="player1" class="fighter"></div>
+  <div id="player2" class="fighter"></div>
+</div>
+<style>
+  .fighter {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+}
+
+#player1 {
+  left: 100px;
+}
+
+#player2 {
+  right: 100px;
+}
+</style>
+<script>
+  class Fighter {
+  constructor(name, hp, damage) {
+    this.name = name;
+    this.hp = hp;
+    this.damage = damage;
+    this.element = null;
+  }
+
+  attack(target) {
+    target.takeDamage(this.damage);
+  }
+
+  takeDamage(damage) {
+    this.hp -= damage;
+    if (this.hp <= 0) {
+      this.hp = 0;
+      this.element.classList.add('dead');
+    }
+  }
+
+  render() {
+    this.element = document.createElement('div');
+    this.element.className = 'fighter';
+    this.element.innerText = this.name;
+    document.getElementById('game').appendChild(this.element);
+  }
+}
+
+const player1 = new Fighter('Player 1', 100, 10);
+const player2 = new Fighter('Player 2', 100, 10);
+
+player1.render();
+player2.render();
+
+document.addEventListener('keydown', function(event) {
+  if (event.keyCode === 65) {
+    player1.attack(player2);
+  } else if (event.keyCode === 76) {
+    player2.attack(player1);
+  }
+});
+</script>
+</html>
