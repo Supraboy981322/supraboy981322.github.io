@@ -53,7 +53,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .hs1-dropdown-hover:hover > .hs1-button:first-child,.hs1-dropdown-click:hover > .hs1-button:first-child{background-color:#ccc;color:#000}
 .hs1-dropdown-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1}
 .hs1-check,.hs1-radio{width:24px;height:24px;position:relative;top:6px}
-.hs1-sidebar{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
+.hs1-sidebar{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto;padding-top:60px}
 .hs1-bar-block .hs1-dropdown-hover,.hs1-bar-block .hs1-dropdown-click{width:100%}
 .hs1-bar-block .hs1-dropdown-hover .hs1-dropdown-content,.hs1-bar-block .hs1-dropdown-click .hs1-dropdown-content{min-width:100%}
 .hs1-bar-block .hs1-dropdown-hover .hs1-button,.hs1-bar-block .hs1-dropdown-click .hs1-button{width:100%;text-align:left;padding:8px 16px}
