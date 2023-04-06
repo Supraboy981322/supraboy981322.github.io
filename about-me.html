@@ -1,206 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>Home - Zane's Website</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        .sidenav {
-          height: 100%;
-          width: 0;
-          position: fixed;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          background-color: #111;
-          overflow-x: hidden;
-          transition: 0.5s;
-          padding-top: 60px;
-        }
-        
-        .sidenav a {
-          padding: 8px 8px 8px 32px;
-          text-decoration: none;
-          font-size: 25px;
-          color: #818181;
-          display: block;
-          transition: 0.3s;
-        }
-        
-        .sidenav a:hover {
-          color: #f1f1f1;
-        }
-        
-        .sidenav .closebtn {
-          position: absolute;
-          top: 0;
-          right: 25px;
-          font-size: 36px;
-          margin-left: 50px;
-        }
-        .content-text-box {
-          background: #5ea7a7;
-          padding: 5px;
-          border-radius: 5px;
-        }
-        .jumbotron-text-center {
-          background-image: url("uncanny gobledygook.png");
-          background-size: cover;
-          height: 200px;
-        }
-        .footer {
-          color: black;
-          background-color:rgb(74, 201, 158);
-          text-align: center;
-          height: 75px;
-        }
-        .jumbotron-actual-text-center {
-          background-color: white;
-          color: black;
-          font-size: 10px; 
-          font-weight: bold;
-          margin: 0 auto;
-          padding: 10px;
-          width: 50%;
-          text-align: center;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          mix-blend-mode: screen;
-        }
-        .col-sm-4 {
-          padding: 0;
-          display: block;
-        }
-        .col-sm-4-content {
-          background-color:azure;
-          padding: 15px;
-          border-radius: 5px;
-        }
-        .col-sm-8 {
-          padding: 0;
-          display: block;
-        }
-        .col-sm-8-content {
-          background-color: #2d5f5f;
-          padding: 15px;
-          border-radius: 5px;
-        }
-        @media screen and (max-height: 450px) {
-          .sidenav {padding-top: 15px;}
-          .sidenav a {font-size: 18px;}
-        }
-        </style>
-        </head>
-        <body>
-        
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="https://supraboy981322.github.io/about-me.html">About</a>
-            <a href="https://supraboy981322.github.io/Search-in-an-html-iframe.html">Search in an HTML iframe</a>
-            <a href="https://supraboy981322.github.io/stories.html">Short stories I made</a>
-            <a href="https://supraboy981322.github.io/soliloquys.html">Soliloquys</a>
-            <a href="https://supraboy981322.github.io/binary-clock.html">Binary Clock</a>
+<head>
+<title>Site Map - Zane's Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-1.css">
+<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-2.css">
+<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/stylesheet.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
+<!-- NEEDED TO PROPERLY DISPLAY SIDE BAR! -->
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.hs1-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="hs1-top">
+  <div class="hs1-bar hs2-theme hs1-top hs1-left-align hs1-large">
+    <a class="hs1-bar-item hs1-button hs1-right hs1-hide-large hs1-hover-white hs1-large hs2-theme-l1" href="javascript:void(0)" onclick="hs1_open()"><i class="fa fa-bars"></i></a>
+    <a href="https://supraboy981322.github.io/" class="hs1-bar-item hs1-button hs2-theme-l1">Zane's website</a>
+    <a href="https://supraboy981322.github.io/about-me.html" class="hs1-bar-item hs1-button hs1-hide-small hs1-hover-white">About</a>
+    <a href="https://supraboy981322.github.io/site-map.html" class="hs1-bar-item hs1-button hs1-hide-small hs1-hover-white">Site map</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="hs1-sidebar hs1-bar-block hs1-collapse hs1-large hs2-theme-l5 hs1-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="hs1_close()" class="hs1-right hs1-xlarge hs1-padding-large hs1-hover-black hs1-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="hs1-bar-item"><b>Menu</b></h4>
+  <a class="hs1-bar-item hs1-button hs1-hover-black" href="https://supraboy981322.github.io/">Home</a>
+  <a class="hs1-bar-item hs1-button hs1-hover-black" href="https://supraboy981322.github.io/about-me.html">About</a>
+  <a class="hs1-bar-item hs1-button we-hover-black" href="https://supraboy981322.github.io/site-map.html">Site map</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="hs1-overlay hs1-hide-large" onclick="hs1_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="hs1-main" style="margin-left:250px">
+
+  <div style="padding:64px">
+    <div>
+      <h1 style="text-align:center;color:teal"><b>About me</b></h1>
+    </div>
+  </div>
+<!-- Main content goes here-->  
+<div class="row">
+    <div class="column">
+        <div style="padding-left:5%">
+          <img src="https://supraboy981322.github.io/profile_card/profile-card-image.jpg" alt="Picture of me" style="width:96%;border-radius:25px;">
         </div>
-        <div id="mainPageContent">
-            <head>
-                
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-                <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-              </head>
-              <body>
-              
-              <div class="jumbotron-text-center" style="margin-bottom:0">
-                <div class="jumbotron-actual-text-center">
+      <div class="all-pages-text-box">
+      <br>
+        <p style="padding-left:15%;padding-right:15%;">Hi, I'm Zane Sanders, a 16-year-old from the USA. I'm interested in math, science, drawing, programming, and game development using Scratch. I'm also autistic and have ADHD. People often tell me I'm smart and could achieve great things, but I'm not sure what "great things" could be for me. Some (including my teachers) compare me to Einstein, Bill Gates, Steve Jobs, and Paul Allen. I've even been told I remind them of Elon Musk's teenage years. I have lots of ideas, but I struggle to write them down before forgetting. I honestly don't know what I want for my future because I enjoy all aspects of technology. Currently, I'm leaning towards web development, but I also like hardware engineering.</p>
+        <a href="https://supraboy981322.github.io/about-me">You can read more here</a>
+      <br>
+  </div>
+    </div>
+    <div class="column">
+      <h5>What is the purpose of this site?</h5>
+              <div class="all-pages-text-box">
+                <div style="padding:5%;">
                   <br>
-                  <h1><b>Welcome to Zane's website</b></h1>
-                  <h2>Created by Zane Sanders</h2>
+                    <b>This website houses many things I publish to the Internet. This site will house everything from my YouTube videos to my resume.</b>
                   <br>
                 </div>
               </div>
-              
-              <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                <span style="font-size:30px;cursor:pointer;color:#cecece" onclick="openNav()">&#9776; <b>Navigate</b></span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link" style="font-size:30px;color:#808080" href="https://supraboy981322.github.io/">| Home | </a>
-                    </li>    
-                  </ul>
-                </div>  
-              </nav>
-              
-              <div class="container" style="margin-top:30px">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="col-sm-4-content">
-                        <h5>About me:</h5>
-                        <img src="profile_card/profile-card-image.jpg" alt="Picture of me" style="width:100%;border-radius:5px;">
-                        <div class="content-text-box"><b>Hi, I'm Zane Sanders, a 16-year-old from the USA. I'm interested in math, science, drawing, programming, and game development using Scratch. I'm also autistic and have ADHD. People often tell me I'm smart and could achieve great things, but I'm not sure what "great things" could be for me. Some (including my teachers) compare me to Einstein, Bill Gates, Steve Jobs, and Paul Allen. I've even been told I remind them of Elon Musk's teenage years. I have lots of ideas, but I struggle to write them down before forgetting. I honestly don't know what I want for my future because I enjoy all aspects of technology. Currently, I'm leaning towards web development, but I also like hardware engineering.</p>
-                          <a href="https://supraboy981322.github.io/about-me-expanded.html">You can read more here</a></b></div>
-                    </div>
-                    <h5>Links:</h5>
-                    <div class="content-text-box">
-                        <b>
-                        <ul class="nav nav-pills flex-column">
-                          <li class="nav-item">
-                            <a class="nav-link active" href="#">homepage</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="https://www.reddit.com/u/polloloco69666?utm_medium=android_app&utm_source=share">reddit</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="https://www.youtube.com/@g.r.a.s.gamingridesandsims6645">YouTube</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="https://www.github.com/supraboy981322">GitHub</a>
-                            <p>I do not have social media (and no, YouTube nor Reddit count as social media YouTube is <i>scrictly</i> videos and Reddit was supposed to be just another online forum website and is <i><b>misused</b> as social media</i>)</p>
-                          </li>
-                        </ul>
-                        </b>
-                      </div>
-                      <br>
-                    <hr class="d-sm-none">
-                  </div>
-                  <div class="col-sm-8">          
-                    <div class="col-sm-8-content">
-                        <h2>About my site:</h2>
-                        <h5>What is the purpose of this site?</h5>
-                        <div class="content-text-box"><b>This website houses many things I publish to the Internet. This site will house everything from my YouTube videos to my resume.</b></div>
-                        <br>
-                        <h5>Why did I create this site?</h5>
-                        <div class="content-text-box"><b>I created this website mostly for fun. I wanted a central place for everything I do on the internet. This website was created to store internet footprint in a place where anyone can access it from anywhere in the world.</b></div>
-                        <br>
-                        <h5>Why would I want a central point for everything I do on the internet?</h5>
-                     <div class="content-text-box"><b>I wanted a central point for my internet footprint because it was a cool idea and I like the convenience.</b></div>
-                   </div>
-                  </div>
+              <br>
+              <h5>Why did I create this site?</h5>
+              <div class="all-pages-text-box">
+                <div style="padding:5%;">
+                  <br>
+                    <b style="padding:5%;">I created this website mostly for fun. I wanted a central place for everything I do on the internet. This website was created to store internet footprint in a place where anyone can access it from anywhere in the world.</b>
+                  <br>
                 </div>
               </div>
-              
-              <div class="footer" style="margin-bottom:0">
-                <br>
-                <h4><b>End of page</b></h4>
+              <h5>Why would I want a central point for everything I do on the internet?</h5>
+           <div class="all-pages-text-box" style="padding:5%">
+            <div style="padding:5%;">
+              <br>
+                <b>I wanted a central point for my internet footprint because it was a cool idea and I like the convenience.</b>
+              <br>
+            </div>
+          </div>
+           <br>
+  
+           <h5>Links:</h5>
+           <div class="all-pages-text-box">
+              <div style="padding:5%;">
+               <b>
+               <ul class="nav nav-pills flex-column">
+                 <li class="nav-item">
+                   <a class="nav-link active" href="https://supraboy981322.github.io">homepage</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="https://www.reddit.com/u/polloloco69666?utm_medium=android_app&utm_source=share">reddit</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="https://www.youtube.com/@g.r.a.s.gamingridesandsims6645">YouTube</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="https://www.github.com/supraboy981322">GitHub</a>
+                   <p>I do not have social media (and no, YouTube nor Reddit count as social media YouTube is <i>scrictly</i> videos and Reddit was supposed to be just another online forum website and is <i><b>misused</b> as social media</i>)</p>
+                 </li>
+               </ul>
+               </b>
               </div>
-        </div>
-        
+             </div>
+    </div>
+  </div>
+  
+       </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+</div>
+<!-- Footer -->
+  <footer id="myFooter">
+    <div style="padding:5px;background-color:#50a1a1;height:50px">
+      <h4 style="text-align:center;padding-top:50%px"><b>End of page</b></h4>
+    </div>
+</footer>
+
+<!-- END MAIN -->
+</div>
 
 <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-          document.getElementById("mainPageContent").style.marginLeft = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("mainPageContent").style.marginLeft = "0";
-        }
-        </script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function hs1_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function hs1_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
 </body>
 </html>
