@@ -84,3 +84,21 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+  .all-pages-text-box {
+    margin:20px;
+    border-radius:25px;
+    background-color:azure;
+    outline: solid black;
+  }
+  .all-pages-text-box-title {
+    color:red;
+    text-align:center;
+    border-radius:25px;
+    margin-left:150px;
+    margin-right:150px;
+    background-color:white;
+    outline: solid black;
+  }
+  .all-pages-text-box-content {
+    margin:20px;
+  }
