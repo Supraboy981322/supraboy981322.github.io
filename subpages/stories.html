@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Stories - Zane's Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-1.css">
+<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-2.css">
+<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/stylesheet.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- NEEDED TO PROPERLY DISPLAY SIDE BAR! -->
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.hs1-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="hs1-top">
+  <div class="hs1-bar hs2-theme hs1-top hs1-left-align hs1-large">
+    <a class="hs1-bar-item hs1-button hs1-right hs1-hide-large hs1-hover-white hs1-large hs2-theme-l1" href="javascript:void(0)" onclick="hs1_open()"><i class="fa fa-bars"></i></a>
+    <a href="https://supraboy981322.github.io/" class="hs1-bar-item hs1-button hs2-theme-l1">Zane's website</a>
+    <a href="https://supraboy981322.github.io/about-me.html" class="hs1-bar-item hs1-button hs1-hide-small hs1-hover-white">About</a>
+    <a href="https://supraboy981322.github.io/site-map.html" class="hs1-bar-item hs1-button hs1-hide-small hs1-hover-white">Site map</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="hs1-sidebar hs1-bar-block hs1-collapse hs1-large hs2-theme-l5 hs1-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="hs1_close()" class="hs1-right hs1-xlarge hs1-padding-large hs1-hover-black hs1-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="hs1-bar-item"><b>Menu</b></h4>
+  <a class="hs1-bar-item hs1-button hs1-hover-black" href="https://supraboy981322.github.io/">Home</a>
+  <a class="hs1-bar-item hs1-button hs1-hover-black" href="https://supraboy981322.github.io/about-me.html">About</a>
+  <a class="hs1-bar-item hs1-button we-hover-black" href="https://supraboy981322.github.io/site-map.html">Site map</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="hs1-overlay hs1-hide-large" onclick="hs1_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="hs1-main" style="margin-left:250px">
+  <div style="padding-top:55px">
+    <div>
+      <h1 style="text-align:center;color:teal"><b>Stories</b></h1>
+    </div>
+  </div>
+<!-- Main content goes here-->  
+<div class="all-pages-text-box">
+    <br>
+      <h2 class="all-pages-text-box-title">Stoichiometric Bicycloptic Rage</h2>
+      <div class="all-pages-text-box-content">
+        <p>There once was a person named "The." "The" had a problem. "The"'s pet named "Bi-cycloptic Hallucination" was sick. So "The" left his house to bring "Bi-cycloptic Hallucination" to a vet named "UserId:34578932475" who worked at a place named "Doctor's complex." "The" died from a heart attack and "UserId:34578932475"'s finger slipped, killing "Bi-cycloptic Hallucination." "UserId:34578932475" was killed by a stray bullet after work while walking to his car, and "Doctor's complex" blew up, destroying everything within 5,652,733 miles.</p>
+        <p>For some reason, unknown to the narrator, a strand of DNA has appeared on a separate planet in the Andromeda Galaxy. Remembering what he was looking for, he went to search for his keys. "The" then dived into the Milky-Way's central blackhole. "The" found his keys. However, he was never seen again, because nothing, other than light, can escape a blackhole, also "The" would be speggetified.</p>
+        <p>This wasn't the end however; "The" found himself, somehow, in *another* planet. This mission to find his keys has become exponential. He looked around the magical land he was in. There was a candy cane forest, in which "The" found a cabin. He began to knock  at the door. "Hello? Anyone there?" He received no response. "Nobody must be home," he said to himself. "The" went on to explore more of his surroundings, finding unnatual terrain everywhere.</p>
+        <p>Then, God, the teenager living in his mom's basement pressed "close application" when the universe simulator stopped responding. He was distraught to find out his progress didn't save. He only had 5 minutes to recover it before it was lost forever.</p>
+        <p>Turns out, that data was only half recovered. This meant trouble for God. "This is going to be more difficult than I thought," God said to himself. He had to figure out how to fix this, and fast. He decided the only thing he could do was to restart his computer in hopes that it was all just a bug. It turned out that it was, so he signed with relief. God restored his previous save, from before humanity fell to crap. God said "It is good."</p>
+        <h3 style="text-align: center;">THE END, FINALLY!</h3>
+      </div>
+    <br>
+</div>
+  <br>
+
+<!-- Footer -->
+  <footer id="myFooter">
+    <div style="padding:5px;background-color:#50a1a1;height:50px">
+      <h4 style="text-align:center;padding-top:50%px"><b>End of page</b></h4>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function hs1_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function hs1_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
