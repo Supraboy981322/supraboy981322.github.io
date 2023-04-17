@@ -99,6 +99,15 @@
     background-color:white;
     outline: solid black;
   }
+  .all-pages-text-box-title-extended {
+    color:red;
+    text-align:center;
+    border-radius:25px;
+    margin-left:15%;
+    margin-right:15%;
+    background-color:white;
+    outline: solid black;
+  }
   .all-pages-text-box-content {
     margin:20px;
   }
