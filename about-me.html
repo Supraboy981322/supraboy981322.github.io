@@ -14,13 +14,6 @@
 <!-- NEEDED TO PROPERLY DISPLAY SIDE BAR! -->
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
-.hs1-sidebar {
-  z-index: 3;
-  width: 250px;
-  top: 43px;
-  bottom: 0;
-  height: inherit;
-}
 .column {
   float: left;
   width: 50%;
@@ -35,38 +28,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 }
 </style>
 
-</style>
-
 </head>
 <body>
-
-<!-- Navbar -->
-<div class="hs1-top">
-  <div class="hs1-bar hs2-theme hs1-top hs1-left-align hs1-large">
-    <a class="hs1-bar-item hs1-button hs1-right hs1-hide-large hs1-hover-white hs1-large hs2-theme-l1" href="javascript:void(0)" onclick="hs1_open()"><i class="fa fa-bars"></i></a>
-    <a href="https://supraboy981322.github.io/" class="hs1-bar-item hs1-button hs2-theme-l1">Zane's website</a>
-    <a href="https://supraboy981322.github.io/about-me" class="hs1-bar-item hs1-button hs1-hide-small hs1-hover-white">About</a>
-    <a href="https://supraboy981322.github.io/site-map" class="hs1-bar-item hs1-button hs1-hide-small hs1-hover-white">Site map</a>
-  </div>
-</div>
-
-<!-- Sidebar -->
-<nav class="hs1-sidebar hs1-bar-block hs1-collapse hs1-large hs2-theme-l5 hs1-animate-left" id="mySidebar">
-  <a href="javascript:void(0)" onclick="hs1_close()" class="hs1-right hs1-xlarge hs1-padding-large hs1-hover-black hs1-hide-large" title="Close Menu">
-    <i class="fa fa-remove"></i>
-  </a>
-  <h4 class="hs1-bar-item"><b>Menu</b></h4>
-  <a class="hs1-bar-item hs1-button hs1-hover-black" href="https://supraboy981322.github.io/">Home</a>
-  <a class="hs1-bar-item hs1-button hs1-hover-black" href="https://supraboy981322.github.io/about-me">About</a>
-  <a class="hs1-bar-item hs1-button we-hover-black" href="https://supraboy981322.github.io/site-map">Site map</a>
-</nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="hs1-overlay hs1-hide-large" onclick="hs1_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-<div class="hs1-main" style="margin-left:250px">
-
   <div style="padding:64px">
     <div>
       <h1 style="text-align:center;color:teal"><b>About me</b></h1>
@@ -138,40 +101,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <br>
 </div>
 </div>
-<!-- Footer -->
-  <footer id="myFooter">
-    <div style="background-color:#50a1a1;height:50px">
-      <h4 style="text-align:center;padding-top:12px"><b>End of page</b></h4>
-    </div>
-</footer>
 
 <!-- END MAIN -->
 </div>
-
-<script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
-
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
-
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function hs1_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
-  } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
-  }
-}
-
-// Close the sidebar with the close button
-function hs1_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
-}
-</script>
-
 </body>
 </html>
