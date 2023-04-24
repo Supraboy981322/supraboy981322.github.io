@@ -104,9 +104,9 @@ function hs1_close() {
   mySidebar.style.display = "none";
   overlayBg.style.display = "none";
 }
-function changeChannel(location) {
+function changeChannel(channelURL) {
   event.preventDefault();
-  document.getElementById("pageContentFrame").src = location.value;
+  document.getElementById("pageContentFrame").src = channelURL.value;
 }
 
 </script>
