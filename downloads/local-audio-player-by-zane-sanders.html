@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html>
-<style>
-    audio, input {
-        display: block;
-    }
-
-    input {
-        width: 100%;       
-    }
-
-    .info {
-        background-color: aqua;            
-    }
-
-    .error {
-        background-color: red;
-        color: white;
-    }
-</style>
-<body>
-    <center><div id="message"></div></center>
-    <center><input type="file" accept="audio/*"/></center>
-    <center><audio controls autoplay></audio></center>
+    <style>
+        audio, input {
+            display: inline;
+        }
+    
+        .info {
+            background-color: aqua;            
+        }
+    
+        .error {
+            background-color: red;
+            color: white;
+        }
+    </style>
+        <center><div id="message"></div></center>
+        <br>
+        <center><input type="file" accept="audio/*"/><audio style="vertical-align:middle;" controls autoplay></audio></center>
+        <br>
 <script>
         (function localFileaudioPlayerInit(win) {
             var URL = win.URL || win.webkitURL,

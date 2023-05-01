@@ -38,11 +38,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <br>
 <style>
     audio, input {
-        display: block;
-    }
-
-    input {
-        width: 100%;       
+        display: inline;
     }
 
     .info {
@@ -55,8 +51,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     }
 </style>
     <center><div id="message"></div></center>
-    <center><input type="file" accept="audio/*"/></center>
-    <center><audio controls autoplay></audio></center>
+    <br>
+    <center><input type="file" accept="audio/*"/><audio style="vertical-align:middle;" controls autoplay></audio></center>
+    <br>
     <script>
         (function localFileaudioPlayerInit(win) {
             var URL = win.URL || win.webkitURL,
