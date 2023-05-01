@@ -5,10 +5,6 @@
                 display: block;
             }
 
-            input {
-                width: 100%;       
-            }
-
             .info {
                 background-color: aqua;            
             }
@@ -19,8 +15,9 @@
             }
         </style>
         <body>
-            <div id="message"></div>
-            <input type="file" accept="video/*"/>
+            <center><div id="message"></div></center>
+            <center><input type="file" accept="video/*"/></center>
+            <br>
             <center><video width=80% height="auto" controls autoplay></video></center>
             <script>
                 (function localFileVideoPlayerInit(win) {
