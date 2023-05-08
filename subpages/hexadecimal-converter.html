@@ -11,7 +11,25 @@
 
 <!-- NEEDED TO PROPERLY DISPLAY SIDE BAR! -->
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+html,body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Roboto", sans-serif;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+}
+
+.grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.item1 {
+    grid-row: 1 / span 2;
+}
+</style>
+
 </style>
 
 </head>
@@ -22,25 +40,45 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     </div>
   </div>
 <!-- Main content goes here-->  
-<div class="all-pages-text-box">
-    <br>
-        <h2 class="all-pages-text-box-title">What is this?</h2>
-        <div class="all-pages-text-box-content"><p>This is a hexadecimal number translator.</p>
-        <h2 class="all-pages-text-box-title">How do I use this?</h2>
-        <div class="all-pages-text-box-content">
-            <p>You input a hexadecimal value then press "= Convert"</p>
+<div class="grid-container">
+    <div class="item 1">
+        <div class="all-pages-text-box">
+            <center><iframe frameborder="0" height="375px" scrolling="no" src="https://supraboy981322.github.io/embeded-content/hexadecimal-converter.html"></iframe></center>
+        </div>        
+    </div>
+    <div class="item2">
+        <div class="all-pages-text-box">
             <br>
+            <h2 class="all-pages-text-box-title" padding="5px">What is this?</h2>
+            <div class="all-pages-text-box-content"><p>This is a hexadecimal number translator.</p></div>
             <br>
-            <h3>Note:</h3>
-            <b>Please do not press the "enter" on your keyboard, it will reset the input box</b>
+        </div>
+    </div>
+    <div class="item3">
+        <div class="all-pages-text-box">
             <br>
-            <b>If a "#" is appended infront of the hexadecimal value, it will not work</b>
+            <h2 class="all-pages-text-box-title" padding="5px">How do I use this?</h2>
+            <div class="all-pages-text-box-content"><p>You put in a hexadecimal value and press "= Convert"</p></div>
+            <br>
+        </div>
+    </div>
+    <div class="item4">
+        <div class="all-pages-text-box">
+            <br>
+            <h2 class="all-pages-text-box-title" style="font-size:75%">Please Note</h2>
+            <div class="all-pages-text-box-content">
+                <p>Please do not press the "enter" on your keyboard, it will reset the input box</p>
+                <p>If a "#" is appended infront of the hexadecimal value, it will not work</p>
+            </div>
+            <br>
+        </div>
+    </div>  
+  </div>
         </div>
       </div>
     <br>
 </div>
   <br>
-
 <!-- END MAIN -->
        <!-- Footer -->
         <footer id="myFooter" style="padding:5px;background-color:#50a1a1;height:50px">
