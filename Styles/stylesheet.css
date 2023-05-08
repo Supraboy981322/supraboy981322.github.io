@@ -99,7 +99,8 @@
     background-color:white;
     outline: solid black;
     height:10%;
-    font-size: calc(75% / 26px)
+    font-size: calc(75% / 26px);
+    padding: 5px;
   }
   .all-pages-text-box-content {
     margin:20px;
