@@ -99,6 +99,7 @@
     background-color:white;
     outline: solid black;
     height: fit-content;
+    width: fit-content;
   }
   .all-pages-text-box-content {
     margin:20px;
