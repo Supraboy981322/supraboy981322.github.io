@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-1.css">
+<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-2.css">
+<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/stylesheet.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- NEEDED TO PROPERLY DISPLAY SIDE BAR! -->
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+</style>
+
+</head>
+<body class="hs1-main" style="padding-top:42px;">
+  <div>
+    <div>
+      <h1 style="text-align:center;color:teal"><b>Page Title</b></h1>
+    </div>
+  </div>
+<!-- Main content goes here-->  
+<div class="all-pages-text-box">
+    <br>
+      <h2 class="all-pages-text-box-title">Title</h2>
+      <div class="all-pages-text-box-content"><p>Content</p>
+      </div>
+    <br>
+</div>
+  <br>
+  <style>
+
+    /* Rounded border */
+    hr.rounded {
+      border-top: 8px solid #bbb;
+      border-radius: 5px;
+    }
+    .filterDiv {
+      float: left;
+      background-color: #2196F3;
+      color: #ffffff;
+      width: 100px;
+      text-align: center;
+      margin: 2px;
+      display: none;
+      border-radius: 10px
+    }
+    
+    .show {
+      display: block;
+    }
+    
+    .container {
+      margin-top: 20px;
+      overflow: hidden;
+    }
+    
+    /* Style the buttons */
+    .btn {
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      border-radius: 10px
+    }
+    
+    .btn:hover {
+      background-color: #ddd;
+    }
+    
+    .btn.active {
+      background-color: #666;
+      color: white;
+    }
+    </style>
+    <body>
+    <br>
+    <center>
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')">Show all</button>
+      <button class="btn" onclick="filterSelection('serious')">Serious/inspiring</button>
+      <button class="btn" onclick="filterSelection('funny')">Funny</button>
+      <button class="btn" onclick="filterSelection('oOC')">Out of context</button>
+      <button class="btn" onclick="filterSelection('slightly-offensive')">Slightly offensive</button>
+      <br>
+      <br>
+      <button class="btn" onclick="filterSelection('random')">Non-sensical</button>
+      <button class="btn" onclick="filterSelection('stupid')">Stupid</button>
+      <button class="btn" onclick="filterSelection('cringe')">Cringe</button>
+      <button class="btn" onclick="filterSelection('philosophical')">Philosophical</button>
+      <button class="btn" onclick="filterSelection('conversation')">Conversational</button>
+      <button class="btn" onclick="filterSelection('zane')">By Me</button>
+    </div>
+    <hr class="rounded">
+    <div class="container">
+      <div class="filterDiv serious">"So say enjoy it for what it does rather than lament what it doesn't" - LGR 2023</div>
+      <div class="filterDiv serious">"If all matter is circulated by the stars, why not look up in the sky and say 'I am special because I have kinship with the stars, the tree, the woodland animals, the brook'" - Neil deGrasse Tyson</div>
+      <div class="filterDiv funny">"They say that nothing is impossible, but I do nothing everyday"</div>
+      <div class="filterDiv philosophical">"Why couldn't they just name DNA 'people particles?' [Why the complicated name 'deoxyribonucleic acid?']" - Rhys</div>
+      <div class="filterDiv serious">"A stitch in time saves nine"</div>
+      <div class="filterDiv serious">"As the area of our knowledge grows, so too does the perimeter of our ignorance" -Neil deGrasse Tyson</div>
+      <div class="filterDiv serious">"The universe is of no obligation to make sense to you" - Neil deGrasse Tyson</div>
+      <div class="filterDiv serious">"In your life, you must learn to love the questions themselves, and celebrate the unknown rather than fear it" - Neil deGrasse Tyson</div>
+      <div class="filterDiv serious zane">"Don't strive to be the best, rather be the best you" - Zane Sanders</div>
+      <div class="filterDiv funny stupid">"He's so smart, he doesn't even remember what he knows"</div>
+      <div class="filterDiv random">"A nothing which attracts something simply screams 'black hole'"</div>
+      <div class="filterDiv funny random">"Don't make me cancel your free subscription of life, Mr."</div>
+      <div class="filterDiv funny stupid random">"I would like that with a side of death, please"</div>
+      <div class="filterDiv random">"Dell, you suck" - Linus Sebastian 2020</div>
+      <div class="filterDiv random funny">"It's terrible, but I'm havin' fun. Maybe that's just the eggnog." - LGR 2022</div>
+      <div class="filterDiv random serious">"Still silly, but at least, it can be usefully silly" - LGR 2022</div>
+      <div class="filterDiv random">"Oh look it's-a-gun"</div>
+      <div class="filterDiv random funny stupid">"I just love smak'n my ballz 'round the table" - LGR 2022</div>
+      <div class="filterDiv random funny stupid">"Why did you pee in my pants"</div>
+      <div class="filterDiv random slightly-offensive conversation">
+        Person 1: "...Then you just come at me at mach-"
+        <br>
+        Person 2: "-mach fuck you"
+      </div>
+      <div class="filterDiv stupid funny conversation">
+        Person 1: "Hey look, it's a cyclops"
+        <br>
+        Person 2: "But he's got 2 eyes"
+        <br>
+        Person 3: "He must be a bi-cyclops"
+    </div>
+    <div class="filterDiv funny conversation">
+        Person 1: "hey look, it's a school of whales"
+        <br>
+        Person 2: "they look a bit old for school"
+        <br>
+        Person 3: "Well, university then"
+        <br>
+        Person 2: 'University of Whales"
+    </div>  
+    <div class="filterDiv random funny">"Lastly, in Kid Klown, by Kemco, if you turn off the game you won't have to play it. But if for <i>some reason</i> you <b><i>insist</i></b>, you could enter the Konami code" - </div>
+
+    </div>
+    
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+    
+<!-- END MAIN -->
+       <!-- Footer -->
+        <footer id="myFooter" style="padding:5px;background-color:#50a1a1;height:50px">
+          <div>
+              <h4 style="text-align:center;"><b>End of page</b></h4>
+          </div>
+      </footer>
+    </div>
+  </body>
+</html>
