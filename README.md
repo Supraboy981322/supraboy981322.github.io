@@ -1,5 +1,5 @@
 # supraboy981322.github.io
-A website all about me!
+A website
 
 # About this website
 - What is the purpose of this site?
