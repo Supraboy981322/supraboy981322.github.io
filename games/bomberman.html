@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles/stylesheet.css">
-    <body>
-        <div class="main">
-            <div>
-                <h1 class="pageTitle"><b>Bomberman</b></h1>
-            </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles/stylesheet.css">
+
+<body>
+    <div class="main">
+        <div>
+            <h1 class="pageTitle"><b>Bomberman</b></h1>
+        </div>
+        <br>
+        <div class="textBox">
             <br>
-            <div class="textBox">
-                <br>
-                <h2>About this game</h2>
-                <p>Bomberman is a strategic, maze-based computer and video game franchise originally developed by Hudson Soft. The original game was published in 1983 and new games in the series are still being published to this day. Today, the Bomberman character is featured in over 60 different games.<br>Infomation from &#8220<a href="https://bomberman.fandom.com">bomberman.fandom.com</a>&#8221<br>Port made by <a href="https://gist.github.com/straker">&#8220straker&#8221 from GitHub</a></p>
-                <br>
-            </div>
+            <h2>About this game</h2>
+            <p>Bomberman is a strategic, maze-based computer and video game franchise originally developed by Hudson
+                Soft. The original game was published in 1983 and new games in the series are still being published to
+                this day. Today, the Bomberman character is featured in over 60 different games.<br>Infomation from
+                &#8220<a href="https://bomberman.fandom.com">bomberman.fandom.com</a>&#8221<br>Port made by <a
+                    href="https://gist.github.com/straker">&#8220straker&#8221 from GitHub</a></p>
             <br>
-           <div class="textBox">
-             <br>
-             <iframe class="game"src="https://supraboy981322.github.io/embeded-content/games/bomberman.html" style=" width: 960px; height: 832px; margin: 0 auto; background-color: #777; display:block; frameborder:0;">
-             </iframe>
-             <br>
-          </div>
-        </div>  
-        <!-- Footer -->
-        <footer>
-            <div>
-                <h4><b>End of page</b></h4>
-            </div>
-        </footer>
-    </body>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <iframe class="game" src="https://supraboy981322.github.io/embeded-content/games/bomberman.html"
+                style=" width: 960px; height: 832px; margin: 0 auto; background-color: #777; display:block; frameborder:0;">
+            </iframe>
+            <br>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h4><b>End of page</b></h4>
+        </div>
+    </footer>
+    <script>
+        // Prevent arrow and space keys from scrolling page
+        window.addEventListener("keydown", function (e) {
+            if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+        // Deprecated code! Needed for older browsers
+        window.addEventListener("keydown", function (e) {
+            // space and arrow keys
+            if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+
+    </script>
+</body>
+
 </html>
