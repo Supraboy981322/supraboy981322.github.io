@@ -166,3 +166,41 @@ footer h4 {
   padding: 12px;
   width: 80%;
 }
+
+.gridBox{
+  background: rgba(255,255,255,0.40);
+  backdrop-filter: blur(3px);  
+  border-radius: 25px;
+  padding: 10px;
+  overflow:hidden;
+  color:black;
+}
+
+.gridBox img {
+  border-radius:20px;
+  width:100%;
+}
+
+.gridBox p{
+  font-size:10px;
+  padding: 0px 0px 0px 5px;
+}
+
+.gridBox b{
+  padding-left:5px;
+}
+
+.contentGrid table,
+.contentGrid td {
+  border: 0.5vw solid transparent;
+  width:100vw;
+  right:8px;
+  margin:-8px;
+}
+
+.contentGrid thead,
+.contentGrid tfoot {
+  background-color: #333;
+  color: #fff;
+}
+
