@@ -7,7 +7,7 @@ html,body,h1,h2,h3,h4,h5,h6 {
 }
 
 body {
-  background-image: url('https://supraboy981322.github.io/embeded-content/background.png');
+  background-image: url('/embeded-content/background.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: auto 100%;
