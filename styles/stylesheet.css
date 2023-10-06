@@ -45,7 +45,6 @@ body {
 }
 
 .pageTitle {
-  horizontal-positon: middle;
   text-align: center;
   background: rgba(192, 243, 252, 0.55);
   backdrop-filter: blur(3px);
@@ -115,6 +114,7 @@ footer h4 {
   transition: 0.3s;
   border-radius:25px;
   font-weight:bold;
+  margin: 0.1vw;
 }
 
 /* Change background color of buttons on hover */
@@ -154,4 +154,15 @@ footer h4 {
 }
 .centerV {
   vertical-align: center;
+}
+
+.tabBar {
+  text-align: center;
+  background: rgba(192, 243, 252, 0.55);
+  backdrop-filter: blur(3px);
+  overflow: hidden;
+  border-radius: 14px;
+  margin: auto;
+  padding: 12px;
+  width: 80%;
 }

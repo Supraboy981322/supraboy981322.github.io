@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles/stylesheet.css">
+
+<body>
+    <div class="main">
+        <div>
+            <h1 class="pageTitle"><b>Breakout</b></h1>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <h2>About this game</h2>
+            <p>Breakout is an arcade video game developed and published by Atari, Inc. and released on May 13, 1976. It
+                was designed by Steve Wozniak, based on conceptualization from Nolan Bushnell and Steve Bristow, who
+                were influenced by the seminal 1972 Atari arcade game Pong.<br>Infomation from &#8220<a
+                    href="https://en.wikipedia.org/">Wikipedia</a>&#8221 (yes, I know not to trust Wikipedia, but I fact
+                checked it.)<br>Port made by <a href="https://github.com/straker">&#8220straker&#8221 from GitHub</a>
+            </p>
+            <br>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <iframe src="/embeded-content/games/breakout.html" scrolling="no" frameborder="0"
+                style="width: 400px; height: 500px; margin: 0 auto; display:block;">
+            </iframe>
+            <br>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h4><b>End of page</b></h4>
+        </div>
+    </footer>
+    <script>
+        // Prevent arrow and space keys from scrolling page
+        window.addEventListener("keydown", function (e) {
+            if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+        // Deprecated code! Needed for older browsers
+        window.addEventListener("keydown", function (e) {
+            // space and arrow keys
+            if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+
+    </script>
+</body>
+
+</html>

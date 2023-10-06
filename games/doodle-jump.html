@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles/stylesheet.css">
+
+<body>
+    <div class="main">
+        <div>
+            <h1 class="pageTitle"><b>Doodle Jump</b></h1>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <h2>About this game</h2>
+            <p>Doodle Jump is one of the most popular iPhone apps. It recently surpassed 10 million downloads. This
+                addictive game is the brainchild of Croatian immigrants Igor and Marko Pusenjak, who came up with the
+                game one day when Igor was sketching a game on a notepad. Marko did the programming and the rest is now
+                history.<br>Infomation from &#8220<a href="https://www.croatia.org/">Croatia.org</a>&#8221<br>Port made
+                by <a href="https://github.com/ImKennyYip">&#8220ImKennyYip&#8221 from GitHub</a></p>
+            <br>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <iframe src="/embeded-content/games/doodle-jump.html" scrolling="no" frameborder="0"
+                style="width: 360px; height: 576px; margin: 0 auto; display:block;">
+            </iframe>
+            <br>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h4><b>End of page</b></h4>
+        </div>
+    </footer>
+    <script>
+        // Prevent arrow and space keys from scrolling page
+        window.addEventListener("keydown", function (e) {
+            if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+        // Deprecated code! Needed for older browsers
+        window.addEventListener("keydown", function (e) {
+            // space and arrow keys
+            if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+
+    </script>
+</body>
+
+</html>
