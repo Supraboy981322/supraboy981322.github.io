@@ -1,113 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-1.css">
-<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-2.css">
-<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/stylesheet.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- NEEDED TO PROPERLY DISPLAY SIDE BAR! -->
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
-</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-1.css">
+    <link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-2.css">
+    <link rel="stylesheet" href="https://supraboy981322.github.io/Styles/stylesheet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- NEEDED TO PROPERLY DISPLAY SIDE BAR! -->
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
+        }
+    </style>
 
 </head>
+
 <body class="hs1-main" style="padding-top:42px;">
-  <div>
     <div>
-      <h1 style="text-align:center;color:teal"><b>Local Video Player</b></h1>
+        <div>
+            <h1 style="text-align:center;color:teal"><b>Local Video Player</b></h1>
+        </div>
     </div>
-  </div>
-<!-- Main content goes here-->  
-<div class="all-pages-text-box">
+    <!-- Main content goes here-->
+    <div class="all-pages-text-box">
+        <br>
+        <h2 class="all-pages-text-box-title">What is this?</h2>
+        <div class="all-pages-text-box-content">
+            <p>This is a video player that runs right in your browser and allows you to watch your own video files from
+                the convinence of your web browser. None of your video files are transfered over the internet from this
+                webpage.</p>
+        </div>
+        <br>
+    </div>
     <br>
-      <h2 class="all-pages-text-box-title">What is this?</h2>
-      <div class="all-pages-text-box-content"><p>This is a video player that runs right in your browser and allows you to watch your own video files from the convinence of your web browser. None of your video files are transfered over the internet from this webpage.</p></div>
+    <div class="all-pages-text-box">
+        <br>
+        <h2 class="all-pages-text-box-title">Can I download this?</h2>
+        <div class="all-pages-text-box-content">
+            <p>Yes, you can download this as an HTML file <a
+                    href="https://supraboy981322.github.io/downloads/local-video-player-by-zane-sanders"
+                    download>here</a>. This file will open in your web browser like a website, but it'll be 100% local
+                and won't require an internet connection to access, once downloaded.</p>
+        </div>
+        <br>
+    </div>
     <br>
-</div>
-  <br>
-<div class="all-pages-text-box">
-    <br>
-    <h2 class="all-pages-text-box-title">Can I download this?</h2>
-    <div class="all-pages-text-box-content"><p>Yes, you can download this as an HTML file <a href="https://supraboy981322.github.io/downloads/local-video-player-by-zane-sanders" download>here</a>. This file will open in your web browser like a website, but it'll be 100% local and won't require an internet connection to access, once downloaded.</p></div>
-    <br>
-</div>
-<br>
-<style>
-    video, input {
-        display: block;
-    }
+    <style>
+        video,
+        input {
+            display: block;
+        }
 
-    .info {
-        background-color: aqua;            
-    }
+        .info {
+            background-color: aqua;
+        }
 
-    .error {
-        background-color: red;
-        color: white;
-    }
-</style>
-    <center><div id="message"></div></center>
-    <center><input type="file" accept="video/*"/></center>
+        .error {
+            background-color: red;
+            color: white;
+        }
+    </style>
+    <center>
+        <div id="message"></div>
+    </center>
+    <center><input type="file" accept="video/*" /></center>
     <br>
     <center><video width=80% height="auto" controls autoplay></video></center>
     <script>
         (function localFileVideoPlayerInit(win) {
             var URL = win.URL || win.webkitURL,
-            displayMessage = (function displayMessageInit() {
-                var node = document.querySelector('#message');
+                displayMessage = (function displayMessageInit() {
+                    var node = document.querySelector('#message');
 
-                return function displayMessage(message, isError) {
-                    node.innerHTML = message;
-                    node.className = isError ? 'error' : 'info';
-                };
-            }()),
-            playSelectedFile = function playSelectedFileInit(event) {
-                var file = this.files[0];
+                    return function displayMessage(message, isError) {
+                        node.innerHTML = message;
+                        node.className = isError ? 'error' : 'info';
+                    };
+                }()),
+                playSelectedFile = function playSelectedFileInit(event) {
+                    var file = this.files[0];
 
-                var type = file.type;
+                    var type = file.type;
 
-                var videoNode = document.querySelector('video');
+                    var videoNode = document.querySelector('video');
 
-                var canPlay = videoNode.canPlayType(type);
+                    var canPlay = videoNode.canPlayType(type);
 
-                canPlay = (canPlay === '' ? 'no' : canPlay);
+                    canPlay = (canPlay === '' ? 'no' : canPlay);
 
-                var message = 'Can play type "' + type + '": ' + canPlay;
+                    var message = 'Can play type "' + type + '": ' + canPlay;
 
-                var isError = canPlay === 'no';
+                    var isError = canPlay === 'no';
 
-                displayMessage(message, isError);
+                    displayMessage(message, isError);
 
-                if (isError) {
-                    return;
-                }
+                    if (isError) {
+                        return;
+                    }
 
-                var fileURL = URL.createObjectURL(file);
+                    var fileURL = URL.createObjectURL(file);
 
-                videoNode.src = fileURL;
-            },
-            inputNode = document.querySelector('input');
+                    videoNode.src = fileURL;
+                },
+                inputNode = document.querySelector('input');
             if (!URL) {
-                displayMessage('Your browser is not ' + 
-                '<a href="http://caniuse.com/bloburls">supported</a>!', true);
+                displayMessage('Your browser is not ' +
+                    '<a href="http://caniuse.com/bloburls">supported</a>!', true);
 
                 return;
-            }      
+            }
             inputNode.addEventListener('change', playSelectedFile, false);
         }(window));
-</script>
-<br>
-<!-- END MAIN -->
-       <!-- Footer -->
-        <footer id="myFooter" style="padding:5px;background-color:#50a1a1;height:50px">
-          <div>
-              <h4 style="text-align:center;"><b>End of page</b></h4>
-          </div>
-      </footer>
+    </script>
+    <br>
+    <!-- END MAIN -->
+    <!-- Footer -->
+    <footer id="myFooter" style="padding:5px;background-color:#50a1a1;height:50px">
+        <div>
+            <h4 style="text-align:center;"><b>End of page</b></h4>
+        </div>
+    </footer>
     </div>
-  </body>
+</body>
+
 </html>

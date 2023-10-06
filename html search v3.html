@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
 
-	<body style="margin:0px;padding:0px;background:black;">
-		<div style="background:black;height:10%;width:100%">
-		
-			<center><input placeholder="Enter URL" type="text" id="searchInput" name="input"><button onclick="changeChannel()">Search</button></center>
-		
-		</div>
-			<script src="https://niutech.github.io/x-frame-bypass/x-frame-bypass.js" type="module"></script>
-		<iframe is="x-frame-bypass" id="searchFrame" src="https://www.bing.com/" style="position: absolute; height: 95%; width:100%; border: none"></iframe>
+<body style="margin:0px;padding:0px;background:black;">
+	<div style="background:black;height:10%;width:100%">
+
+		<center><input placeholder="Enter URL" type="text" id="searchInput" name="input"><button
+				onclick="changeChannel()">Search</button></center>
+
+	</div>
+	<script src="https://niutech.github.io/x-frame-bypass/x-frame-bypass.js" type="module"></script>
+	<iframe is="x-frame-bypass" id="searchFrame" src="https://www.bing.com/"
+		style="position: absolute; height: 95%; width:100%; border: none"></iframe>
 	<script>
 		function changeChannel() {
-          event.preventDefault();
-          document.getElementById("searchFrame").src = document.getElementById("searchInput").value;
+			event.preventDefault();
+			document.getElementById("searchFrame").src = document.getElementById("searchInput").value;
 		}
-		</script>
-	</body>
+	</script>
+</body>
+
 </html>

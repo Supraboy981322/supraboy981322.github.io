@@ -2,139 +2,173 @@
 <title>Reversed Webpage - Zane's Website</title>
 <html>
 <script>
-  function scrollBottom() {window.scrollTo(0, 999999999);}
-    if (document.addEventListener) document.addEventListener("DOMContentLoaded", scrollBottom, false)
-    else if (window.attachEvent) window.attachEvent("onload", scrollBottom);
+  function scrollBottom() { window.scrollTo(0, 999999999); }
+  if (document.addEventListener) document.addEventListener("DOMContentLoaded", scrollBottom, false)
+  else if (window.attachEvent) window.attachEvent("onload", scrollBottom);
 </script>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
-
-.footer {
-    height:0%;
-    background-color: grey;
-    top:0;
-    left:0;
-    overflow-x:hidden;
-    overflow-y:hidden;
-    padding:1%;
-    text-align:center;
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
     }
 
-.footer b {
-	color:white;
-}
-
-
-.topbar {
-    width: 100%;
-    background-color: grey;
-    bottom:0;
-    left:0;
-    position:fixed;
-    overflow-x:hidden;
-    overflow-y:hidden;
-    padding:1%
+    .footer {
+      height: 0%;
+      background-color: grey;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      padding: 1%;
+      text-align: center;
     }
 
-.topbar a {
-	color:white;
-}
+    .footer b {
+      color: white;
+    }
 
-.sidenav {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: black;
-  overflow-x: hidden;
-}
 
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-}
+    .topbar {
+      width: 100%;
+      background-color: grey;
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      padding: 1%
+    }
 
-.sidenav h2 {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-}
+    .topbar a {
+      color: white;
+    }
 
-.sidenav a:hover {
-  color: teal;
-}
-.topbar a:hover {
-  color: maroon;
-}
+    .sidenav {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background-color: black;
+      overflow-x: hidden;
+    }
 
-.main {
-  margin-right: 160px; /* Same as the width of the sidenav */
-  margin-bottom:5%;
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+    }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;};
-  .sidenav a,h2 {font-size: 18px;};
-  .topbar {padding-top: 15px;};
-  .topbar a {font-size:18px;};
-}
-</style>
+    .sidenav h2 {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+    }
+
+    .sidenav a:hover {
+      color: teal;
+    }
+
+    .topbar a:hover {
+      color: maroon;
+    }
+
+    .main {
+      margin-right: 160px;
+      /* Same as the width of the sidenav */
+      margin-bottom: 5%;
+      font-size: 28px;
+      /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      ;
+
+      .sidenav a,
+      h2 {
+        font-size: 18px;
+      }
+
+      ;
+
+      .topbar {
+        padding-top: 15px;
+      }
+
+      ;
+
+      .topbar a {
+        font-size: 18px;
+      }
+
+      ;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="topbar">
-	<b>
-    <a href="https://supraboy981322.github.io/" style="padding-left:15px">Home</a>
-  	<a href="https://supraboy981322.github.io/about-me" style="padding-left:15px">About</a>
-    <a href="https://supraboy981322.giothub.io/site-map" style="padding-left:15px">Site map</a>
-  </b>
-</div>
-<div class="sidenav">
-	<h2>Menu</h2>
+  <div class="topbar">
     <b>
-  	<a href="#">Home</a>
-  	<a href="#">about</a>
-  	<a href="#">Site map</a>
+      <a href="https://supraboy981322.github.io/" style="padding-left:15px">Home</a>
+      <a href="https://supraboy981322.github.io/about-me" style="padding-left:15px">About</a>
+      <a href="https://supraboy981322.giothub.io/site-map" style="padding-left:15px">Site map</a>
     </b>
-</div>
+  </div>
+  <div class="sidenav">
+    <h2>Menu</h2>
+    <b>
+      <a href="#">Home</a>
+      <a href="#">about</a>
+      <a href="#">Site map</a>
+    </b>
+  </div>
 
-<div class="main">
-	<div class="footer">
-    	<b>End of page</b>
-	</div>
-	<p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-	<p>The title is in a teal box with 15 pixel rounded corners, centered text, and 10 pixel padding.</p>
-	<h2>About The Title</h2>
+  <div class="main">
+    <div class="footer">
+      <b>End of page</b>
+    </div>
+    <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo.
+      Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint
+      efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>The title is in a teal box with 15 pixel rounded corners, centered text, and 10 pixel padding.</p>
+    <h2>About The Title</h2>
     <br>
-	<p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-	<p>The topbar is 100% minus 160 pixel width and 5% height</p>
+    <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo.
+      Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint
+      efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>The topbar is 100% minus 160 pixel width and 5% height</p>
     <h2>About The Topbar</h2>
     <br>
-	<p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo.
+      Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint
+      efficiantur his ad. Eum no molestiae voluptatibus.</p>
     <p>Scroll down the page to see the result.</p>
-	<p>The sidebar is of full height and always shown.</p>
-	<h2>About The Sidebar</h2>
-  <br>
-  <p>A webpage that I just wanted to make for fun. The layout is reversed from what is standard web design. The header is at the bottom, the page starts at the end, the user scrolls up, and the side navigation bar is on the right.</p>
-  <h2>About This Page</h2>
-  <br>
-  <div style="padding-bottom:5%;background-color:teal;padding:10px;text-align:center;border-radius:15px">
-    <h1>Welcome to my Inverted Webpage Example</h1>
-	</div>
-</div>
-   
+    <p>The sidebar is of full height and always shown.</p>
+    <h2>About The Sidebar</h2>
+    <br>
+    <p>A webpage that I just wanted to make for fun. The layout is reversed from what is standard web design. The header
+      is at the bottom, the page starts at the end, the user scrolls up, and the side navigation bar is on the right.
+    </p>
+    <h2>About This Page</h2>
+    <br>
+    <div style="padding-bottom:5%;background-color:teal;padding:10px;text-align:center;border-radius:15px">
+      <h1>Welcome to my Inverted Webpage Example</h1>
+    </div>
+  </div>
+
 </body>
-</html> 
+
+</html>

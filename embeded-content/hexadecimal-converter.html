@@ -1,252 +1,284 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<script async src="/lib/tagmng8.js"></script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async src="/lib/tagmng8.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/lib/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="/lib/favicon/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/lib/favicon/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/lib/favicon/manifest.json">
-<link rel="shortcut icon" href="/lib/favicon/favicon.ico">
-<meta name="msapplication-config" content="/lib/favicon/browserconfig.xml">
+	<link rel="apple-touch-icon" sizes="180x180" href="/lib/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/lib/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/lib/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/lib/favicon/manifest.json">
+	<link rel="shortcut icon" href="/lib/favicon/favicon.ico">
+	<meta name="msapplication-config" content="/lib/favicon/browserconfig.xml">
 
-<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="telephone=no">
 
-<title>Hexadecimal to Decimal Converter</title>
-<meta name="description" content="Hex to decimal number converter and how to convert.">
+	<title>Hexadecimal to Decimal Converter</title>
+	<meta name="description" content="Hex to decimal number converter and how to convert.">
 
-<style>
-   h1 { font-size:1.6rem; }
-   h2 { font-size:1.4rem; }
-   h4 { font-size:1.2rem; }
-   #wrapper td { padding:.75rem; }
-   #calcform { max-width:500px; padding:20px; background:transparent; } 
-   #calcform button img { filter:invert(100%); }
-   #calcform .input-group sub { font-size:large; }
-   .btn span { font-weight:bold; font-size:large; }
-	.ntable tr td { line-height:0.5 !important; }
-</style>
+	<style>
+		h1 {
+			font-size: 1.6rem;
+		}
+
+		h2 {
+			font-size: 1.4rem;
+		}
+
+		h4 {
+			font-size: 1.2rem;
+		}
+
+		#wrapper td {
+			padding: .75rem;
+		}
+
+		#calcform {
+			max-width: 500px;
+			padding: 20px;
+			background: transparent;
+		}
+
+		#calcform button img {
+			filter: invert(100%);
+		}
+
+		#calcform .input-group sub {
+			font-size: large;
+		}
+
+		.btn span {
+			font-weight: bold;
+			font-size: large;
+		}
+
+		.ntable tr td {
+			line-height: 0.5 !important;
+		}
+	</style>
 
 </head>
+
 <body>
-<center>
-<div id="header">
-<div>
-<div id="wrapper">
+	<center>
+		<div id="header">
+			<div>
+				<div id="wrapper">
 
-<div id='div-gpt-ad-1639638001114-0'>
-</div>
-<div id="lcol">
-<div id="doc">
+					<div id='div-gpt-ad-1639638001114-0'>
+					</div>
+					<div id="lcol">
+						<div id="doc">
 
-<form id="calcform" name="calcform" autocomplete="off">
-<div id="unitnav" class="form-row">
-<div class="form-group col" hidden>
-<label for="unit1">From</label>
-<select id="unit1" class="form-control">
-<option value="binary">Binary</option>
-<option value="decimal">Decimal</option>
-<option value="octal">Octal</option>
-<option value="hex" selected>Hexadecimal</option>
-<option value="ascii">Text</option>
-</select>
-</div>
-<div class="form-group col" hidden>
-<label for="unit2">To</label>
-<select id="unit2" class="form-control">
-<option value="binary">Binary</option>
-<option value="decimal" selected>Decimal</option>
-<option value="octal">Octal</option>
-<option value="hex">Hexadecimal</option>
-<option value="ascii">Text</option>
-</select>
-</div>
-</div>
-<div class="form-group">
-<label for="x">Enter hex number</label>
-<div class="input-group">
-<input type="text" id="x" name="x" class="form-control form-control-lg" required autofocus>
-<div class="input-group-append">
-</div>
-</div>
-</div>
-<div class="form-group">
-<button type="button" title="Convert" class="btn btn-success" onclick="convert()"><span>=</span> Convert</button>
-</div>
-<div class="form-group">
-<label for="y" id="ylabel">Decimal number</label>
-<div class="input-group">
-<textarea rows="2" id="y" class="form-control form-control-lg" readonly></textarea>
-<div class="input-group-append">
-</div>
-</div>
-</div>
-<div class="form-group">
-<label for="y2" id="y2label">Decimal from signed 2's complement</label>
-<div class="input-group">
-<textarea rows="2" id="y2" class="form-control form-control-lg" readonly></textarea>
-<div class="input-group-append">
-</div>
-</div>
-</div>
-<div class="form-group">
-<label for="y3" id="y3label">Binary number</label>
-<div class="input-group">
-<textarea rows="2" id="y3" class="form-control form-control-lg" readonly></textarea>
-<div class="input-group-append">
-</div>
-</div>
-</div>
-<div class="form-group">
-<label for="y4">Decimal calculation steps</label>
-<br>
-<textarea rows="3" id="y4" class="form-control form-control-lg" readonly></textarea>
-</div>
-<div class="form-group">
-</div>
-</form>
+							<form id="calcform" name="calcform" autocomplete="off">
+								<div id="unitnav" class="form-row">
+									<div class="form-group col" hidden>
+										<label for="unit1">From</label>
+										<select id="unit1" class="form-control">
+											<option value="binary">Binary</option>
+											<option value="decimal">Decimal</option>
+											<option value="octal">Octal</option>
+											<option value="hex" selected>Hexadecimal</option>
+											<option value="ascii">Text</option>
+										</select>
+									</div>
+									<div class="form-group col" hidden>
+										<label for="unit2">To</label>
+										<select id="unit2" class="form-control">
+											<option value="binary">Binary</option>
+											<option value="decimal" selected>Decimal</option>
+											<option value="octal">Octal</option>
+											<option value="hex">Hexadecimal</option>
+											<option value="ascii">Text</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="x">Enter hex number</label>
+									<div class="input-group">
+										<input type="text" id="x" name="x" class="form-control form-control-lg" required
+											autofocus>
+										<div class="input-group-append">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<button type="button" title="Convert" class="btn btn-success"
+										onclick="convert()"><span>=</span> Convert</button>
+								</div>
+								<div class="form-group">
+									<label for="y" id="ylabel">Decimal number</label>
+									<div class="input-group">
+										<textarea rows="2" id="y" class="form-control form-control-lg"
+											readonly></textarea>
+										<div class="input-group-append">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="y2" id="y2label">Decimal from signed 2's complement</label>
+									<div class="input-group">
+										<textarea rows="2" id="y2" class="form-control form-control-lg"
+											readonly></textarea>
+										<div class="input-group-append">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="y3" id="y3label">Binary number</label>
+									<div class="input-group">
+										<textarea rows="2" id="y3" class="form-control form-control-lg"
+											readonly></textarea>
+										<div class="input-group-append">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="y4">Decimal calculation steps</label>
+									<br>
+									<textarea rows="3" id="y4" class="form-control form-control-lg" readonly></textarea>
+								</div>
+								<div class="form-group">
+								</div>
+							</form>
 
-</div>
+						</div>
 
-</div>
-</div>
-<div id="rcol">
+					</div>
+				</div>
+				<div id="rcol">
 
-<div id="adngin-right_sidebar-0"></div>
+					<div id="adngin-right_sidebar-0"></div>
 
-</div>
-</div>
+				</div>
+			</div>
 
-<div id="adngin-adhesive-0"></div>
+			<div id="adngin-adhesive-0"></div>
 
 
-<script src="https://supraboy981322.github.io/scripts/hex-converter.js"></script>
-<script async src="https://supraboy981322.github.io/unitnav.js"></script>
-<script>
-   var xelem=document.getElementById("x");
-   var yelem=document.getElementById("y");
-   var y2elem=document.getElementById("y2");
-   var y3elem=document.getElementById("y3");
-   window.addEventListener("DOMContentLoaded",function() {
-		var params=GetURLParams();
-      //if( Object.keys(params).length>0 && params.x!="" ) {
-      if( typeof params.x!="undefined" ) {
-			document.title = params.x+" hex to decimal conversion";
-			SetLinks(params.x);
-			xelem.value = params.x;
-			convert();
-		}
-	});
-	function SetLinks(x)
-	{
-		var p1 = document.getElementById("p1");
-		var p2 = document.createElement('p');
-		var p3 = document.createElement('p');
-		var x= new BigNumber(x, 16);
-		var x1=x.minus(1).toString(16).toUpperCase();
-		var x2=x.plus(1).toString(16).toUpperCase();
-		p2.innerHTML = "<a href='hex-to-decimal.html?x="+x1+"'>"+x1+" hex to decimal &#9658;</a>";
-		p3.innerHTML = "<a href='hex-to-decimal.html?x="+x2+"'>"+x2+" hex to decimal &#9658;</a>";
-		p1.parentNode.insertBefore(p2, p1);
-		p1.parentNode.insertBefore(p3, p1);
-	}
-	function GetURLParams()
-	{
-		var url=window.location.href;
-		var regex = /[?&]([^=#]+)=([^&#]*)/g,
-				//url = "www.domain.com/?v=123&p=hello",
-				params = {},
-				match;
-		while(match = regex.exec(url)) {
-			params[match[1]] = match[2];
-		}
-		return params;
-	}
-	function hide() {
-		document.getElementById("row1").style.display = 'none';
-		document.getElementById("row2").style.display = 'none';
-	}
-	function show() {
-		document.getElementById("row1").style.display = '';
-		document.getElementById("row2").style.display = '';
-	}
-	function convert() {
-		var hex = document.calcform.x.value;
-		hex = hex.replace("0x","");
-		hex = hex.replace("0X","");
-		try {
-			var x = new BigNumber(hex, 16);
-			xelem.style.backgroundColor = "white";
-		}
-		catch(err) {
-			xelem.style.backgroundColor = "#fff0f0";
-			return;
-		}
-		var xx=x.toString(10);
-		yelem.value = xx;
-		y3elem.value = x.toString(2);
-		if( x.isInt() && x.gte(0) ) {
-			if( hex.length==2 && x.gte("80", 16) ) { x=x.minus("100",16); }
-			if( hex.length==4 && x.gte("8000", 16) ) { x=x.minus("10000",16); }
-			if( hex.length==8 && x.gte("80000000", 16) ) { x=x.minus("100000000",16); }
-			var t1 = new BigNumber("8000000000000000",16);
-			var t2 = new BigNumber("10000000000000000",16);
-			if( hex.length==16 && x.gte(t1) ) { x=x.minus(t2); }
-			if( hex.length==2 || hex.length==4 || hex.length==8 || hex.length==16 )
-				y2elem.value = x.toString(10);
-			else
-				y2elem.value = "N/A";
-		}
-		else
-			y2elem.value = "N/A";
-      var yd=yelem.value.match(/\d/g);
-	   var y2d=y2elem.value.match(/\d/g);
-	   var y3d=y3elem.value.match(/\d/g);
-      var ylabel="Decimal number";
-      var y2label="Decimal from signed 2's complement";
-      var y3label="Binary number";
-      if( yd!=null ) ylabel+=" ("+yd.length+((yd.length==1)?" digit)":" digits)");
-      if( y2d!=null ) y2label+=" ("+y2d.length+((y2d.length==1)?" digit)":" digits)");
-      if( y3d!=null ) y3label+=" ("+y3d.length+((y3d.length==1)?" digit)":" digits)");
-		document.getElementById("ylabel").innerHTML = ylabel;
-		document.getElementById("y2label").innerHTML = y2label;
-		document.getElementById("y3label").innerHTML = y3label;
-		hex=hex.toUpperCase();
-		var txt="("+hex+")\u2081\u2086 = ";
-		var d,e,minus=false;
-		var len=hex.length;
-		if( hex[0]=="-" ) { txt+="-["; hex=hex.substr(1); len--; minus=true; }
-		var idot=hex.indexOf(".");
-		if( idot>=0 ) { hex=hex.substring(0,idot)+hex.substring(idot+1,len); len--; }
-		else idot=len;
-		etbl = ["\u2070","\u00B9","\u00B2","\u00B3","\u2074","\u2075","\u2076","\u2077","\u2078","\u2079"];
-		for(var i=0; i<len; i++) {
-			d = hex.charCodeAt(i);
-			if( d<58 ) d-=48;
-			else if( d>64 ) d-=55;
-			//e = len-i-1;
-			e = idot-i-1;
-			e=e.toString();
-			txt+="("+d+" \u00D7 16";
-			for(var k=0; k<e.length; k++)
-				if( e[k]=="-" )
-					txt+="\u207B";
-				else
-					txt+=etbl[e[k]];
-			txt+=")";
-			if( i<len-1 ) txt+=" + ";
-		}
-		if( minus ) txt+="]";
-		txt+=" = ("+xx+")\u2081\u2080";
-		document.getElementById("y4").value = txt;
-	}
-</script>
+			<script src="https://supraboy981322.github.io/scripts/hex-converter.js"></script>
+			<script async src="https://supraboy981322.github.io/unitnav.js"></script>
+			<script>
+				var xelem = document.getElementById("x");
+				var yelem = document.getElementById("y");
+				var y2elem = document.getElementById("y2");
+				var y3elem = document.getElementById("y3");
+				window.addEventListener("DOMContentLoaded", function () {
+					var params = GetURLParams();
+					//if( Object.keys(params).length>0 && params.x!="" ) {
+					if (typeof params.x != "undefined") {
+						document.title = params.x + " hex to decimal conversion";
+						SetLinks(params.x);
+						xelem.value = params.x;
+						convert();
+					}
+				});
+				function SetLinks(x) {
+					var p1 = document.getElementById("p1");
+					var p2 = document.createElement('p');
+					var p3 = document.createElement('p');
+					var x = new BigNumber(x, 16);
+					var x1 = x.minus(1).toString(16).toUpperCase();
+					var x2 = x.plus(1).toString(16).toUpperCase();
+					p2.innerHTML = "<a href='hex-to-decimal.html?x=" + x1 + "'>" + x1 + " hex to decimal &#9658;</a>";
+					p3.innerHTML = "<a href='hex-to-decimal.html?x=" + x2 + "'>" + x2 + " hex to decimal &#9658;</a>";
+					p1.parentNode.insertBefore(p2, p1);
+					p1.parentNode.insertBefore(p3, p1);
+				}
+				function GetURLParams() {
+					var url = window.location.href;
+					var regex = /[?&]([^=#]+)=([^&#]*)/g,
+						//url = "www.domain.com/?v=123&p=hello",
+						params = {},
+						match;
+					while (match = regex.exec(url)) {
+						params[match[1]] = match[2];
+					}
+					return params;
+				}
+				function hide() {
+					document.getElementById("row1").style.display = 'none';
+					document.getElementById("row2").style.display = 'none';
+				}
+				function show() {
+					document.getElementById("row1").style.display = '';
+					document.getElementById("row2").style.display = '';
+				}
+				function convert() {
+					var hex = document.calcform.x.value;
+					hex = hex.replace("0x", "");
+					hex = hex.replace("0X", "");
+					try {
+						var x = new BigNumber(hex, 16);
+						xelem.style.backgroundColor = "white";
+					}
+					catch (err) {
+						xelem.style.backgroundColor = "#fff0f0";
+						return;
+					}
+					var xx = x.toString(10);
+					yelem.value = xx;
+					y3elem.value = x.toString(2);
+					if (x.isInt() && x.gte(0)) {
+						if (hex.length == 2 && x.gte("80", 16)) { x = x.minus("100", 16); }
+						if (hex.length == 4 && x.gte("8000", 16)) { x = x.minus("10000", 16); }
+						if (hex.length == 8 && x.gte("80000000", 16)) { x = x.minus("100000000", 16); }
+						var t1 = new BigNumber("8000000000000000", 16);
+						var t2 = new BigNumber("10000000000000000", 16);
+						if (hex.length == 16 && x.gte(t1)) { x = x.minus(t2); }
+						if (hex.length == 2 || hex.length == 4 || hex.length == 8 || hex.length == 16)
+							y2elem.value = x.toString(10);
+						else
+							y2elem.value = "N/A";
+					}
+					else
+						y2elem.value = "N/A";
+					var yd = yelem.value.match(/\d/g);
+					var y2d = y2elem.value.match(/\d/g);
+					var y3d = y3elem.value.match(/\d/g);
+					var ylabel = "Decimal number";
+					var y2label = "Decimal from signed 2's complement";
+					var y3label = "Binary number";
+					if (yd != null) ylabel += " (" + yd.length + ((yd.length == 1) ? " digit)" : " digits)");
+					if (y2d != null) y2label += " (" + y2d.length + ((y2d.length == 1) ? " digit)" : " digits)");
+					if (y3d != null) y3label += " (" + y3d.length + ((y3d.length == 1) ? " digit)" : " digits)");
+					document.getElementById("ylabel").innerHTML = ylabel;
+					document.getElementById("y2label").innerHTML = y2label;
+					document.getElementById("y3label").innerHTML = y3label;
+					hex = hex.toUpperCase();
+					var txt = "(" + hex + ")\u2081\u2086 = ";
+					var d, e, minus = false;
+					var len = hex.length;
+					if (hex[0] == "-") { txt += "-["; hex = hex.substr(1); len--; minus = true; }
+					var idot = hex.indexOf(".");
+					if (idot >= 0) { hex = hex.substring(0, idot) + hex.substring(idot + 1, len); len--; }
+					else idot = len;
+					etbl = ["\u2070", "\u00B9", "\u00B2", "\u00B3", "\u2074", "\u2075", "\u2076", "\u2077", "\u2078", "\u2079"];
+					for (var i = 0; i < len; i++) {
+						d = hex.charCodeAt(i);
+						if (d < 58) d -= 48;
+						else if (d > 64) d -= 55;
+						//e = len-i-1;
+						e = idot - i - 1;
+						e = e.toString();
+						txt += "(" + d + " \u00D7 16";
+						for (var k = 0; k < e.length; k++)
+							if (e[k] == "-")
+								txt += "\u207B";
+							else
+								txt += etbl[e[k]];
+						txt += ")";
+						if (i < len - 1) txt += " + ";
+					}
+					if (minus) txt += "]";
+					txt += " = (" + xx + ")\u2081\u2080";
+					document.getElementById("y4").value = txt;
+				}
+			</script>
 
-</center>
+	</center>
 </body>
 
 </html>

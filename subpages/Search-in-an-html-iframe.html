@@ -1,130 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-1.css">
-<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/search-in-an-html-iframe-stylesheet.css">
-<link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-2.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-1.css">
+  <link rel="stylesheet" href="https://supraboy981322.github.io/Styles/search-in-an-html-iframe-stylesheet.css">
+  <link rel="stylesheet" href="https://supraboy981322.github.io/Styles/Homepage-stylesheet-2.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body class="hs1-main" style="padding-top:42px;">
 
   <style>
-    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Roboto", sans-serif;
+    }
   </style>
   <div>
     <div>
       <h1 style="text-align:center;color:teal"><b>Search In An HTML iFrame</b></h1>
     </div>
   </div>
-	<div style="margin:20px;border-radius:25px;padding-top:15px;background-color:azure;outline: solid black">
-      <h2 style="color:red;text-align:center;border-radius:25px;margin-left:20%;margin-right:20%;background-color:white;outline: solid black">Description</h2>
-      <p style="margin:20px">This is a website that allows the user to search in an HTML iframe. If you download the original file, you can browse using it without being seen by most anti-privacy software that teachers/employers use. This website was originally a single offline
-        HTML document, but I decided to go public with it just for the fun of it. You can download the original file using the link further down the page</p>
-        <br>
-    </div>
-    <div>
+  <div style="margin:20px;border-radius:25px;padding-top:15px;background-color:azure;outline: solid black">
+    <h2
+      style="color:red;text-align:center;border-radius:25px;margin-left:20%;margin-right:20%;background-color:white;outline: solid black">
+      Description</h2>
+    <p style="margin:20px">This is a website that allows the user to search in an HTML iframe. If you download the
+      original file, you can browse using it without being seen by most anti-privacy software that teachers/employers
+      use. This website was originally a single offline
+      HTML document, but I decided to go public with it just for the fun of it. You can download the original file using
+      the link further down the page</p>
     <br>
-    <script>   
-        function changeChannel() {
-          event.preventDefault();
-          document.getElementById("searchFrame").src = document.getElementById("searchInput").value;
-        }
-        </script>
-          </head>
-          <body>
-        <div id="container">
+  </div>
+  <div>
+    <br>
+    <script>
+      function changeChannel() {
+        event.preventDefault();
+        document.getElementById("searchFrame").src = document.getElementById("searchInput").value;
+      }
+    </script>
+    </head>
+
+    <body>
+      <div id="container">
         <div align="center">
-          <iframe
-          id="searchFrame"
-          src="https://www.bing.com"
-          width= 75%
-          height= "800px"
-          frameborder="0"
-          scrolling="yes"
-          allowfullscreen="true"> 
-        </iframe></div>
-         <div>
-         <center><button class="button" id="modal" onclick="document.getElementById('id01').style.display='block'"><b>Enter URL</b></button></center>
-         <div class="modal" id="id01">
+          <iframe id="searchFrame" src="https://www.bing.com" width=75% height="800px" frameborder="0" scrolling="yes"
+            allowfullscreen="true">
+          </iframe>
+        </div>
+        <div>
+          <center><button class="button" id="modal"
+              onclick="document.getElementById('id01').style.display='block'"><b>Enter URL</b></button></center>
+          <div class="modal" id="id01">
             <form class="modal-content animate">
-           <div class="imgcontainer">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-           </div>
-           <div class="container">
-               <p>Enter the URL link for the site you would like to use then hit enter.</p>
-              <label for="input">Enter Link Here</label>
-              <center><input type="text" id="searchInput" name="input"></center>
-              <center><button class="button" onclick="changeChannel()">Go</button></center>
-           </div>
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                  title="Close Modal">&times;</span>
+              </div>
+              <div class="container">
+                <p>Enter the URL link for the site you would like to use then hit enter.</p>
+                <label for="input">Enter Link Here</label>
+                <center><input type="text" id="searchInput" name="input"></center>
+                <center><button class="button" onclick="changeChannel()">Go</button></center>
+              </div>
               <div class="container" style="background-color:#f1f1f1">
-                  <center><button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">close</button></center>
-                </div>
+                <center><button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">close</button></center>
+              </div>
             </form>
-            </div>
-           </div>
-         </div>
-         </div>
-                    
-      
-        <center><div id="disqus_thread"></div></center>
-      <center><p>If you would like to download the original HTML file, <a href="https://supraboy981322.github.io/downloads/search-in-an-html-document-by-zane-sanders" download>please click here</a>.</p></center>
-      <center>
-      <b><h2>PLEASE NOTE:</h2></b>
-      <p>- When using google, try using "https://www.google.com/webhp?igu=1" instead of "https://www.google.com/"</p>
-      <p>- Google images currently may not work</p>
-      <p>- If you find a YouTube or Google Images clone/mirror that works, please contact me with the link</p>
-      <p>- Your activity will still be attached to your IP Address, so please use a VPN if you insist on using this and don't want to be trackable</p>
-      <p>- Nothing you do here will show up on your browser history, but it will show up on government and business databases</p>
-      <p>- Feel free to use my code for the HTML iframe as you please, but make sure to give me credit for the code you decide to use.</p>
-            
-      <center><h2>Website list</h2></center>
-      <center><p><b>PLEASE NOTE:</b> These are <b>not the only</b> websites you can use!</p></center>
-      <center><p>Please contact me if you find a website that does <b>not</b> work, or if you would like to add a website that <b>does</b> work, so I can add it to the list.</p></center>
-      <table>
-        <tr>
-          <th style="width:50%">Tested websites</th>
-          <th>Does it work?</th>
-          <th>How well</th>
-        </tr>
-        <tr>
-          <td>youtube.com</td>
-          <td><i class="fa fa-remove"></i></td>
-          <td><i class="fa fa-minus"></i></td>
-        </tr>
-        <tr>
-          <td>google.com</td>
-          <td><i class="fa fa-minus"></i></td>
-          <td><i>variable</i></td>
-        </tr>
-        <tr>
-          <td>bing.com</td>
-          <td><i class="fa fa-check"></i></td>
-          <td><i>great</i></td>
-        </tr>
-        <tr>
-          <td>github.com</td>
-          <td><i class="fa fa-remove"></i></td>
-          <td><i class="fa fa-minus"></i></td>
-        </tr>
-        <tr>
-      
-        </tr>
-      </table>
-      <b>You can contact me at supraboy981322@gmail.com. I rarely check this email, so it may take a while for me to respond</b>
-      <p>if you have any issues, please post them on <a href="https://github.com/Supraboy981322/supraboy981322.github.io/issues">the github page for this website</a>.</p>
-      </center>
-      
-    <br>
-  <!-- END MAIN -->
-        <!-- Footer -->
-        <footer id="myFooter" style="padding:5px;background-color:#50a1a1;height:50px">
-          <div>
-              <h4 style="text-align:center;"><b>End of page</b></h4>
           </div>
-      </footer>
+        </div>
+      </div>
+  </div>
+
+
+  <center>
+    <div id="disqus_thread"></div>
+  </center>
+  <center>
+    <p>If you would like to download the original HTML file, <a
+        href="https://supraboy981322.github.io/downloads/search-in-an-html-document-by-zane-sanders" download>please
+        click here</a>.</p>
+  </center>
+  <center>
+    <b>
+      <h2>PLEASE NOTE:</h2>
+    </b>
+    <p>- When using google, try using "https://www.google.com/webhp?igu=1" instead of "https://www.google.com/"</p>
+    <p>- Google images currently may not work</p>
+    <p>- If you find a YouTube or Google Images clone/mirror that works, please contact me with the link</p>
+    <p>- Your activity will still be attached to your IP Address, so please use a VPN if you insist on using this and
+      don't want to be trackable</p>
+    <p>- Nothing you do here will show up on your browser history, but it will show up on government and business
+      databases</p>
+    <p>- Feel free to use my code for the HTML iframe as you please, but make sure to give me credit for the code you
+      decide to use.</p>
+
+    <center>
+      <h2>Website list</h2>
+    </center>
+    <center>
+      <p><b>PLEASE NOTE:</b> These are <b>not the only</b> websites you can use!</p>
+    </center>
+    <center>
+      <p>Please contact me if you find a website that does <b>not</b> work, or if you would like to add a website that
+        <b>does</b> work, so I can add it to the list.</p>
+    </center>
+    <table>
+      <tr>
+        <th style="width:50%">Tested websites</th>
+        <th>Does it work?</th>
+        <th>How well</th>
+      </tr>
+      <tr>
+        <td>youtube.com</td>
+        <td><i class="fa fa-remove"></i></td>
+        <td><i class="fa fa-minus"></i></td>
+      </tr>
+      <tr>
+        <td>google.com</td>
+        <td><i class="fa fa-minus"></i></td>
+        <td><i>variable</i></td>
+      </tr>
+      <tr>
+        <td>bing.com</td>
+        <td><i class="fa fa-check"></i></td>
+        <td><i>great</i></td>
+      </tr>
+      <tr>
+        <td>github.com</td>
+        <td><i class="fa fa-remove"></i></td>
+        <td><i class="fa fa-minus"></i></td>
+      </tr>
+      <tr>
+
+      </tr>
+    </table>
+    <b>You can contact me at supraboy981322@gmail.com. I rarely check this email, so it may take a while for me to
+      respond</b>
+    <p>if you have any issues, please post them on <a
+        href="https://github.com/Supraboy981322/supraboy981322.github.io/issues">the github page for this website</a>.
+    </p>
+  </center>
+
+  <br>
+  <!-- END MAIN -->
+  <!-- Footer -->
+  <footer id="myFooter" style="padding:5px;background-color:#50a1a1;height:50px">
+    <div>
+      <h4 style="text-align:center;"><b>End of page</b></h4>
     </div>
+  </footer>
+  </div>
 </body>
+
 </html>

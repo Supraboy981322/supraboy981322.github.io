@@ -18,13 +18,13 @@ body {
   display: table;
   clear: both;
   width: 99.5%;
-  margin:0px;
+  margin: 0px;
 }
 
 .column {
   float: left;
   padding: 0px 2%;
-  align: center;
+  box-align: center;
   height: 150px;
 }
 
@@ -39,8 +39,8 @@ body {
   margin: 0px 2.5%;
   width: 42%;
   background-color: rgba(200, 230, 255, 0.50);
-  backdrop-filter: blur(3px);  
-  border-radius:14px;
+  backdrop-filter: blur(3px);
+  border-radius: 14px;
 }
 
 .column h2 {
@@ -53,12 +53,14 @@ body {
   border-radius: 14px;
   backdrop-filter: blur(3px);
 }
+
 .blurBack {
-  float:left;
+  float: left;
   margin: 2% 2%;
   width: 1860px;
   background-color: rgba(200, 230, 255, 0.50);
-  backdrop-filter: blur(3px);;
-  border-radius:14px;  
+  backdrop-filter: blur(3px);
+  ;
+  border-radius: 14px;
   height: 1000px;
 }

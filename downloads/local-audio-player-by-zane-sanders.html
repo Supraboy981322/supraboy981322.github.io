@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        audio, input {
-            display: inline;
-        }
-    
-        .info {
-            background-color: aqua;            
-        }
-    
-        .error {
-            background-color: red;
-            color: white;
-        }
-    </style>
-        <center><div id="message"></div></center>
-        <br>
-        <center><input type="file" accept="audio/*"/><audio style="vertical-align:middle;" controls autoplay></audio></center>
-        <br>
+<style>
+    audio,
+    input {
+        display: inline;
+    }
+
+    .info {
+        background-color: aqua;
+    }
+
+    .error {
+        background-color: red;
+        color: white;
+    }
+</style>
+<center>
+    <div id="message"></div>
+</center>
+<br>
+<center><input type="file" accept="audio/*" /><audio style="vertical-align:middle;" controls autoplay></audio></center>
+<br>
 <script>
-        (function localFileaudioPlayerInit(win) {
-            var URL = win.URL || win.webkitURL,
+    (function localFileaudioPlayerInit(win) {
+        var URL = win.URL || win.webkitURL,
             displayMessage = (function displayMessageInit() {
                 var node = document.querySelector('#message');
 
@@ -55,14 +58,15 @@
                 audioNode.src = fileURL;
             },
             inputNode = document.querySelector('input');
-            if (!URL) {
-                displayMessage('Your browser is not ' + 
+        if (!URL) {
+            displayMessage('Your browser is not ' +
                 '<a href="http://caniuse.com/bloburls">supported</a>!', true);
 
-                return;
-            }      
-            inputNode.addEventListener('change', playSelectedFile, false);
-        }(window));
+            return;
+        }
+        inputNode.addEventListener('change', playSelectedFile, false);
+    }(window));
 </script>
 </body>
+
 </html>

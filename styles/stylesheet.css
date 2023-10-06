@@ -1,4 +1,11 @@
-html,body,h1,h2,h3,h4,h5,h6 {
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Roboto", sans-serif;
 }
 
@@ -15,8 +22,8 @@ body {
 }
 
 .textBox {
-  background: rgba(255,255,255,0.40);
-  backdrop-filter: blur(3px);  
+  background: rgba(255, 255, 255, 0.40);
+  backdrop-filter: blur(3px);
   border-radius: 14px;
   margin: 20px;
   border-radius: 25px;
@@ -24,8 +31,8 @@ body {
 }
 
 .textBox h2 {
-  background: rgba(192,243,252,0.1);
-  backdrop-filter: blur(3px);  
+  background: rgba(192, 243, 252, 0.1);
+  backdrop-filter: blur(3px);
   border-radius: 14px;
   border-radius: 25px;
   color: red;
@@ -37,11 +44,11 @@ body {
 }
 
 .textBox p {
-  text-align:center;
+  text-align: center;
   padding-top: 20px;
   padding-right: 20px;
   padding-left: 20px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .pageTitle {
@@ -63,8 +70,8 @@ footer {
   margin: 5px 15px 20px 15px;
   padding: 2px;
   padding-top: 3px;
-  background: rgba(192,243,252,0.1);
-  backdrop-filter: blur(3px);  
+  background: rgba(192, 243, 252, 0.1);
+  backdrop-filter: blur(3px);
   border-radius: 14px;
   border-radius: 25px;
 }
@@ -75,34 +82,34 @@ footer h4 {
 }
 
 .pill {
-  background: rgba(0,200,250,0.3);
+  background: rgba(0, 200, 250, 0.3);
   border-radius: 14px;
   height: auto;
-  text-align:center;
+  text-align: center;
   margin: auto;
   width: 75%;
   padding: 15px;
-  border:0px;
+  border: 0px;
 
 }
 
 .nav-pill {
   font-size: 20px;
   font-weight: bold;
-  color:blue;
-  border:0px;
-  background-color:transparent;
+  color: blue;
+  border: 0px;
+  background-color: transparent;
 }
 
 .nav-pill p {
   margin: -17px 0px 0px 0px;
-  color:black;
+  color: black;
 }
 
 /* Style the tab */
 .tab {
   overflow: hidden;
-  background-color: rgba(192,243,252,0.1);
+  background-color: rgba(192, 243, 252, 0.1);
 }
 
 /* Style the buttons inside the tab */
@@ -112,19 +119,19 @@ footer h4 {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  border-radius:25px;
-  font-weight:bold;
+  border-radius: 25px;
+  font-weight: bold;
   margin: 0.1vw;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: rgba(220,220,210,0.5);
+  background-color: rgba(220, 220, 210, 0.5);
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: rgba(200,200,200,0.5);
+  background-color: rgba(200, 200, 200, 0.5);
 }
 
 /* Style the tab content */
@@ -135,8 +142,8 @@ footer h4 {
 }
 
 .tabcontent h3 {
-  background: rgba(200,223,102,0.5);
-  backdrop-filter: blur(3px);  
+  background: rgba(200, 223, 102, 0.5);
+  backdrop-filter: blur(3px);
   border-radius: 14px;
   border-radius: 25px;
   color: purple;
@@ -146,12 +153,14 @@ footer h4 {
   margin-right: 25%;
   padding: 12px;
 }
+
 .center {
   margin: auto;
   width: 33%;
   padding: 10px;
   text-align: center;
 }
+
 .centerV {
   vertical-align: center;
 }
@@ -167,35 +176,35 @@ footer h4 {
   width: 80%;
 }
 
-.gridBox{
-  background: rgba(255,255,255,0.40);
-  backdrop-filter: blur(3px);  
+.gridBox {
+  background: rgba(255, 255, 255, 0.40);
+  backdrop-filter: blur(3px);
   border-radius: 25px;
   padding: 10px;
-  overflow:hidden;
-  color:black;
+  overflow: hidden;
+  color: black;
 }
 
 .gridBox img {
-  border-radius:20px;
-  width:100%;
+  border-radius: 20px;
+  width: 100%;
 }
 
-.gridBox p{
-  font-size:10px;
+.gridBox p {
+  font-size: 10px;
   padding: 0px 0px 0px 5px;
 }
 
-.gridBox b{
-  padding-left:5px;
+.gridBox b {
+  padding-left: 5px;
 }
 
 .contentGrid table,
 .contentGrid td {
   border: 0.5vw solid transparent;
-  width:100vw;
-  right:8px;
-  margin:-8px;
+  width: 100vw;
+  right: 8px;
+  margin: -8px;
 }
 
 .contentGrid thead,
@@ -203,4 +212,3 @@ footer h4 {
   background-color: #333;
   color: #fff;
 }
-

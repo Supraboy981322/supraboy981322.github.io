@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Zane's Website</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <style>
-    html,body,h1,h2,h3,h4,h5,h6 {
+
+<head>
+  <title>Zane's Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: "Roboto", sans-serif;
     }
+
     body {
       font-family: "Lato", sans-serif;
     }
+
     .sidenav {
       height: 100%;
       width: 0;
@@ -20,12 +31,13 @@
       z-index: 1;
       top: 0;
       left: 0;
-      background-color: rgba(192,243,252,0.5);
+      background-color: rgba(192, 243, 252, 0.5);
       backdrop-filter: blur(3px);
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 60px;
     }
+
     .sidenav a {
       padding: 8px 8px 8px 32px;
       text-decoration: none;
@@ -33,12 +45,14 @@
       color: black;
       display: block;
       transition: 0.3s;
-      font-weight:bold;
+      font-weight: bold;
     }
+
     .sidenav a:hover {
       color: grey;
-      font-size:30px;
+      font-size: 30px;
     }
+
     .sidenav .closebtn {
       position: absolute;
       top: 0;
@@ -46,32 +60,40 @@
       font-size: 36px;
       margin-left: 50px;
     }
+
     @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
     }
-    </style>
-    <!-- Sidebar -->
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a onclick="changeChannel('https://supraboy981322.github.io/home');closeNav();">Home</a>
-      <a onclick="changeChannel('https://supraboy981322.github.io/about-me');closeNav();">About</a>
-      <a onclick="changeChannel('https://supraboy981322.github.io/site-map');closeNav();">Sitemap</a>
-      <a onclick="changeChannel('https://supraboy981322.github.io/subpages/games');closeNav();">Games</a>
-      <a onclick="changeChannel('https://supraboy981322.github.io/youtube-videos');closeNav();">My YouTube Videos</a>
+  </style>
+  <!-- Sidebar -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a onclick="changeChannel('https://supraboy981322.github.io/home');closeNav();">Home</a>
+    <a onclick="changeChannel('https://supraboy981322.github.io/about-me');closeNav();">About</a>
+    <a onclick="changeChannel('https://supraboy981322.github.io/site-map');closeNav();">Sitemap</a>
+    <a onclick="changeChannel('https://supraboy981322.github.io/subpages/games');closeNav();">Games</a>
+    <a onclick="changeChannel('https://supraboy981322.github.io/youtube-videos');closeNav();">My YouTube Videos</a>
+  </div>
+
+  <div class="hs1-main">
+    <!-- Sidebar open button -->
+    <div id="sidebarButton"
+      style="position:absolute; z-index:0; left:-20px; padding:5px 20px 0px 35px; top:20px; border-radius:20px;background: rgba(102,243,252,0.5);backdrop-filter: blur(3px);">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
     </div>
-    
-    <div class="hs1-main">
-      <!-- Sidebar open button -->
-      <div id="sidebarButton"  style="position:absolute; z-index:0; left:-20px; padding:5px 20px 0px 35px; top:20px; border-radius:20px;background: rgba(102,243,252,0.5);backdrop-filter: blur(3px);">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-      </div>
-      
-      <!-- Main content -->
-      <iframe id="pageContentFrame" src="https://supraboy981322.github.io/home" frameborder="0" scrolling="yes" seamless="seamless" index="1" style="display:block; margin:-8px; width:100vw; height:100vh;"></iframe>
-      <!-- END MAIN -->
-    </div>
-    <script>
+
+    <!-- Main content -->
+    <iframe id="pageContentFrame" src="https://supraboy981322.github.io/home" frameborder="0" scrolling="yes"
+      seamless="seamless" index="1" style="display:block; margin:-8px; width:100vw; height:100vh;"></iframe>
+    <!-- END MAIN -->
+  </div>
+  <script>
     function changeChannel(channelURL) {
       event.preventDefault();
       document.getElementById("pageContentFrame").src = channelURL
@@ -83,6 +105,7 @@
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
     }
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
