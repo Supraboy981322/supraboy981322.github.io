@@ -54,11 +54,11 @@
     <!-- Sidebar -->
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a onclick="changeChannel('https://supraboy981322.github.io/home')">Home</a>
-      <a onclick="changeChannel('https://supraboy981322.github.io/about-me')">About</a>
-      <a onclick="changeChannel('https://supraboy981322.github.io/site-map')">Sitemap</a>
-      <a onclick="changeChannel('https://supraboy981322.github.io/subpages/games')">Games</a>
-      <a onclick="changeChannel('https://supraboy981322.github.io/youtube-videos')">My YouTube Videos</a>
+      <a onclick="changeChannel('https://supraboy981322.github.io/home');closeNav();">Home</a>
+      <a onclick="changeChannel('https://supraboy981322.github.io/about-me');closeNav();">About</a>
+      <a onclick="changeChannel('https://supraboy981322.github.io/site-map');closeNav();">Sitemap</a>
+      <a onclick="changeChannel('https://supraboy981322.github.io/subpages/games');closeNav();">Games</a>
+      <a onclick="changeChannel('https://supraboy981322.github.io/youtube-videos');closeNav();">My YouTube Videos</a>
     </div>
     
     <div class="hs1-main">
@@ -75,9 +75,6 @@
     function changeChannel(channelURL) {
       event.preventDefault();
       document.getElementById("pageContentFrame").src = channelURL
-    }
-    function xafronianVoiloe(){
-      document.getElementById("pageContentFrame").src = "https://www.bing.com"
     }
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
