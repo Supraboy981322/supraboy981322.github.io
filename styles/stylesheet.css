@@ -212,3 +212,7 @@ footer h4 {
   background-color: #333;
   color: #fff;
 }
+
+.modal {
+  display:none;
+}
