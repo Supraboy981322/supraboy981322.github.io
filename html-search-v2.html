@@ -1,21 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<body style="margin:0px;padding:0px;background:black;">
-    <div style="background:black;height:10%;width:100%">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://supraboy981322.github.io/styles/stylesheet.css">
+</head>
 
-        <center><input placeholder="Enter URL" type="text" id="searchInput" name="input"><button
-                onclick="changeChannel()">Search</button></center>
+<body class="main">
 
-    </div>
-    <iframe id="searchFrame" src="https://www.bing.com/"
-        style="position: absolute; height: 95%; width:100%; border: none"></iframe>
-</body>
-<script>
-    function changeChannel() {
+  <div>
+    <h1 class="pageTitle">HTML iFrame Search V2</h1>
+  </div>
+  <br>
+  <div class="textBox">
+    <h2>Description</h2>
+    <p>This is a version 2 of a webpage that allows the user to search in an HTML iframe. If you download the v2 file,
+      you can browse using it without being seen by most anti-privacy software that teachers/employers use. This version
+      uses a proxie method to get around site compatability and various spyware and blocking software. <strong
+        style="color:purple; font-size:20px;">PLEASE NOTE THAT DUE TO THE USE OF A PROXY, THIS MAY BE BLOCKED BY YOUR
+        ORGANIZATION OR MAY NOT WORK!</strong> You can download the HTML file for this page using the link further down
+      the page</p>
+    <br>
+  </div>
+  <br>
+  <div>
+    <script>
+      function changeChannel() {
         event.preventDefault();
         document.getElementById("searchFrame").src = document.getElementById("searchInput").value;
-    }
-</script>
+      }
+    </script>
+    <div class="textBox" id="container">
+      <br>
+      <div align="center">
+        <script src="https://niutech.github.io/x-frame-bypass/x-frame-bypass.js" type="module"></script>
+        <iframe is="x-frame-bypass" id="searchFrame" src="https://www.bing.com" width=75% height="800px" frameborder="0"
+          scrolling="yes" allowfullscreen="true"></iframe>
+      </div>
+      <br>
+      <div>
+        <center><button class="pill button" id="modal"
+            onclick="document.getElementById('id01').style.display='block'"><b>Enter URL</b></button></center>
+        <br>
+        <div class="modal textBox" id="id01">
+          <form class="modal-content animate">
+            <div class="container">
+              <p>Enter the URL link for the site you would like to use then hit enter.</p>
+              <label for="input">
+                <center font-weight="bold">Enter Link Here</center>
+              </label>
+              <center><input type="text" id="searchInput" name="input"></center>
+              <br>
+              <center><button class="button pill" onclick="changeChannel()"><b>Go</b></button></center>
+            </div>
+            <br>
+            <div class="container">
+              <center><button type="button" class="pill" onclick="document.getElementById('id01').style.display='none'"
+                  class="cancelbtn pill"><b>Close</b></button></center>
+            </div>
+            <br>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <center>
+    <div id="disqus_thread"></div>
+  </center>
+  <div class="pageTitle">
+    <p>If you would like to download the original HTML file, <a
+        href="https://supraboy981322.github.io/downloads/search-in-an-html-document-v2-by-zane-sanders" download>please
+        click here</a>.</p>
+  </div>
+  </center>
+  <div class="textBox">
+    <b>
+      <h2>PLEASE NOTE:</h2>
+    </b>
+    <p>- DUE TO THE USE OF A PROXY, THIS MAY BE BLOCKED BY YOUR ORGANIZATION OR MAY NOT WORK!</p>
+    <p>The proxy used in this method is French, this is because it was the only freely available proxie at the time of
+      creation. You'll have to change the language to English if you cannot read French. Sorry for the inconvenience</p>
+    <p>- Thanks to <a style="color:purple;" href="https://github.com/niutech">niutech</a> for the proxy and javascript
+      file used in this method. He hosts it <a style="color:purple;"
+        href="https://niutech.github.io/x-frame-bypass/x-frame-bypass.js">here</a>.</p>
+  </div>
+  <div class="textBox" style="text-align:center">
+    <h2>Website list</h2>
+    <p><b>PLEASE NOTE:</b> These are <b>not the only</b> websites you can use!</p>
+    <p>Please contact me if you find a website that does <b>not</b> work, or if you would like to add a website
+      that<b>does</b> work, so I can add it to the list.</p>
+    <style>
+      td {
+        padding: 20px;
+      }
+    </style>
+    <table width="100%">
+      <tr>
+        <td>
+          <h2 style="margin-left: 0%; margin-right: 0%; width:100%;">Sites</h2>
+          <p>youtube.com</p>
+          <p>google.com</p>
+          <p>bing.com</p>
+          <p>github.com</p>
+          <p>supraboy981322.github.io</p>
+        </td>
+        <td>
+          <h2 style="margin-left: 0%;margin-right:0%;width:100%;">Status</h2>
+          <p>Loads</p>
+          <p>Working</p>
+          <p>Varies</p>
+          <p>Working</p>
+          <p>Working</p>
+        </td>
+      </tr>
+    </table>
+    <table width="100%">
+      <tr>
+        <td>
+          <h2 style="margin-left:0%;margin-right:0%;width:100%;">Sites</h2>
+          <p>youtube.com</p>
+          <p>google.com</p>
+          <p>bing.com</p>
+          <p>github.com</p>
+          <p>supraboy981322.github.io</p>
+        </td>
+        <td>
+          <h2 style="margin-left: 0%;margin-right: 0%;width:100%;">Usability</h2>
+          <p>Videos will not play</p>
+          <p>Perfect</p>
+          <p>Varies</p>
+          <p>Varies</p>
+          <p>Perfect</p>
+        </td>
+      </tr>
+    </table>
+    <b>You can contact me at supraboy981322@gmail.com. I rarely check this email, so it may take a while for me to
+      respond</b>
+    <p>If you have any issues, please post them on <a
+        href="https://github.com/Supraboy981322/supraboy981322.github.io/issues">the github page for this website</a>.
+    </p>
+    <br>
+  </div>
+
+  <br>
+  <!-- END MAIN -->
+  <!-- Footer -->
+  <footer id="myFooter" style="padding:5px;background-color:#50a1a1;height:50px">
+    <div>
+      <h4 style="text-align:center;"><b>End of page</b></h4>
+    </div>
+  </footer>
+  </div>
+</body>
 
 </html>

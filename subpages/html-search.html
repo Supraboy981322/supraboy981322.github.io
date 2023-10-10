@@ -4,18 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="/styles/stylesheet.css">
+  <link rel="stylesheet" href="/styles/stylesheet.css">
 </head>
 
 <body class="main">
 
-    <div>
-      <h1 class="pageTitle">HTML iFrame Search</h1>
-    </div>
+  <div>
+    <h1 class="pageTitle">HTML iFrame Search</h1>
+  </div>
   <br>
   <div class="textBox">
     <h2>Description</h2>
-    <p>This is a website that allows the user to search in an HTML iframe. If you download the original file, you can browse using it without being seen by most anti-privacy software that teachers/employers use. This website was originally a single offline HTML document, but I decided to go public with it just for the fun of it. You can download the original file using the link further down the page</p>
+    <p>This is a webpage that allows the user to search in an HTML iframe. If you download the original file, you can
+      browse using it without being seen by most anti-privacy software that teachers/employers use. This webpage was
+      originally a single offline HTML document, but I decided to go public with it just for the fun of it. You can
+      download the original file using the link further down the page</p>
     <br>
   </div>
   <br>
@@ -26,33 +29,38 @@
         document.getElementById("searchFrame").src = document.getElementById("searchInput").value;
       }
     </script>
-      <div class="textBox" id="container">
+    <div class="textBox" id="container">
+      <br>
+      <div align="center">
+        <iframe id="searchFrame" src="https://www.bing.com" width=75% height="800px" frameborder="0" scrolling="yes"
+          allowfullscreen="true"></iframe>
+      </div>
+      <br>
+      <div>
+        <center><button class="pill button" id="modal"
+            onclick="document.getElementById('id01').style.display='block'"><b>Enter URL</b></button></center>
         <br>
-        <div align="center">
-          <iframe id="searchFrame" src="https://www.bing.com" width=75% height="800px" frameborder="0" scrolling="yes" allowfullscreen="true"></iframe>
-        </div>
-        <br>
-        <div>
-          <center><button class="pill button" id="modal" onclick="document.getElementById('id01').style.display='block'"><b>Enter URL</b></button></center>
-          <br>
-          <div class="modal textBox" id="id01">
-            <form class="modal-content animate">
-              <div class="container">
-                <p>Enter the URL link for the site you would like to use then hit enter.</p>
-                <label for="input"><center font-weight="bold">Enter Link Here</center></label>
-                <center><input type="text" id="searchInput" name="input"></center>
-                <br>
-                <center><button class="button" onclick="changeChannel()">Go</button></center>
-              </div>
+        <div class="modal textBox" id="id01">
+          <form class="modal-content animate">
+            <div class="container">
+              <p>Enter the URL link for the site you would like to use then hit enter.</p>
+              <label for="input">
+                <center font-weight="bold">Enter Link Here</center>
+              </label>
+              <center><input type="text" id="searchInput" name="input"></center>
               <br>
-              <div class="container">
-                <center><button type="button" class="pill" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn pill"><b>close</b></button></center>
-              </div>
-              <br>
-            </form>
-          </div>
+              <center><button class="button pill" onclick="changeChannel()"><b>Go</b></button></center>
+            </div>
+            <br>
+            <div class="container">
+              <center><button type="button" class="pill" onclick="document.getElementById('id01').style.display='none'"
+                  class="cancelbtn pill"><b>Close</b></button></center>
+            </div>
+            <br>
+          </form>
         </div>
       </div>
+    </div>
   </div>
 
 
@@ -60,8 +68,10 @@
     <div id="disqus_thread"></div>
   </center>
   <div class="pageTitle">
-    <p>If you would like to download the original HTML file, <a href="https://supraboy981322.github.io/downloads/search-in-an-html-document-by-zane-sanders" download>please click here</a>.</p>
-    </div>
+    <p>If you would like to download the original HTML file, <a
+        href="https://supraboy981322.github.io/downloads/search-in-an-html-document-by-zane-sanders" download>please
+        click here</a>.</p>
+  </div>
   </center>
   <div class="textBox">
     <b>
@@ -77,15 +87,16 @@
     <p>- Feel free to use my code for the HTML iframe as you please, but make sure to give me credit for the code you
       decide to use.</p>
   </div>
-    <div class="textBox" style="text-align:center">
-      <h2>Website list</h2>
-      <p><b>PLEASE NOTE:</b> These are <b>not the only</b> websites you can use!</p>
-      <p>Please contact me if you find a website that does <b>not</b> work, or if you would like to add a website that<b>does</b> work, so I can add it to the list.</p>
+  <div class="textBox" style="text-align:center">
+    <h2>Website list</h2>
+    <p><b>PLEASE NOTE:</b> These are <b>not the only</b> websites you can use!</p>
+    <p>Please contact me if you find a website that does <b>not</b> work, or if you would like to add a website
+      that<b>does</b> work, so I can add it to the list.</p>
     <style>
-    td {
-      padding: 20px;
-    }
-  </style>
+      td {
+        padding: 20px;
+      }
+    </style>
     <table width="100%">
       <tr>
         <td>
@@ -104,31 +115,32 @@
           <p>Not working</p>
           <p>Working</p>
         </td>
-      </tr>     
-      </table>
-      <table width="100%">
-        <tr>
-          <td>
-            <h2 style="margin-left:0%;margin-right:0%;width:100%;">Sites</h2>
-            <p>youtube.com</p>
-            <p>google.com</p>
-            <p>bing.com</p>
-            <p>github.com</p>
-            <p>supraboy981322.github.io</p>
-          </td>
-          <td>
-            <h2 style="margin-left: 0%;margin-right: 0%;width:100%;">Usability</h2>
-            <p>N/A</p>
-            <p>Variable</p>
-            <p>Perfect</p>
-            <p>N/A</p>
-            <p>perfect</p>
-          </td>
-        </tr>
-      </table>
-      <b>You can contact me at supraboy981322@gmail.com. I rarely check this email, so it may take a while for me to
+      </tr>
+    </table>
+    <table width="100%">
+      <tr>
+        <td>
+          <h2 style="margin-left:0%;margin-right:0%;width:100%;">Sites</h2>
+          <p>youtube.com</p>
+          <p>google.com</p>
+          <p>bing.com</p>
+          <p>github.com</p>
+          <p>supraboy981322.github.io</p>
+        </td>
+        <td>
+          <h2 style="margin-left: 0%;margin-right: 0%;width:100%;">Usability</h2>
+          <p>N/A</p>
+          <p>Variable</p>
+          <p>Perfect</p>
+          <p>N/A</p>
+          <p>perfect</p>
+        </td>
+      </tr>
+    </table>
+    <b>You can contact me at supraboy981322@gmail.com. I rarely check this email, so it may take a while for me to
       respond</b>
-    <p>if you have any issues, please post them on <a href="https://github.com/Supraboy981322/supraboy981322.github.io/issues">the github page for this website</a>.
+    <p>if you have any issues, please post them on <a
+        href="https://github.com/Supraboy981322/supraboy981322.github.io/issues">the github page for this website</a>.
     </p>
   </div>
 
