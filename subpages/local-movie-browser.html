@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .movies td {
+    padding: 5px;
+  }
+  .movies img {
+    background-color: #333;
+    padding: 0px;
+    width: 135px;
+    height: 240px;
+  }
+  .movies img:hover {
+    width: 480px;
+    height: 270px;
+    color: grey;
+    font-size: 30px;
+  }
+</style>
+<body>
+	<center>
+		<h1>Tu mama</h1>
+	</center>
+  <div id="movies" class="movies">
+  </div>
+
+</body>
+
+<script>
+  let contentList = ["https://supraboy981322.github.io/embeded-content/background.png", "https://supraboy981322.github.io/embeded-content/this-site-cant-be-reached.png", "https://supraboy981322.github.io/uncanny%20gobledygook.png"];
+  let list = document.getElementById("movies");
+  contentList.forEach((item) => {
+    let img = document.createElement("img");
+    img.src = item;
+    list.appendChild(img);
+  });	
+</script>
+</html>
