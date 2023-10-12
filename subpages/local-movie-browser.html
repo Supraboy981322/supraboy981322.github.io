@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://supraboy981322.github.io/styles/stylesheet.css">
+
 <style>
     body {
-        background-color: #b89b1c;
+        padding: 5px;
+        padding-top: 6px;
     }
 
     .libaryMovies td {
@@ -29,17 +34,38 @@
 
     .libraryDesc {
         height: 200px;
+        background: rgba(192, 243, 252, 0.55);
+        border-radius: 25px;
+        backdrop-filter: blur(3px);
+        padding: 14px;
     }
 
     .libraryDesc img {
         height: 200px;
+        border-radius: 18px;
+    }
+
+    .libraryDesc span {
+        top: 0px;
+    }
+
+    .movieRow {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.40);
+        border-radius: 25px;
+        margin: 0px;
+        padding: 8px 10px 0px 10px;
+        backdrop-filter: blur(3px);
     }
 </style>
 
 <body>
-    <div id="libraryDesc" class="libraryDesc"></div>
+    <div id="libraryDesc" class="libraryDesc">
+        <img src="https://supraboy981322.github.io/uncanny%20gobledygook.png">
+        <span>jd</span>
+    </div>
     <br>
-    <div style="height:268px;border:1px solid purple;padding:0px;" id="movies" class="libaryMovies">
+    <div id="movies" class="libaryMovies movieRow">
     </div>
 </body>
 
@@ -50,7 +76,7 @@
         let img = document.createElement("img");
         img.src = item;
         list.appendChild(img);
-    });	
+    });
 </script>
 
 </html>
