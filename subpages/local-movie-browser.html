@@ -46,16 +46,46 @@
     }
 
     .libraryDesc span {
-        top: 0px;
+        margin-top: 0px;
     }
 
     .movieRow {
         width: 100%;
+        overflow: hidden;
         background: rgba(255, 255, 255, 0.40);
         border-radius: 25px;
         margin: 0px;
         padding: 8px 10px 0px 10px;
         backdrop-filter: blur(3px);
+    }
+
+    .rowLeft {
+        float: left;
+        border: none;
+        border-radius: 0px 130px 130px 0px;
+        height: 260px;
+        margin-left: -10px;
+        background-color: rgba(255, 0, 0, 0.3);
+        width: 35px;
+    }
+
+    .rowRight {
+        float: right;
+        border: none;
+        border-radius: 130px 0px 0px 130px;
+        height: 260px;
+        margin-right: -10px;
+        background-color: rgba(255, 0, 0, 0.3);
+        width: 35px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .poster:hover+.hide {
+        display: block;
+        color: red;
     }
 </style>
 
@@ -66,7 +96,22 @@
     </div>
     <br>
     <div id="movies" class="libaryMovies movieRow">
+        <button class="rowLeft">
+            <p>
+                << /p>
+                    </buton>
+                    <button class="rowRight">
+                        <p>></p>
+                        </buton>
     </div>
+
+    <br>
+    <div class="poster">Hover over me.</div>
+    <div class="hide">I am shown when someone hovers over the div above.</div>
+
+    <div class="poster">Hover2</div>
+    <div class="hide">I am shown when someone hovers over "Hover2"</div>
+
 </body>
 
 <script>
