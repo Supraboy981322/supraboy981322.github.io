@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-  .movies td {
-    padding: 5px;
-  }
-  .movies img {
-    background-color: #333;
-    padding: 0px;
-    width: 135px;
-    height: 240px;
-  }
-  .movies img:hover {
-    width: 480px;
-    height: 270px;
-    color: grey;
-    font-size: 30px;
-  }
-</style>
-<body>
-	<center>
-		<h1>Tu mama</h1>
-	</center>
-  <div id="movies" class="movies">
-  </div>
+    body {
+        background-color: #b89b1c;
+    }
 
+    .libaryMovies td {
+        margin: 0px;
+    }
+
+    .libaryMovies img {
+        background-color: #333;
+        width: 135px;
+        height: 240px;
+        border: 2px solid black;
+        border-radius: 14px;
+        margin: 0px 5px 24px 5px;
+    }
+
+    .libaryMovies img:hover {
+        width: 155px;
+        height: 260px;
+        font-size: 30px;
+        border: 4px solid white;
+        border-radius: 20px;
+        margin 0px 0px 28px 0px;
+    }
+
+    .libraryDesc {
+        height: 200px;
+    }
+
+    .libraryDesc img {
+        height: 200px;
+    }
+</style>
+
+<body>
+    <div id="libraryDesc" class="libraryDesc"></div>
+    <br>
+    <div style="padding:0px;" id="movies" class="libaryMovies">
+    </div>
+    <img src="https://supraboy981322.github.io/embeded-content/binary-example.png" onmouseover=""
+        onmouseout="src= 'https://supraboy981322.github.io/embeded-content/binary-example.png'"></img>
 </body>
 
 <script>
-  let contentList = ["https://supraboy981322.github.io/embeded-content/background.png", "https://supraboy981322.github.io/embeded-content/this-site-cant-be-reached.png", "https://supraboy981322.github.io/uncanny%20gobledygook.png"];
-  let list = document.getElementById("movies");
-  contentList.forEach((item) => {
-    let img = document.createElement("img");
-    img.src = item;
-    list.appendChild(img);
-  });	
+    let contentList = ["https://supraboy981322.github.io/embeded-content/background.png", "https://supraboy981322.github.io/embeded-content/this-site-cant-be-reached.png", "https://supraboy981322.github.io/uncanny%20gobledygook.png"];
+    let list = document.getElementById("movies");
+    contentList.forEach((item) => {
+        let img = document.createElement("img");
+        img.src = item;
+        list.appendChild(img);
+    });	
 </script>
+
 </html>
