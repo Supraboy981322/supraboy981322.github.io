@@ -46,7 +46,12 @@
   var doc = document.getElementById("document");
   mimetype = mimetype || "text/plain";
   
-  
+  link.setAttribute('download', filename);
+  link.setAttribute('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(doc));
+  link.click(); 
 }
+
+var fileName =  'tags.html'; // You can use the .txt extension if you want
+
 </script>
 </html>
