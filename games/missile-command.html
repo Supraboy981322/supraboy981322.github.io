@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles/stylesheet.css">
+
+<body>
+    <div class="main">
+        <div>
+            <h1 class="pageTitle"><b>Missile Command</b></h1>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <h2>About this game</h2>
+            <p>Missile Command is an Arcade game released in 1980, where the player controls a crosshair across the sky background via a trackball and pressing one of three buttons to launch a counter-missile from the appropriate battery.
+                <br>Infomation from
+                &#8220<a href="https://pixels-film.fandom.com/wiki/Missile_Command">fandom.com</a>&#8221<br>Port made by <a
+                    href="https://gist.github.com/straker">&#8220straker&#8221 from GitHub</a></p>
+            <br>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <iframe src="/embeded-content/games/missile-command.html" scrolling="no" frameborder="0"
+                style="width: 800px; height: 550px; margin: 0 auto; display:block;">
+            </iframe>
+            <br>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h4><b>End of page</b></h4>
+        </div>
+    </footer>
+    <script>
+        // Prevent arrow and space keys from scrolling page
+        window.addEventListener("keydown", function (e) {
+            if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+        // Deprecated code! Needed for older browsers
+        window.addEventListener("keydown", function (e) {
+            // space and arrow keys
+            if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+
+    </script>
+</body>
+
+</html>

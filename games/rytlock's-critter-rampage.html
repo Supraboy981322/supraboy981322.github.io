@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles/stylesheet.css">
+
+<body>
+    <div class="main">
+        <div>
+            <h1 class="pageTitle"><b>Rytlock's Critter Rampage</b></h1>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <h2>About this game</h2>
+            <p>Rytlock's Critter Rampage is a web game developed by Delly Sartika and the ArenaNet Cinematics team. The game started as a fake game as part of the Super Adventure Box commercial and the concept was developed into a full-fledged game. The game has many similarities to the Super Adventure Box, including hearts, enemies, mushrooms, and music.
+                <br>Infomation from
+                &#8220<a href="https://wiki.guildwars2.com/wiki/Rytlock%27s_Critter_Rampage">guildwars2.com</a>&#8221</p>
+            <br>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <iframe src="/embeded-content/games/rytlock's-critter-rampage.html" scrolling="no" frameborder="0"
+                style="width: 320px; height: 240px; margin: 0 auto; display:block;">
+            </iframe>
+            <br>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h4><b>End of page</b></h4>
+        </div>
+    </footer>
+    <script>
+        // Prevent arrow and space keys from scrolling page
+        window.addEventListener("keydown", function (e) {
+            if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+        // Deprecated code! Needed for older browsers
+        window.addEventListener("keydown", function (e) {
+            // space and arrow keys
+            if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles/stylesheet.css">
+
+<body>
+    <div class="main">
+        <div>
+            <h1 class="pageTitle"><b>Snake</b></h1>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <h2>About this game</h2>
+            <p>The original Snake game was first introduced in 1997 on Nokia devices and became a staple game during the early days of mobile phones. The game was simple yet addictive - players controlled a snake that grew longer as it ate food while avoiding running into the walls or its own tail.<br>Infomation from
+                &#8220<a href="https://www.siouxlandproud.com/business/press-releases/ein-presswire/631105891/the-evolution-of-snake-games-and-their-popularity">siouxlandproud.com</a>&#8221<br>Port made by <a
+                    href="https://gist.github.com/straker">&#8220straker&#8221 from GitHub</a></p>
+            <br>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <iframe src="/embeded-content/games/snake.html" scrolling="no" frameborder="0"
+                style="width: 400px; height: 400px; margin: 0 auto; display:block;">
+            </iframe>
+            <br>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h4><b>End of page</b></h4>
+        </div>
+    </footer>
+    <script>
+        // Prevent arrow and space keys from scrolling page
+        window.addEventListener("keydown", function (e) {
+            if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+        // Deprecated code! Needed for older browsers
+        window.addEventListener("keydown", function (e) {
+            // space and arrow keys
+            if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+
+    </script>
+</body>
+
+</html>
