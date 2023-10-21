@@ -25,6 +25,19 @@
 <body>
 <canvas width="800" height="550" id="game"></canvas>
 <script>
+    // Prevent arrow and space keys from scrolling page
+    window.addEventListener("keydown", function (e) {
+            if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+        // Deprecated code! Needed for older browsers
+        window.addEventListener("keydown", function (e) {
+            // space and arrow keys
+            if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 const groundY = 500;  // y position of where the ground starts
