@@ -17,7 +17,7 @@ body {
   background-image: url('/embeded-content/background.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: auto 100%;
+  background-size: cover;
   background-position: right;
 }
 
