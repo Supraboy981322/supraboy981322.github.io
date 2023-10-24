@@ -1,0 +1,57 @@
+<body>
+    <div class="toolBar">
+        <button onclick="run()">Run</button>
+    </div>
+    <div class="editor">
+        <div id="input" contenteditable="true">
+
+        </div>
+        <object id="output" height="100vh" width="100vw"></object>
+    </div>
+</body>
+<style>
+    body {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .toolBar {
+        margin: 0px;
+        padding: 1vh 0vw 1vh 0.5vw;
+        width: 99.5vw;
+        background-color: #004980;
+    }
+
+    .toolBar button {
+        height: 3.5vh;
+        font-weight: bold;
+    }
+
+    .editor {
+        display: inline;
+    }
+
+    .editor #input {
+        float: left;
+        margin: 1.5vh 0vw 1.5vh 1vw;
+        width: 48vw;
+        height: 91.25vh;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    .editor #output {
+        margin: 1.5vh 1vw 0vh 0vw;
+        width: 48.5vw;
+        height: 91.25vh;
+        float: right;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+</style>
+<script>
+    function run() {
+        let code = document.getElementById("input").innerText;
+        document.getElementById("output").innerHTML = code;
+    }
+</script>
