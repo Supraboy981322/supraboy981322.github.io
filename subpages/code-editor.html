@@ -1,113 +1,114 @@
+<!DOCTYPE html>
 <body>
     <div class="toolBar">
-      <button id="HTMLview" onclick="showHTML();">HTML</button>
-      <button id="CSSview" onclick="showCSS();">CSS</button>
-      <button id="JSview" onclick="showJS();">JS</button>
-      <span>|</span>
-      <button onclick="run()">Run</button>
+        <button id="HTMLview" onclick="showHTML();">HTML</button>
+        <button id="CSSview" onclick="showCSS();">CSS</button>
+        <button id="JSview" onclick="showJS();">JS</button>
+        <span>|</span>
+        <button onclick="run()">Run</button>
     </div>
     <div class="editor">
-      <div id="input">
-        <div id="HTML" contenteditable="true">HTML placeholder</div>
-        <div id="CSS" contenteditable="true">CSS Placeholder</div>
-        <div id="JS" contenteditable="true">JS placeholder</div>
-        
-      </div>
-      <object id="output" height="100vh" width="100vw"></object>
+        <div id="input">
+            <div id="HTML" contenteditable="true">HTML placeholder</div>
+            <div id="CSS" contenteditable="true">CSS Placeholder</div>
+            <div id="JS" contenteditable="true">JS placeholder</div>
+        </div>
+        <object id="output" height="100vh" width="100vw"></object>
     </div>
-    <script>
-        function showHTML() {
-  document.getElementById("HTMLview").setAttribute ("style", "color:white;font-weight:bold; background-color:grey;");
-  document.getElementById("CSSview").setAttribute ("style", "color:black;font-weight:normal; background-color:white;");
-  document.getElementById("JSview").setAttribute ("style", "color:black;font-weight:normal; background-color:white;");
-  document.getElementById("HTML").setAttribute ("style", "display:inline;");
-  document.getElementById("CSS").setAttribute ("style", "display:none;");
-  document.getElementById("JS").setAttribute ("style", "display:none;");
+</body>
+<script>
+function showHTML() {
+    document.getElementById("HTMLview").setAttribute ("style", "color:white;font-weight:bold; background-color:grey;");
+    document.getElementById("CSSview").setAttribute ("style", "color:black;font-weight:normal; background-color:white;");
+    document.getElementById("JSview").setAttribute ("style", "color:black;font-weight:normal; background-color:white;");
+    document.getElementById("HTML").setAttribute ("style", "display:inline;");
+    document.getElementById("CSS").setAttribute ("style", "display:none;");
+    document.getElementById("JS").setAttribute ("style", "display:none;");
 };
 
 function showCSS() {
-  document.getElementById("CSSview").setAttribute ("style", "color:white;font-weight:bold; background-color:grey;");
-  document.getElementById("HTMLview").setAttribute ("style", "color:black;font-weight:normal; background-color:white;");
-  document.getElementById("JSview").setAttribute ("style", "color:black;font-weight:normal; background-color:white;");
-  document.getElementById("HTML").setAttribute ("style", "display:none;");
-  document.getElementById("CSS").setAttribute ("style", "display:inline;");
-  document.getElementById("JS").setAttribute ("style", "display:none;");
+    document.getElementById("CSSview").setAttribute ("style", "color:white;font-weight:bold; background-color:grey;");
+    document.getElementById("HTMLview").setAttribute ("style", "color:black;font-weight:normal; background-color:white;");
+    document.getElementById("JSview").setAttribute ("style", "color:black;font-weight:normal; background-color:white;");
+    document.getElementById("HTML").setAttribute ("style", "display:none;");
+    document.getElementById("CSS").setAttribute ("style", "display:inline;");
+    document.getElementById("JS").setAttribute ("style", "display:none;");
 };
 
 function showJS() {
-  document.getElementById("JSview").setAttribute ("style", "color:white;font-weight:bold; background-color:grey;");
-  document.getElementById("CSSview").setAttribute ("style", "color:black;font-weight:normal; background-color:white;");
-  document.getElementById("HTMLview").setAttribute ("style", "color:black;font-weight:normal; background-color:white;");
-  document.getElementById("HTML").setAttribute ("style", "display:none;");
-  document.getElementById("CSS").setAttribute ("style", "display:none;");
-  document.getElementById("JS").setAttribute ("style", "display:inline;");
+    document.getElementById("JSview").setAttribute ("style", "color:white;font-weight:bold; background-color:grey;");
+    document.getElementById("CSSview").setAttribute ("style", "color:black;font-weight:normal; background-color:white;");
+    document.getElementById("HTMLview").setAttribute ("style", "color:black;font-weight:normal; background-color:white;");
+    document.getElementById("HTML").setAttribute ("style", "display:none;");
+    document.getElementById("CSS").setAttribute ("style", "display:none;");
+    document.getElementById("JS").setAttribute ("style", "display:inline;");
 };
 
 function run() {
-  let HTMLcode = document.getElementById("input").innerText;
-  let CSScode = document.getElementById("") document.getElementById("output").innerHTML = code;
+    let HTMLcode = document.getElementById("HTML").innerText;
+    let CSScode = document.getElementById("CSS").innerText;
+    let JScode = "<script>" + document.getElementById("JS").innerText + "<\script>";
+    document.getElementById("output").innerHTML = HTMLcode + "<script>" + JScode + "<\script>" + "<style>" + CSScode + "<\style>";
 };
-    </script>
-    <style>
-        body {
-  padding: 0px;
-  margin: 0px;
+</script>
+<style>
+body {
+    padding: 0px;
+    margin: 0px;
 }
 
 .toolBar {
-  margin: 0px;
-  padding: 1vh 0vw 1vh 0.5vw;
-  width: 99.5vw;
-  background-color: #004980;
-  border
+    margin: 0px;
+    padding: 1vh 0vw 1vh 0.5vw;
+    width: 99.5vw;
+    background-color: #004980;
 }
 
 .toolBar button {
-  height: 3.5vh;
-  font-weight: bold;
-  cursor: pointer;
+    height: 3.5vh;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 2vh;
 }
 
-.toolBar button:hover {
-  
-} 
-
 .editor {
-  display: inline;
+    display: inline;
 }
 
 .editor #input #HTML, #CSS, #JS {
-  float: left;
-  margin: 1.5vh 0vw 1.5vh 1vw;
-  width: 48vw;
-  height: 91.25vh;
-  border: 1px solid black;
-  border-radius: 5px;
+    float: left;
+    margin: 1.5vh 0vw 1.5vh 1vw;
+    width: 47vw;
+    height: 91.25vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:5px;
 }
 
 .toolBar #HTMLview {
-  color: white;
-  font-weight: bold;
-  background-color: grey;
+    color: white;
+    font-weight: bold;
+    background-color: grey;
 }
 
 .toolBar #CSSview, #JSview {
-  color: black;
-  font-weight: normal;
-  background-color: white;
+    color: black;
+    font-weight: normal;
+    background-color: white;
 }
 
 .editor #output {
-  margin: 1.5vh 1vw 0vh 0vw;
-  width: 48.5vw;
-  height: 91.25vh;
-  float: right;
-  border: 1px solid black;
-  border-radius: 5px;
+    margin: 1.5vh 1vw 0vh 0vw;
+    width: 48.5vw;
+    height: 91.25vh;
+    float: right;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .editor #input #CSS, #JS {
-  display: none;
+    display: none;
 }
-    </style>
-    </body>
+</style>
+</body>
+</html>

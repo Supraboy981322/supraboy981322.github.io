@@ -1,0 +1,20 @@
+<button id="b" onclick="f();">function button</button>
+<p id="t">button not clicked</p>
+
+<style>
+    #t {
+        color: white;
+        background-color: red;
+    }
+
+    #b {
+        color: grey;
+        background-color: black;
+    }
+</style>
+
+<script>
+    function f() {
+        document.getElementById("t").innerHTML = "Hello God!";
+    }
+</script>
