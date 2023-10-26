@@ -2,103 +2,111 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    .toolBar {
-  background-color:grey;
-  width: 100vw;
-  margin:-8px;
-  float: left;
-  padding:5px 5px 5px 5px;
-}
+	.toolBar {
+		background-color: #004980;
+		width: 100vw;
+		margin: -8px;
+		float: left;
+		padding: 1vh 0vw 1vh 0.5vw;
+	}
 
-#saveButton {
-  	border-radius:10px;
-  	border:0px;
-  	background-color:white;
-  	padding:8px 17px 7px 17px;
-	font-size:15.4px;
-  	color:black;
-  	text-decoration:none;
-	margin:0px;
-	height:32px;
-}
+	#saveButton {
+		border-radius: 10px;
+		border: 0px;
+		background-color: white;
+		padding: 1% 2%;
+		font-size: 15.4px;
+		color: black;
+		text-decoration: none;
+		margin: 0px;
+		height: 3.5vh;
+		font-weight: bold;
+		cursor: pointer;
+		font-size: 2vh;
+	}
 
-#docContent {
-  height: 100vh;
-  width: 75vw;
-  float: left;
-  margin-left: 12.5vw;
-  margin-top: 18px;
-  border: 2px solid grey;
-  border-radius: 5px;
-  padding: 8px;
-}
+	#docContent {
+		height: 100vh;
+		width: 75vw;
+		float: left;
+		margin-left: 12.5vw;
+		margin-top: 18px;
+		border: 2px solid grey;
+		border-radius: 5px;
+		padding: 8px;
+	}
 
-#fileType {
-	border-radius:10px;
-  	border:0px;
-  	padding:1px 6px 1px 6px;
-  	color:black;
-  	text-decoration:none;
-	margin:0px;
-	width:50px;
-	height:32px;
-}
+	#fileType {
+		border-radius: 10px;
+		border: 0px;
+		padding: 0.5%;
+		color: black;
+		text-decoration: none;
+		margin: 0px;
+		width: 50px;
+		height: 3.5vh;
+		font-weight: bold;
+		cursor: pointer;
+		font-size: 2vh;
+	}
 
-.toolBar span {
-	padding:5px;
-}
+	.toolBar span {
+		padding: 0vh 1vw 0vh 1vw;
+		font-weight: bold;
+	}
 
-#file {
-	background-color:white;
-	padding: 5px;
-	border-radius:6px;
-	height:32px;
-}
+	#file {
+		background-color: white;
+		padding: 1.5%;
+		border-radius: 6px;
+		height: 3.5vh;
+	}
 
-#fileName {
-	border-radius:10px;
-  	border:0px;
-  	padding:1px 6px 1px 6px;
-  	color:black;
-  	text-decoration:none;
-	margin:0px;	
-	height:32px;
-} 
+	#fileName {
+		border-radius: 10px;
+		border: 0px;
+		padding: 1px 6px 1px 6px;
+		color: black;
+		text-decoration: none;
+		margin: 0px;
+		height: 32px;
+	}
 
-#loadFileButton{
-	padding:1px 6px 1px 6px;
-	border-radius:10px;
-	border:none;
-	background-color:white;	
-	height:32px;
-}
+	#loadFileButton {
+		padding: 1px 6px 1px 6px;
+		border-radius: 10px;
+		border: none;
+		background-color: white;
+		height: 32px;
+	}
 
-.buttonCursor {
-	cursor:pointer;
-}
+	.buttonCursor {
+		cursor: pointer;
+	}
 
-.textCursor {
-	background-color:#dddddd;
-}
-
+	.textCursor {
+		background-color: #dddddd;
+	}
 </style>
+
 <body style="overflow:hidden;">
-    <div class="toolBar">
-	<input id="fileName" class="textCursor" type="text" value="Unnamed Document"></input>
-	<input id="fileType" class="textCursor" type="text" value=".txt"></input>
-	<span> | </span>
-        <a id="saveButton" class="buttonCursor" download="ILoveTheBible.txt" onclick="saveDocument()">Save</a>
-	<span> | </span>
-	<input id="file" class="buttonCursor" type="file"></input>
-	<button id="loadFileButton" class="buttonCursor" onclick="loadFile(document.getElementById('file').value)">Load file</button>
-    </div>
-    <br>
-    <div style="margin:-8px;">
-        <div style="overflow:wrap;" id="docContent" contenteditable="true"></div>
-    </div>
+	<div class="toolBar">
+		<input id="fileName" class="textCursor" type="text" value="Unnamed Document"></input>
+		<input id="fileType" class="textCursor" type="text" value=".txt"></input>
+		<span> | </span>
+		<a id="saveButton" class="buttonCursor" download="ILoveTheBible.txt" onclick="saveDocument()">Save</a>
+		<span> | </span>
+		<input id="file" class="buttonCursor" type="file"></input>
+		<button id="loadFileButton" class="buttonCursor" onclick="loadFile(document.getElementById('file').value)">Load
+			file</button>
+	</div>
+	<br>
+	<div style="margin:-8px;">
+		<div style="overflow:wrap;" id="docContent" contenteditable="true"></div>
+	</div>
 </body>
 <script>
-	function loadFile (fileLocation) {
+	function loadFile(fileLocation) {
 		document.getElementById("docContent").innerText = fileLocation
 	}
 	function saveDocument() {
@@ -112,4 +120,5 @@
 	};
 
 </script>
+
 </html>
