@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 	.toolBar {
 		background-color: #004980;
-		width: 100vw;
-		margin: -8px;
+		width: 99.5vw;
+		margin: -8px 0px 0px -8px;
 		float: left;
 		padding: 1vh 0vw 1vh 0.5vw;
 	}
@@ -29,8 +30,7 @@
 		height: 100vh;
 		width: 75vw;
 		float: left;
-		margin-left: 12.5vw;
-		margin-top: 18px;
+		margin: 8px 0px 8px 11vw;
 		border: 2px solid grey;
 		border-radius: 5px;
 		padding: 8px;
@@ -89,7 +89,7 @@
 	}
 </style>
 
-<body style="overflow:hidden;">
+<body style="">
 	<div class="toolBar">
 		<input id="fileName" class="textCursor" type="text" value="Unnamed Document"></input>
 		<input id="fileType" class="textCursor" type="text" value=".txt"></input>
@@ -106,9 +106,28 @@
 	</div>
 </body>
 <script>
-	function loadFile(fileLocation) {
-		document.getElementById("docContent").innerText = fileLocation
-	}
+  	function loadFile(fileLocation) {
+    const doc = document.getElementById('docContent');
+    const file = document.getElementById('file').files[0];
+    const reader = new FileReader();
+    
+    // listen for 'load' events on the FileReader
+    reader.addEventListener("load", function () {
+      // change the preloadedText's src to be the "result" of reading the uploaded file (below)
+      fetch(reader.result)
+        .then( r => r.text() )
+        .then( t => load(t))
+    }, false);
+    
+      function load(text) {
+        document.getElementById("docContent").innerText = text;
+      }
+    // if there's a file, tell the reader to read the data
+    // which triggers the load event above
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
 	function saveDocument() {
 		var link = document.getElementById("saveButton");
 		var docC = document.getElementById("docContent");
@@ -118,7 +137,6 @@
 		link.setAttribute("download", fileName + fileType);
 		link.setAttribute("href", "data:" + mimetype + "charset=utf-8," + docC.innerText);
 	};
-
 </script>
 
 </html>
