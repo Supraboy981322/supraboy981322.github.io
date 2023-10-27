@@ -1,12 +1,12 @@
-
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://supraboy981322.github.io/styles/stylesheet.css">
 <style>
 	.toolBar {
-		background-color: #004980;
+		background-color: rgba(192, 243, 252, 0.55);
 		width: 99.5vw;
-		margin: -8px 0px 0px -8px;
+		margin: -50px 0px 0px -8px;
 		float: left;
 		padding: 1vh 0vw 1vh 0.5vw;
 	}
@@ -14,7 +14,7 @@
 	#saveButton {
 		border-radius: 10px;
 		border: 0px;
-		background-color: white;
+		background-color: rgba(255, 255, 255, 0.55);
 		padding: 1% 2%;
 		font-size: 15.4px;
 		color: black;
@@ -32,12 +32,15 @@
 		width: 75vw;
 		float: left;
 		margin: 8px 0px 8px 11vw;
-		border: 2px solid grey;
-		border-radius: 5px;
-		padding: 8px;
+		border-radius: 14px;
+		padding: 14px;
+    background-color: rgba(255,255,255,0.40);
+    font-weight: bold;
+    font: ariel;
 	}
 
 	#fileType {
+    background-color: rgba(255,255,255, 0.5);
 		border-radius: 10px;
 		border: 0px;
 		padding: 0.5%;
@@ -57,16 +60,21 @@
 	}
 
 	#file {
-		background-color: white;
-		padding: 0.5%;
+		background-color: rgba(255,255,255, 0.5);
+    margin-top: -6px;
+		padding: 5px 0px 0px 5px;
 		border-radius: 6px;
+    height: 27px;
+    font-weight: bold;
 	}
-
+  
 	#fileName {
 		border-radius: 10px;
 		border: 0px;
 		padding: 1px 6px 1px 6px;
+    background-color: rgba(255,255,255, 0.5);
 		color: black;
+    font-weight: bold;
 		text-decoration: none;
 		margin: 0px;
 		height: 32px;
@@ -76,7 +84,8 @@
 		padding: 1px 6px 1px 6px;
 		border-radius: 10px;
 		border: none;
-		background-color: white;
+    background-color: rgba(255,255,255, 0.5);
+    font-weight: bold;
 		height: 32px;
 	}
 
@@ -89,7 +98,7 @@
 	}
 </style>
 
-<body>
+<body class="main">
 	<div class="toolBar">
 		<input id="fileName" class="textCursor" type="text" value="Unnamed Document"></input>
 		<input id="fileType" class="textCursor" type="text" value=".txt"></input>
