@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +12,7 @@
 	}
 
 	#saveButton {
-    float: top;
+		float: top;
 		border-radius: 10px;
 		border: 0px;
 		background-color: rgba(255, 255, 255, 0.55);
@@ -35,14 +34,14 @@
 		margin: -8px 11vw 12px 11vw;
 		border-radius: 14px;
 		padding: 14px;
-    background-color: rgba(255,255,255,0.40);
-    font-weight: bold;
-    font: ariel;
+		background-color: rgba(255, 255, 255, 0.40);
+		font-weight: bold;
+		font: ariel;
 	}
 
 	#fileType {
-    float: top;
-    background-color: rgba(255,255,255, 0.5);
+		float: top;
+		background-color: rgba(255, 255, 255, 0.5);
 		border-radius: 10px;
 		border: 0px;
 		padding: 6.75px 5px 7px 5px;
@@ -60,31 +59,68 @@
 	}
 
 	#file {
-		background-color: rgba(255,255,255, 0.5);
+		background-color: rgba(255, 255, 255, 0.5);
 		padding: 4px 0px 0px 4px;
 		border-radius: 6px;
-    height: 26px;
-    font-weight: bold;
+		height: 26px;
+		font-weight: bold;
 	}
-  
+
 	#fileName {
 		border-radius: 10px;
 		border: 0px;
 		padding: 1px 6px 1px 6px;
-    background-color: rgba(255,255,255, 0.5);
+		background-color: rgba(255, 255, 255, 0.5);
 		color: black;
-    font-weight: bold;
+		font-weight: bold;
 		text-decoration: none;
 		margin: 0px;
-    padding: 7px 0px 7px 10px;
+		padding: 7px 0px 7px 10px;
 	}
 
 	#loadFileButton {
 		padding: 7px 10px 7px 10px;
 		border-radius: 10px;
 		border: none;
-    background-color: rgba(255,255,255, 0.5);
-    font-weight: bold;
+		background-color: rgba(255, 255, 255, 0.5);
+		font-weight: bold;
+	}
+
+	@media (min-width: 721px) {
+		.changeOnSize {
+			display: inline;
+		}
+
+		#file {
+			margin: 0px;
+		}
+
+		.hideUnder700 {
+			display: inline;
+		}
+
+		.hideOver700 {
+			display: none;
+		}
+	}
+
+	@media (max-width: 720px) {
+		#file {
+			margin: 5px 0px 0px 0px;
+		}
+
+		.changeOnSize {
+			display: block;
+		}
+
+		.hideUnder700 {
+			display: none;
+			;
+		}
+
+		.hideOver700 {
+			display: block;
+		}
 	}
 
 	.buttonCursor {
@@ -102,10 +138,13 @@
 		<input id="fileType" class="textCursor" type="text" value=".txt"></input>
 		<span> | </span>
 		<a id="saveButton" class="buttonCursor" download="ILoveTheBible.txt" onclick="saveDocument()">Save</a>
-		<span> | </span>
-		<input id="file" class="buttonCursor" type="file"></input>
-		<button id="loadFileButton" class="buttonCursor" onclick="loadFile(document.getElementById('file').value)">Load
-			file</button>
+		<span class="hideUnder700"> | </span>
+		<div class="changeOnSize">
+			<input id="file" class="buttonCursor" type="file"></input>
+			<button id="loadFileButton" class="buttonCursor"
+				onclick="loadFile(document.getElementById('file').value)">Load
+				file</button>
+		</div>
 	</div>
 	<br>
 	<div style="margin:-8px;">
@@ -113,28 +152,28 @@
 	</div>
 </body>
 <script>
-  	function loadFile(fileLocation) {
-    const doc = document.getElementById('docContent');
-    const file = document.getElementById('file').files[0];
-    const reader = new FileReader();
-    
-    // listen for 'load' events on the FileReader
-    reader.addEventListener("load", function () {
-      // change the preloadedText's src to be the "result" of reading the uploaded file (below)
-      fetch(reader.result)
-        .then( r => r.text() )
-        .then( t => load(t))
-    }, false);
-    
-      function load(text) {
-        document.getElementById("docContent").innerText = text;
-      }
-    // if there's a file, tell the reader to read the data
-    // which triggers the load event above
-    if (file) {
-      reader.readAsDataURL(file);
-    }
-  }
+	function loadFile(fileLocation) {
+		const doc = document.getElementById('docContent');
+		const file = document.getElementById('file').files[0];
+		const reader = new FileReader();
+
+		// listen for 'load' events on the FileReader
+		reader.addEventListener("load", function () {
+			// change the preloadedText's src to be the "result" of reading the uploaded file (below)
+			fetch(reader.result)
+				.then(r => r.text())
+				.then(t => load(t))
+		}, false);
+
+		function load(text) {
+			document.getElementById("docContent").innerText = text;
+		}
+		// if there's a file, tell the reader to read the data
+		// which triggers the load event above
+		if (file) {
+			reader.readAsDataURL(file);
+		}
+	}
 	function saveDocument() {
 		var link = document.getElementById("saveButton");
 		var docC = document.getElementById("docContent");
