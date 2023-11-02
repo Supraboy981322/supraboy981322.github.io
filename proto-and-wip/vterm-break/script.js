@@ -27,7 +27,7 @@ $('body').terminal({
             this.echo(
                 'Err. no command for ' + what);
         }
-    },
+    }, 
 }, {
     greetings: greetings1.innerHTML
 });
