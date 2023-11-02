@@ -29,5 +29,5 @@ $('body').terminal({
         }
     },
 }, {
-    greetings: greetings.innerHTML
+    greetings: greetings1.innerHTML
 });
