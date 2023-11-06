@@ -28,6 +28,11 @@ $('body').terminal({
                 'Err. no command for ' + what);
         }
     }, 
+    hakr: function(what) {
+        let randomSyntax
+        this.echo()
+        
+    }
 }, {
-    greetings: greetings1.innerHTML
+    greetings: greetings4.innerHTML
 });
