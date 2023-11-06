@@ -30,9 +30,9 @@ $('body').terminal({
     }, 
     hakr: function(what) {
         let randomSyntax
-        this.echo()
+        this.echo('text');
         
-    }
+    },
 }, {
     greetings: greetings4.innerHTML
 });
