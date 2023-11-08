@@ -40,7 +40,7 @@
 
 <body>
   <div class="inputBox">
-    <input class="input" type="text" placeholder="Add text input here">
+    <input class="input" type="text" placeholder="Input text here">
   </div>
   <div id="outer" class="container outputBox">
     <div class="output"></div>
@@ -51,6 +51,8 @@
   const output = document.querySelector('.output');
   const outputContainer = document.querySelector('.container');
 
+  window.onload(output.innerHTML = "Lorem ipsum");
+  
   function resize_to_fit() {
     let fontSize = window.getComputedStyle(output).fontSize;
     output.style.fontSize = (parseFloat(fontSize) - 1) + 'px';
