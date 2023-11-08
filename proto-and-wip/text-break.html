@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <style>
+    @font-face {
+        font-family: D-DINExp-Bold;
+        src: url(https://supraboy981322.github.io/styles/fonts/D-DINExp-Bold.otf);
+    }
+
+body {
+  font-family: D-DINExp-Bold;
+  padding: 0px;
+  margin: 0px;
+  content-align: center;
+  text-align: center;
+  align: center;
+  overflow: hidden;
+}
+  </style>
+<body>
+  <div style="width:100vw;padding:3vh 0vw;border:2px solid blue">
+    <input type="text" placeholder="Add text input here" style="width:51%;">
+  </div>
+<div id="outer" class="container" 
+style="width:100vw; height:90vh; border:2px solid red; font-size:20px;">
+  
+<div class="output" style="word-break: break-none; word-wrap: break-word;">
+</div>
+
+</div>
+</body>
+  <script>
+    const input = document.querySelector('input');
+const output = document.querySelector('.output');
+const outputContainer = document.querySelector('.container');
+
+function resize_to_fit() {
+  let fontSize = window.getComputedStyle(output).fontSize;
+  output.style.fontSize = (parseFloat(fontSize) - 1) + 'px';
+  
+  if(output.clientHeight >= outputContainer.clientHeight){
+    resize_to_fit();
+  }
+}
+
+function processInput() { 
+  output.innerHTML =this.value;
+  output.style.fontSize = '100px'; // Default font size
+  resize_to_fit();
+}
+
+    input.addEventListener('input', processInput);
+  </script>
+</html>
