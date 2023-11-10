@@ -40,19 +40,25 @@
     word-wrap: break-word;
     z-index: 1;
   }
+
   .watermark {
     float: right;
     padding-right: 5px;
     color: blue;
     z-index: 1;
   }
+
   #tooltip {
     z-index: 50;
     float: left;
     position: absolute;
-    top: 8vh;
+    top: 7vh;
     border: 5px solid blue;
     padding: 5px;
+    left: 37.5vw;
+    width: 21vw;
+    font-size: 3vw;
+    border-radius: 25px;
   }
 </style>
 
@@ -64,21 +70,20 @@
     <div id="output" class="output"></div>
   </div>
   <div class="watermark">Lunch Break Software</div>
-  <div id="tooltip"><span>test<span></div>
+  <div id="tooltip"><span>&#11014 Text Input &#11014<span></div>
 </body>
-    <script>
-      
+<script>
+
   function loadText() {
     let tooltip = document.getElementById("tooltip");
 
     output.innerHTML = "Lorem Ipsum";
     output.style.fontSize = '100px'; // Default font size
-    resize_to_fit();
-    
+    tooltip.setAttribute("style", "display:block");
   }
-      addEventListener(window.onload, loadText());
-    </script>
-<script>                
+  addEventListener(window.onload, loadText());
+</script>
+<script>
   const input = document.querySelector('input');
   const output = document.querySelector('.output');
   const outputContainer = document.querySelector('.container');
@@ -95,6 +100,7 @@
     output.innerHTML = this.value;
     output.style.fontSize = '100px'; // Default font size
     resize_to_fit();
+    document.getElementById("tooltip").setAttribute("style", "display:none;");
   }
   input.addEventListener('input', processInput);
 </script>
