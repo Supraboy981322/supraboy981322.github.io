@@ -17,24 +17,42 @@
   .inputBox {
     width: 100vw;
     padding: 3vh 0vw;
+    z-index: 1;
   }
 
   .input {
     width: 51%;
+    z-index: 1;
   }
 
   .outputBox {
     width: 100vw;
-    height: 90vh;
+    height: 87vh;
     font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
   }
 
   .output {
     word-break: break-word;
     word-wrap: break-word;
+    z-index: 1;
+  }
+  .watermark {
+    float: right;
+    padding-right: 5px;
+    color: blue;
+    z-index: 1;
+  }
+  #tooltip {
+    z-index: 50;
+    float: left;
+    position: absolute;
+    top: 8vh;
+    border: 5px solid blue;
+    padding: 5px;
   }
 </style>
 
@@ -43,16 +61,27 @@
     <input class="input" type="text" placeholder="Input text here">
   </div>
   <div id="outer" class="container outputBox">
-    <div class="output"></div>
+    <div id="output" class="output"></div>
   </div>
+  <div class="watermark">Lunch Break Software</div>
+  <div id="tooltip"><span>test<span></div>
 </body>
-<script>
+    <script>
+      
+  function loadText() {
+    let tooltip = document.getElementById("tooltip");
+
+    output.innerHTML = "Lorem Ipsum";
+    output.style.fontSize = '100px'; // Default font size
+    resize_to_fit();
+    
+  }
+      addEventListener(window.onload, loadText());
+    </script>
+<script>                
   const input = document.querySelector('input');
   const output = document.querySelector('.output');
   const outputContainer = document.querySelector('.container');
-
-  window.onload(output.innerHTML = "Lorem ipsum");
-
   function resize_to_fit() {
     let fontSize = window.getComputedStyle(output).fontSize;
     output.style.fontSize = (parseFloat(fontSize) - 1) + 'px';
@@ -67,7 +96,6 @@
     output.style.fontSize = '100px'; // Default font size
     resize_to_fit();
   }
-
   input.addEventListener('input', processInput);
 </script>
 
