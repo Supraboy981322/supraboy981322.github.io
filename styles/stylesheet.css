@@ -221,3 +221,14 @@ footer h4 {
 .modal {
   display:none;
 }
+
+.pageSubTitle {
+  text-align: center;
+  background: rgba(222, 213, 202, 0.55);
+  backdrop-filter: blur(3px);
+  overflow: hidden;
+  border-radius: 14px;
+  margin: auto;
+  padding: 12px;
+  width: 40%;
+}
