@@ -1,0 +1,20 @@
+
+
+<!DOCTYPE html>
+<html>
+
+	<body style="margin:0px;padding:0px;background:black;">
+		<div style="background:black;height:10%;width:100%">
+		
+			<center><input placeholder="Enter URL" type="text" id="searchInput" name="input"><button onclick="changeChannel()">Search</button></center>
+		
+		</div>
+		<iframe id="searchFrame" src="https://app.element.io/" style="position: absolute; height: 95%; width:100%; border: none"></iframe>
+	</body>
+	<script>
+		function changeChannel() {
+          event.preventDefault();
+          document.getElementById("searchFrame").src = document.getElementById("searchInput").value;
+        }
+	</script>
+</html>
