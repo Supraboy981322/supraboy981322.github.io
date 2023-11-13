@@ -32,7 +32,7 @@
         margin-right: 8vw;
     }
 
-    .searchBox {
+    #searchBox {
         display: inline-block;
         background: rgba(255, 255, 255, 0.4);
         border-radius: 25px;
@@ -53,9 +53,9 @@
             <h1 class="pageTitle"><b>Search Break</b></h1>
         </div>
         <br>
-        <div class="searchBox" contenteditable>
+        <div id="searchBox" contenteditable>
         </div>
-        <div onclick="window.location.replace('https://www.google.com/search?q=' + document.getElementById('searchBox'));" id="search">Go</div>
+        <div onclick="window.location.replace('https://www.google.com/search?q=' + document.getElementById('searchBox').innerHTML);" id="search"><span  onclick="window.location.replace('https://www.google.com/search?q=' + document.getElementById('searchBox').innerHTML);">Go</span></div>
         <br>
     </div>
 </body>
