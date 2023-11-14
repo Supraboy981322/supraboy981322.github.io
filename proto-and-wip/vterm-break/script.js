@@ -28,12 +28,6 @@ $('body').terminal({
                 'Err. no command for ' + what);
         }
     }, 
-    hakr: function(what) {
-        let syntax = ["1","2","3","4","5","6","7","8","9","10"];
-        let ranNum = Math.random() * (syntax.length - 1) + 1;
-        this.echo('> ' + syntax[ranNum]);
-        
-    },
 }, {
     greetings: greetings4.innerHTML
 });
