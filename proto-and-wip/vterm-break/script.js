@@ -30,8 +30,8 @@ $('body').terminal({
     }, 
     hakr: function(what) {
         let syntax = ["1","2","3","4","5","6","7","8","9","10"]
-        let x = Math.random() * (syntax.length - 1) + 1;
-        this.echo('> ' + syntax[x]);
+        let ranNum = Math.random() * (syntax.length - 1) + 1;
+        this.echo('> ' + syntax[ranNum]);
         
     },
 }, {
