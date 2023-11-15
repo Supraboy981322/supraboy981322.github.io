@@ -43,18 +43,20 @@
                 <span>Output: </span>
                 <span style="color:purple;" id="biOutput">Number not yet generated</span>
             </p>
-
         </div>
+
         <div class="textBox">
-            <h2>Base XX</h2>
+            <h2>Base 36</h2>
             <p>
-                <label>Base number</label>
-                <input id="baseNum" min="1" max="62" step="1" type="range">
-                <output id="basNumValue"></output>
+                <label>Base </label>
+            </p>
+        <div class="textBox">
+            <h2>Base 62</h2>
+            <p>
                 <label>Number of digits</label>
                 <input id="baseDigits" min="1" max="62" step="1" type="range">
                 <output id="basDigValue"></output>
-                <button onclick="genBase();">Generate</button>
+                <button onclick="gen62();">Generate</button>
             </p>
             <p>
                 <span>Output: </span>
@@ -109,21 +111,21 @@
         genDecValue("bi", biNum);
     }
 
-    const baseNumValue = document.querySelector("#basNumValue").value;
-    const baseValue = document.querySelector("basDigValue");
-    const baseInput = document.querySelector("baseDigits");
-    baseValue.textContent = baseValue.value;
-    baseInput.addEventListener("input", (event) => {
-        baseValue.textContent = event.target.value;
+
+    const sixtyTwoValue = document.querySelector("basDigValue");
+    const sixtyTwoInput = document.querySelector("baseDigits");
+    sixtyTwoValue.textContent = sixtyTwoValue.value;
+    sixtyTwoInput.addEventListener("input", (event) => {
+        sixtyTwoValue.textContent = event.target.value;
     })
 
-    function genBase() {
-        let baseValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j","k", "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-        let baseDigits = document.getElementById("baseDigits").value;
-        let baseNum = "";
-        let baseCurDig = "";
-        for (let i = 0; i < baseDigits; i++) {
-            baseNum = baseNum + baseValues[Math.floor(Math.random() *  62) + 0];
+    function gen62() {
+        let sixtyTwoValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j","k", "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+        let sixtyTwoDigits = document.getElementById("baseDigits").value;
+        let sixtyTwoNum = "";
+        let sixtyTwoCurDig = "";
+        for (let i = 0; i < sixtyTwoDigits; i++) {
+            sixtyTwoNum = sixtyTwoNum + sixtyTwoValues[Math.floor(Math.random() *  62) + 0];
         }
         document.getElementById("baseOutput").innerText = baseNum;
         genDecVal("base", baseNum);
