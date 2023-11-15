@@ -123,7 +123,7 @@
         let baseNum = "";
         let baseCurDig = "";
         for (let i = 0; i < baseDigits; i++) {
-            baseNum = baseNum + baseValues[Math.floor(Math.random() * baseNumValue - 1) + 0];
+            baseNum = baseNum + baseValues[Math.floor(Math.random() *  62) + 0];
         }
         document.getElementById("baseOutput").innerText = baseNum;
         genDecVal("base", baseNum);
