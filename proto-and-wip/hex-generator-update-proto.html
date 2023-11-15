@@ -21,7 +21,7 @@
         <div class="textBox">
             <h2>Hexadecimal</h2>
             <p>
-                <label># of Digits</label>
+                <label>Number of Digits</label>
                 <input id="hexDigits" min="1" max="20" step="1" type="range">
                 <output id="hexDigValue"></output>
                 <button onclick="genHex();">Generate</button>
@@ -34,7 +34,7 @@
         <div class="textBox">
             <h2>Binary</h2>
             <p>
-                <label># of Digits</label>
+                <label>Number of Digits</label>
                 <input id="biDigits" min="1" max="20" step="1" type="range">
                 <output id="biDigValue"></output>
                 <button onclick="genBi();">Generate</button>
@@ -44,6 +44,22 @@
                 <span style="color:purple;" id="biOutput">Number not yet generated</span>
             </p>
 
+        </div>
+        <div class="textBox">
+            <h2>Base XX</h2>
+            <p>
+                <label>Base number</label>
+                <input id="baseNum" min="1" max="62" step="1" type="range">
+                <output id="basNumValue"></output>
+                <label>Number of digits</label>
+                <input id="baseDigits" min="1" max="62" step="1" type="range">
+                <output id="basDigValue"></output>
+                <button onclick="genBase();">Generate</button>
+            </p>
+            <p>
+                <span>Output: </span>
+                <span style="color:purple;" id="baseOutput">Number not yet generated</span>
+            </p>
         </div>
     </div>
     <!-- Footer -->
@@ -83,7 +99,7 @@
 
     function genBi() {
         let biValues = ["0", "1"];
-        let biDigits = document.getElementById("biDigits").value
+        let biDigits = document.getElementById("biDigits").value;
         let biNum = "";
         let biCurDig = "";
         for (let i = 0; i < biDigits; i++) {
@@ -91,6 +107,26 @@
         }
         document.getElementById("biOutput").innerText = biNum;
         genDecValue("bi", biNum);
+    }
+
+    const baseNumValue = document.querySelector("#basNumValue").value;
+    const baseValue = document.querySelector("basDigValue");
+    const baseInput = document.querySelector("baseDigits");
+    baseValue.textContent = baseValue.value;
+    baseInput.addEventListener("input", (event) => {
+        baseValue.textContent = event.target.value;
+    })
+
+    function genBase() {
+        let baseValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j","k", "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+        let baseDigits = document.getElementById("baseDigits").value;
+        let baseNum = "";
+        let baseCurDig = "";
+        for (let i = 0; i < baseDigits; i++) {
+            baseNum = baseNum + baseValues[Math.floor(Math.random() * baseNumValue - 1) + 0];
+        }
+        document.getElementById("baseOutput").innerText = baseNum;
+        genDecVal("base", baseNum);
     }
 
     function genDecVal(which, num) {
