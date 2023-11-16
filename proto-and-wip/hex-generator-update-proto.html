@@ -22,7 +22,7 @@
             <h2>Hexadecimal</h2>
             <p>
                 <label>Number of Digits</label>
-                <input id="hexDigits" min="1" max="20" step="1" type="range">
+                <input id="hexDigits" min="1" max="32" step="1" type="range">
                 <output id="hexDigValue"></output>
                 <button onclick="genHex();">Generate</button>
             </p>
@@ -35,7 +35,7 @@
             <h2>Binary</h2>
             <p>
                 <label>Number of Digits</label>
-                <input id="biDigits" min="1" max="20" step="1" type="range">
+                <input id="biDigits" min="1" max="32" step="1" type="range">
                 <output id="biDigValue"></output>
                 <button onclick="genBi();">Generate</button>
             </p>
@@ -46,21 +46,29 @@
         </div>
 
         <div class="textBox">
-            <h2>Base 36</h2>
+            <h2>Base 31</h2>
             <p>
-                <label>Base </label>
+                <label>Number of digits</label>
+                <input id="thirtyOneDigits" min="1" max="32" step="1" type="range">
+                <output id="thirtyOneDigValue"></output>
+                <button onclick="genThirtyOne();">Generate</button>
             </p>
+            <p>
+                <span>Output: </span>
+                <span style="color:purple;" id="31Output">Number not yet generated</span>
+            </p>
+        </div>
         <div class="textBox">
             <h2>Base 62</h2>
             <p>
                 <label>Number of digits</label>
-                <input id="baseDigits" min="1" max="62" step="1" type="range">
-                <output id="basDigValue"></output>
-                <button onclick="gen62();">Generate</button>
+                <input id="sixtyTwoDigits" min="1" max="32" step="1" type="range">
+                <output id="sixtyTwoDigValue"></output>
+                <button onclick="genSixtyTwo();">Generate</button>
             </p>
             <p>
                 <span>Output: </span>
-                <span style="color:purple;" id="baseOutput">Number not yet generated</span>
+                <span style="color:purple;" id="62Output">Number not yet generated</span>
             </p>
         </div>
     </div>
@@ -89,7 +97,6 @@
             hexNum = hexNum + hexValues[Math.floor(Math.random() * 16) + 0];
         };
         document.getElementById("hexOutput").innerText = "#" + hexNum;
-        genDecVal("hex", hexNum);
     };
 
     const biValue = document.querySelector("#biDigValue");
@@ -108,27 +115,43 @@
             biNum = biNum + biValues[Math.floor(Math.random() * 2) + 0];
         }
         document.getElementById("biOutput").innerText = biNum;
-        genDecValue("bi", biNum);
+    }
+
+    const thirtyOneValue = document.querySelector("#thirtyOneDigValue");
+    const thirtyOneInput = document.querySelector("#thirtyOneDigits");
+    thirtyOneValue.textContent = thirtyOneInput.value;
+    thirtyOneInput.addEventListener("input", (event) => {
+        thirtyOneValue.textContent = event.target.value;
+    })
+
+    function genThirtyOne() {
+        let thirtyOneValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        let thirtyOneDigits = document.getElementById("thirtyOneDigits").value;
+        let thirtyOneNum = "";
+        let thirtyOneCurDig = "";
+        for (let i = 0; i < thirtyOneDigits; i++) {
+            thirtyOneNum = thirtyOneNum + thirtyOneValues[Math.floor(Math.random() * 31) + 0];
+        }
+        document.getElementById("31Output").innerText = thirtyOneNum;
     }
 
 
-    const sixtyTwoValue = document.querySelector("basDigValue");
-    const sixtyTwoInput = document.querySelector("baseDigits");
-    sixtyTwoValue.textContent = sixtyTwoValue.value;
+    const sixtyTwoValue = document.querySelector("#sixtyTwoDigValue");
+    const sixtyTwoInput = document.querySelector("#sixtyTwoDigits");
+    sixtyTwoValue.textContent = sixtyTwoInput.value;
     sixtyTwoInput.addEventListener("input", (event) => {
         sixtyTwoValue.textContent = event.target.value;
     })
 
-    function gen62() {
-        let sixtyTwoValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j","k", "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-        let sixtyTwoDigits = document.getElementById("baseDigits").value;
+    function genSixtyTwo() {
+        let sixtyTwoValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        let sixtyTwoDigits = document.getElementById("sixtyTwoDigits").value;
         let sixtyTwoNum = "";
         let sixtyTwoCurDig = "";
         for (let i = 0; i < sixtyTwoDigits; i++) {
-            sixtyTwoNum = sixtyTwoNum + sixtyTwoValues[Math.floor(Math.random() *  62) + 0];
+            sixtyTwoNum = sixtyTwoNum + sixtyTwoValues[Math.floor(Math.random() * 62) + 0];
         }
-        document.getElementById("baseOutput").innerText = baseNum;
-        genDecVal("base", baseNum);
+        document.getElementById("62Output").innerText = sixtyTwoNum;
     }
 
     function genDecVal(which, num) {
@@ -137,7 +160,7 @@
         if (which == "bi") {
             let biValues = ["0", "1"];
             for (let i = 1; i < num.length; i++) {
-                decVal = decVal + ((indexOf(biValues, num[i]))**i)
+                decVal = decVal + ((indexOf(biValues, num[i])) ** i)
             }
         } else if (which == "hex") {
             let hexValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
