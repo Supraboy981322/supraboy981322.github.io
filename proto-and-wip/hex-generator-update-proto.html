@@ -97,7 +97,25 @@
     </footer>
 </body>
 <script>
+    
+    const decValue = document.querySelector("#decDigValue");
+    const decInput = document.querySelector("#decDigits");
+    decValue.textContent = decInput.value;
+    decInput.addEventListener("input", (event) => {
+        decValue.textContent = event.target.value;
+    })
 
+    function genDec() {
+        let decValues = ["0", "1","2","3","4","5","6","7","8","9"];
+        let decDigits = document.getElementById("decDigits").value;
+        let decNum = "";
+        let DecCurDig = "";
+        for (let i = 0; i < decDigits; i++) {
+            decNum = decNum + decValues[Math.floor(Math.random() * 10) + 0];
+        }
+        document.getElementById("decOutput").innerText = decNum;
+    }
+    
     const hexValue = document.querySelector("#hexDigValue");
     const hexInput = document.querySelector("#hexDigits");
     hexValue.textContent = hexInput.value;
