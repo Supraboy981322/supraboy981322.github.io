@@ -64,7 +64,7 @@
 
 <body>
   <div class="inputBox">
-    <input class="input" type="text" placeholder="Input text here">
+    <input autofocus class="input" type="text" placeholder="Input text here">
   </div>
   <div id="outer" class="container outputBox">
     <div id="output" class="output"></div>
@@ -76,8 +76,14 @@
 
   function loadText() {
     let tooltip = document.getElementById("tooltip");
+    let params = new URLSearchParams(document.location.search);
+    let t = params.get("t"); // is the string "Jonathan"
 
-    output.innerHTML = "Lorem Ipsum";
+    if (t == null) {
+      output.innerHTML = "Lorem Ipsum";
+    } else {
+      output.innerHTML = t;
+    }
     output.style.fontSize = '100px'; // Default font size
     tooltip.setAttribute("style", "display:block");
   }
