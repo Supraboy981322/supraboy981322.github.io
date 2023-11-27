@@ -112,11 +112,12 @@
 </body>
 
 <script>
-    let contentList = ["https://supraboy981322.github.io/embeded-content/background.png", "https://supraboy981322.github.io/embeded-content/this-site-cant-be-reached.png", "https://supraboy981322.github.io/uncanny%20gobledygook.png"];
+    let directory = ["https://supraboy981322.github.io/embeded-content/"]
+    let contentList = ["background", "this-site-cant-be-reached", "uncanny%20gobledygook"];
     let list = document.getElementById("movies");
     contentList.forEach((item) => {
         let img = document.createElement("img");
-        img.src = item;
+        img.src = directory + item + "Poster.png";
         list.appendChild(img);
     });
 </script>
