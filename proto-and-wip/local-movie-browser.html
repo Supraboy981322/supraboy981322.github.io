@@ -115,10 +115,17 @@
     let directory = ["https://supraboy981322.github.io/embeded-content/"]
     let contentList = ["background", "this-site-cant-be-reached", "uncanny%20gobledygook"];
     let list = document.getElementById("movies");
+    let hoverArea = document.getElementById("libraryDesc");
     contentList.forEach((item) => {
-        let img = document.createElement("img");
-        img.src = directory + item + "Poster.png";
-        list.appendChild(img);
+        let posterImg = document.createElement("img");
+        posterImg.src = directory + item + "Poster.png";
+        list.appendChild(posterImg);
+        let hoverImg = document.createElement("img");
+        hoverImg.src = directory + item + "Description.png";
+        hoverArea.appendChild(hoverImg);
+        let title = document.createElement("div");
+        title.innerText = item.replaceAll("%20", " ");
+
     });
 </script>
 
