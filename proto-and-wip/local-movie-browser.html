@@ -38,7 +38,7 @@
         border-radius: 25px;
         backdrop-filter: blur(3px);
         padding: 14px;
-        width: math(100vw - 14px);
+        width: calc(100vw - 38px);
         display: inline-block;
     }
 
@@ -84,7 +84,6 @@
     .hide {
         display: none;
     }
-
     .poster:hover+.hide {
         display: block;
         color: red;
@@ -121,16 +120,24 @@
     contentList.forEach((item) => {
         let posterImg = document.createElement("img");
         posterImg.src = directory + item + "Poster.png";
-        posterImg.class = "poster";
+        posterImg.addEventListener("mouseover", (event) => {
+            document.getElementById(item).setAttribute("style", "display: inline-block");
+        });
+        posterImg.addEventListener("mouseleave", (event) => {
+            document.getElementById(item).setAttribute("style", "display: none");
+        });
         list.appendChild(posterImg);
         let hoverImg = document.createElement("img");
         hoverImg.src = directory + item + "Description.png";
+        hoverImg.setAttribute("style", "display:none;");
+        hoverImg.setAttribute("id", item);
         hoverArea.appendChild(hoverImg);
-        let title = document.createElement("h2");
+        let title = document.createElement("span");
         title.innerText = item.replaceAll("%20", " ");
-        title.class = "hide";
+        title.setAttribute("style", "display:none;");
+        title.setAttribute("id", item);
         hoverArea.appendChild(title);
-        
+
     });
 </script>
 
