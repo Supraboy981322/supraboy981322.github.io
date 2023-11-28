@@ -38,6 +38,8 @@
         border-radius: 25px;
         backdrop-filter: blur(3px);
         padding: 14px;
+        width: math(100vw - 14px);
+        display: inline-block;
     }
 
     .libraryDesc img {
@@ -119,13 +121,16 @@
     contentList.forEach((item) => {
         let posterImg = document.createElement("img");
         posterImg.src = directory + item + "Poster.png";
+        posterImg.class = "poster";
         list.appendChild(posterImg);
         let hoverImg = document.createElement("img");
         hoverImg.src = directory + item + "Description.png";
         hoverArea.appendChild(hoverImg);
-        let title = document.createElement("div");
+        let title = document.createElement("h2");
         title.innerText = item.replaceAll("%20", " ");
-
+        title.class = "hide";
+        hoverArea.appendChild(title);
+        
     });
 </script>
 
