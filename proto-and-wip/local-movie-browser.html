@@ -29,7 +29,7 @@
         font-size: 30px;
         border: 4px solid white;
         border-radius: 20px;
-        margin: 0px 0px 4px 0px;
+        margin: 8px 0px 0px 0px;
     }
 
     .libraryDesc {
@@ -47,16 +47,17 @@
         border-radius: 18px;
     }
 
-    .libraryDesc span {
+    .libraryDesc .title {
         margin-top: 0px;
+        font-size: 50px;
     }
 
     .movieRow {
-        width: 100%;
+        width: calc(100vw - 28);
         overflow: hidden;
         background: rgba(255, 255, 255, 0.40);
         border-radius: 25px;
-        margin: 0px;
+        margin: 10px 0px 10px 0px;
         padding: 8px 10px 0px 10px;
         backdrop-filter: blur(3px);
     }
@@ -80,20 +81,11 @@
         background-color: rgba(255, 0, 0, 0.3);
         width: 35px;
     }
-
-    .hide {
-        display: none;
-    }
-    .poster:hover+.hide {
-        display: block;
-        color: red;
-    }
 </style>
 
 <body>
     <div id="libraryDesc" class="libraryDesc">
-        <img src="https://supraboy981322.github.io/uncanny%20gobledygook.png">
-        <span>jd</span>
+
     </div>
     <br>
     <div id="movies" class="libaryMovies movieRow">
@@ -102,14 +94,6 @@
                         <p>></p>
                         </buton>
     </div>
-
-    <br>
-    <div class="poster">Hover over me.</div>
-    <div class="hide">I am shown when someone hovers over the div above.</div>
-
-    <div class="poster">Hover2</div>
-    <div class="hide">I am shown when someone hovers over "Hover2"</div>
-
 </body>
 
 <script>
@@ -138,6 +122,7 @@
         title.innerText = item.replaceAll("%20", " ");
         title.setAttribute("style", "display:none;");
         title.setAttribute("id", item + "descTitle");
+        title.setAttribute("class", "title");
         hoverArea.appendChild(title);
 
     });
