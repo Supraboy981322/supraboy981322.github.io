@@ -121,21 +121,23 @@
         let posterImg = document.createElement("img");
         posterImg.src = directory + item + "Poster.png";
         posterImg.addEventListener("mouseover", (event) => {
-            document.getElementById(item).setAttribute("style", "display: inline-block");
+            document.getElementById(item + "descImg").setAttribute("style", "display: inline-block");
+            document.getElementById(item + "descTitle").setAttribute("style", "display: inline-block;");
         });
         posterImg.addEventListener("mouseleave", (event) => {
-            document.getElementById(item).setAttribute("style", "display: none");
+            document.getElementById(item + "descImg").setAttribute("style", "display: none");
+            document.getElementById(item + "descTitle").setAttribute("style", "display: none;");
         });
         list.appendChild(posterImg);
         let hoverImg = document.createElement("img");
         hoverImg.src = directory + item + "Description.png";
         hoverImg.setAttribute("style", "display:none;");
-        hoverImg.setAttribute("id", item);
+        hoverImg.setAttribute("id", item + "descImg");
         hoverArea.appendChild(hoverImg);
         let title = document.createElement("span");
         title.innerText = item.replaceAll("%20", " ");
         title.setAttribute("style", "display:none;");
-        title.setAttribute("id", item);
+        title.setAttribute("id", item + "descTitle");
         hoverArea.appendChild(title);
 
     });
