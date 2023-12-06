@@ -70,6 +70,7 @@
         font-size: 18px;
       }
     }
+
     .sidenav h1 {
       padding: 8px 8px 8px 32px;
       text-decoration: none;
@@ -79,18 +80,20 @@
       transition: 0.3s;
       font-weight: bold;
     }
+
     .sidenav img {
-      width:200px;
-      margin:0px 0px 15px 25px;
+      width: 200px;
+      margin: 0px 0px 15px 25px;
     }
+
     #sidebarButton {
-      position:absolute;
-      z-index:0;
-      left:-20px;
-      padding:5px 20px 9px 35px;
-      top:45px;
-      border-radius:20px;
-      background: rgba(102,243,252,0.5);
+      position: absolute;
+      z-index: 0;
+      left: -20px;
+      padding: 5px 20px 9px 35px;
+      top: 45px;
+      border-radius: 20px;
+      background: rgba(102, 243, 252, 0.5);
       backdrop-filter: blur(3px);
     }
   </style>
@@ -111,8 +114,8 @@
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
     </div>
     <!-- Main content -->
-    <iframe id="pageContentFrame" src="home.html" frameborder="0" scrolling="yes"
-      seamless="seamless" index="1" style="display:block; margin:-8px; width:100vw; height:100vh;"></iframe>
+    <iframe id="pageContentFrame" src="home.html" frameborder="0" scrolling="yes" seamless="seamless" index="1"
+      style="display:block; margin:-8px; width:100vw; height:100vh;"></iframe>
     <!-- END MAIN -->
   </div>
   <script>
@@ -129,21 +132,32 @@
     }
   </script>
   <script>
-        // Prevent arrow and space keys from scrolling page
-        window.addEventListener("keydown", function (e) {
-            if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
-                e.preventDefault();
-            }
-        }, false);
-        // Deprecated code! Needed for older browsers
-        window.addEventListener("keydown", function (e) {
-            // space and arrow keys
-            if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
-                e.preventDefault();
-            }
-        }, false);
+    // Prevent arrow and space keys from scrolling page
+    window.addEventListener("keydown", function (e) {
+      if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+      }
+    }, false);
+    // Deprecated code! Needed for older browsers
+    window.addEventListener("keydown", function (e) {
+      // space and arrow keys
+      if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+      }
+    }, false);
 
-    </script>
+    function loadIframe() {
+      let params = new URLSearchParams(document.location.search);
+      let t = params.get("p");
+
+      if (p == null) {
+        changeChannel("https://supraboy981322.github.io/home.html");
+      } else {
+        changeChannel("https://supraboy981322.github.io/" + decodeURI(p));
+      }
+    }
+    addEventListener(window.onload, loadIframe());
+  </script>
 </body>
 
 </html>
