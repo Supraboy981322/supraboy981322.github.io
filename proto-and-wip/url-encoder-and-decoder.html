@@ -22,6 +22,7 @@
             <h2>Encoder</h2>
             <p>
                 <input type="text" id="eIn" placeholder="Enter text here">
+                <button onclick="encode(document.getElementById('eIn').value);"></button>
                 <h3 id="eOut">Not yet encoded</h3>
             </p>
             <br>
@@ -32,6 +33,7 @@
             <h2>Decoder</h2>
             <p>
                 <input type="text" id="dIn" placeholder="Enter text here">
+                <button onclick="decode(document.getElementById('dIn').value);"></button>
                 <h3 id="dOut">Not yet decoded</h3>
             </p>
             <br>
@@ -48,12 +50,14 @@
 <script>
     function decode(t) {
         let output = document.getElementById("dOut");
-        let input = document.getElementById("dIn");
+        
+        output.innerText = decodeURI(t);
     }
 
     function encode(t){
         let output = document.getElementById("eOut");
-        let input = document.getElementById("eIn");
+        
+        output.innerText = encodeURI(t);
     }
 </script>
 </html>
