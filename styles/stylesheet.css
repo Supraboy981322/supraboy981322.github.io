@@ -14,6 +14,10 @@ h6 {
   font-family: D-DINExp-Bold;
 }
 
+center {
+  text-align: center;
+}
+
 .main {
   padding-top: 42px;
 }
@@ -235,4 +239,5 @@ footer h4 {
 
 .textBox h3 {
   color: purple;
+  text-align: center;
 }
