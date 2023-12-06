@@ -120,7 +120,6 @@
   </div>
   <script>
     function changeChannel(channelURL) {
-      event.preventDefault();
       document.getElementById("pageContentFrame").src = channelURL
     }
     function openNav() {
@@ -151,9 +150,9 @@
       let p = params.get("p");
 
       if (p == null) {
-        changeChannel("home.html");
+        changeChannel("https://supraboy981322.github.io/" + "home.html");
       } else {
-        changeChannel(decodeURI(p));
+        changeChannel("https://supraboy981322.github.io/" + decodeURI(p));
       }
     }
     addEventListener(window.onload, loadIframe());
