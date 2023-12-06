@@ -19,7 +19,7 @@
                 <label>Number of Digits</label>
                 <input id="decDigits" min="1" max="32" step="1" type="range">
                 <output id="decDigValue"></output>
-                <button onclick="genDec();">Generate</button>
+                <button onclick="gen('dec');">Generate</button>
             </p>
             <p>
                 <span>Output: </span>
@@ -44,7 +44,7 @@
                 <label>Number of Digits</label>
                 <input id="hexDigits" min="1" max="32" step="1" type="range">
                 <output id="hexDigValue"></output>
-                <button onclick="genHex();">Generate</button>
+                <button onclick="gen('hex');">Generate</button>
             </p>
             <p>
                 <span>Output: </span>
@@ -68,7 +68,7 @@
                 <label>Number of Digits</label>
                 <input id="biDigits" min="1" max="32" step="1" type="range">
                 <output id="biDigValue"></output>
-                <button onclick="genBi();">Generate</button>
+                <button onclick="gen('bi');">Generate</button>
             </p>
             <p>
                 <span>Output: </span>
@@ -92,7 +92,7 @@
                 <label>Number of digits</label>
                 <input id="thirtyOneDigits" min="1" max="32" step="1" type="range">
                 <output id="thirtyOneDigValue"></output>
-                <button onclick="genThirtyOne();">Generate</button>
+                <button onclick="gen('thirtyOne');">Generate</button>
             </p>
             <p>
                 <span>Output: </span>
@@ -116,7 +116,7 @@
                 <label>Number of digits</label>
                 <input id="sixtyTwoDigits" min="1" max="32" step="1" type="range">
                 <output id="sixtyTwoDigValue"></output>
-                <button onclick="genSixtyTwo();">Generate</button>
+                <button onclick="gen('sixtyTwo');">Generate</button>
             </p>
             <p>
                 <span>Output: </span>
@@ -222,25 +222,6 @@
         }
     }
 
-    function genSixtyTwo() {
-
-    }
-
-    function genDecVal(which, num) {
-        let decVal = "";
-        let tmp = "";
-        if (which == "bi") {
-            let biValues = ["0", "1"];
-            for (let i = 1; i < num.length; i++) {
-                decVal = decVal + ((indexOf(biValues, num[i])) ** i)
-            }
-        } else if (which == "hex") {
-            let hexValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
-
-        }
-        let valLoc = which + "Output"
-        document.getElementById(valLoc)
-    }
     function showCon(which) {
         let thing = document.getElementById(which);
         if (thing.display == 'none') {
