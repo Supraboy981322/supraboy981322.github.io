@@ -151,9 +151,9 @@
       let p = params.get("p");
 
       if (p == null) {
-        changeChannel("https://supraboy981322.github.io/home.html");
+        changeChannel("home.html");
       } else {
-        changeChannel("https://supraboy981322.github.io/" + decodeURI(p));
+        changeChannel(decodeURI(p));
       }
     }
     addEventListener(window.onload, loadIframe());
