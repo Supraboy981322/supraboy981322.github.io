@@ -21,7 +21,8 @@
             <br>
             <h2>Encoder</h2>
             <p>
-                content
+                <input type="text" id="eIn" placeholder="Enter text here">
+                <h3 id="eOut">Not yet encoded</h3>
             </p>
             <br>
         </div>
@@ -30,7 +31,8 @@
             <br>
             <h2>Decoder</h2>
             <p>
-                content
+                <input type="text" id="dIn" placeholder="Enter text here">
+                <h3 id="dOut">Not yet decoded</h3>
             </p>
             <br>
         </div>
@@ -43,5 +45,15 @@
         </div>
     </footer>
 </body>
+<script>
+    function decode(t) {
+        let output = document.getElementById("dOut");
+        let input = document.getElementById("dIn");
+    }
 
+    function encode(t){
+        let output = document.getElementById("eOut");
+        let input = document.getElementById("eIn");
+    }
+</script>
 </html>
