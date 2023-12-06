@@ -13,7 +13,8 @@
         <div class="textBox">
             <h2>Decimal (base 10)</h2>
             <h3 style="text-align: center;">What is decimal, or base 10?</h3>
-            <p>Decimal, or base 10, is the conventional number system that we use everyday. As the name suggests, it has 10 numbers in total; 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
+            <p>Decimal, or base 10, is the conventional number system that we use everyday. As the name suggests, it has
+                10 numbers in total; 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
             <p>
                 <label>Number of Digits</label>
                 <input id="decDigits" min="1" max="32" step="1" type="range">
@@ -23,20 +24,21 @@
             <p>
                 <span>Output: </span>
                 <span style="color: purple;" id="decOutput">Number not yet generated</span>
-                <button onclick="showDec();">Show conversions</button>
-                <div id="decCon" display="none">
-                    <p>Binary (base 2): </p><span id="decBi" color="purple">Number not yet generated</span>
-                    <p>Hexadecimal (base 16): </p><span id="decHex" color="purple">Number not yet generated</span>
-                    <p>Base 31: </p><span id="decThirtyOne" color="purple">Number not yet generated</span>
-                    <p>Base 62: </p><span id="decSixtyTwo" color="purple">Number not yet generated</span>
-                </div>
+                <button onclick="showCon('decCon');">Show conversions</button>
+            <div id="decCon" display="none">
+                <p>Binary (base 2): </p><span id="decBi" color="purple">Number not yet generated</span>
+                <p>Hexadecimal (base 16): </p><span id="decHex" color="purple">Number not yet generated</span>
+                <p>Base 31: </p><span id="decThirtyOne" color="purple">Number not yet generated</span>
+                <p>Base 62: </p><span id="decSixtyTwo" color="purple">Number not yet generated</span>
+            </div>
             </p>
         </div>
         <div class="textBox">
             <h2>Hexadecimal (base 16)</h2>
             <h3 style="text-align: center;">What is hexadecimal?</h3>
             <p>The hexadecimal number system is a type of number system, that has a base value equal to 16. It is also
-                pronounced sometimes as 'hex'. Hexadecimal numbers are represented by only 16 characters. These symbols or
+                pronounced sometimes as 'hex'. Hexadecimal numbers are represented by only 16 characters. These symbols
+                or
                 values are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E and F.</p>
             <p>
                 <label>Number of Digits</label>
@@ -47,19 +49,21 @@
             <p>
                 <span>Output: </span>
                 <span style="color: purple;" id="hexOutput">Number not yet generated</span>
-                <button onclick="showHex();">Show conversions</button>
-                <div id="hexCon" display="none">
-                    <p>Binary (base 2): </p><span id="hexBi" color="purple">Number not yet generated</span>
-                    <p>Decimal (base 10): </p><span id="hexDec" color="purple">Number not yet generated</span>
-                    <p>Base 31: </p><span id="hexThirtyTwo" color="purple">Number not yet generated</span>
-                    <p>Base 62: </p><span id="hexSixtyOne" color="purple">Number not yet generated</span>
-                </div>
+                <button onclick="showCon('hexCon');">Show conversions</button>
+            <div id="hexCon" display="none">
+                <p>Binary (base 2): </p><span id="hexBi" color="purple">Number not yet generated</span>
+                <p>Decimal (base 10): </p><span id="hexDec" color="purple">Number not yet generated</span>
+                <p>Base 31: </p><span id="hexThirtyTwo" color="purple">Number not yet generated</span>
+                <p>Base 62: </p><span id="hexSixtyOne" color="purple">Number not yet generated</span>
+            </div>
             </p>
         </div>
         <div class="textBox">
             <h2>Binary (base 2)</h2>
             <h3 style="text-align: center;">What is binary or base 2?</h3>
-            <p>Binary, or base 2 is the number system typically used by classical computing. Binary can represent any kind of data, whether it's images, numbers, or text. Binary consists of just 2 numbers, which is conventionally 0 and 1. However, binary can be represented by any 2 things.</p>
+            <p>Binary, or base 2 is the number system typically used by classical computing. Binary can represent any
+                kind of data, whether it's images, numbers, or text. Binary consists of just 2 numbers, which is
+                conventionally 0 and 1. However, binary can be represented by any 2 things.</p>
             <p>
                 <label>Number of Digits</label>
                 <input id="biDigits" min="1" max="32" step="1" type="range">
@@ -69,20 +73,21 @@
             <p>
                 <span>Output: </span>
                 <span style="color:purple;" id="biOutput">Number not yet generated</span>
-                <button onclick="showBi();">Show conversions</button>
-                <div id="biCon" display="none">
-                    <p>Decimal (base 10): </p><span id="biDec" color="purple">Number not yet generated</span>
-                    <p>Hexadecimal (base 16): </p><span id="biHex" color="purple">Number not yet generated</span>
-                    <p>Base 31: </p><span id="biThirtyOne" color="purple">Number not yet generated</span>
-                    <p>Base 62: </p><span id="biSixtyTwo" color="purple">Number not yet generated</span>
-                </div>
+                <button onclick="showCon('biCon');">Show conversions</button>
+            <div id="biCon" display="none">
+                <p>Decimal (base 10): </p><span id="biDec" color="purple">Number not yet generated</span>
+                <p>Hexadecimal (base 16): </p><span id="biHex" color="purple">Number not yet generated</span>
+                <p>Base 31: </p><span id="biThirtyOne" color="purple">Number not yet generated</span>
+                <p>Base 62: </p><span id="biSixtyTwo" color="purple">Number not yet generated</span>
+            </div>
             </p>
         </div>
 
         <div class="textBox">
             <h2>Base 31</h2>
             <h3 style="text-align: center;">What is base 31?</h3>
-            <p>The base 31 number system consists of 31 numbers in total, as the name implies. Base 31 represents numbers using 0-9 and a-z.</p>
+            <p>The base 31 number system consists of 31 numbers in total, as the name implies. Base 31 represents
+                numbers using 0-9 and a-z.</p>
             <p>
                 <label>Number of digits</label>
                 <input id="thirtyOneDigits" min="1" max="32" step="1" type="range">
@@ -92,19 +97,21 @@
             <p>
                 <span>Output: </span>
                 <span style="color:purple;" id="31Output">Number not yet generated</span>
-                <button onclick="if(document.getElementById.display == 'none'){document.getElementById('thirtyOneCon').setAttribute('display', 'block');} else {document.getElementById('thirtyOneCon').setAttribute('display', 'none');};">Show conversions</button>
-                <div id="thirtyOneCon" display="none">
-                    <p>Binary (base 2): </p><span id="thirtyOneBi" color="purple">Number not yet generated</span>
-                    <p>Decimal (base 10): </p><span id="thirtyOneDec" color="purple">Number not yet generated</span>
-                    <p>Hexadecimal (base 16): </p><span id="thirtyOneHex" color="purple">Number not yet generated</span>
-                    <p>Base 62: </p><span id="thirtyOneSixtyTwo" color="purple">Number not yet generated</span>
-                </div>
+                <button onclick="showCon('thirtyOneCon');">Show conversions</button>
+            <div id="thirtyOneCon" display="none">
+                <p>Binary (base 2): </p><span id="thirtyOneBi" color="purple">Number not yet generated</span>
+                <p>Decimal (base 10): </p><span id="thirtyOneDec" color="purple">Number not yet generated</span>
+                <p>Hexadecimal (base 16): </p><span id="thirtyOneHex" color="purple">Number not yet generated</span>
+                <p>Base 62: </p><span id="thirtyOneSixtyTwo" color="purple">Number not yet generated</span>
+            </div>
             </p>
         </div>
         <div class="textBox">
             <h2>Base 62</h2>
             <h3 style="text-align: center;">What is base 62?</h3>
-            <p>The base 62 number system is, as it expresses, a 62 character number system. The base 62 number system uses 0-9, a-z, and A-Z. The base 62 number system uses both capitol and lowercase characters, as well as the conventional 0-9, to represent numbers.</p>
+            <p>The base 62 number system is, as it expresses, a 62 character number system. The base 62 number system
+                uses 0-9, a-z, and A-Z. The base 62 number system uses both capitol and lowercase characters, as well as
+                the conventional 0-9, to represent numbers.</p>
             <p>
                 <label>Number of digits</label>
                 <input id="sixtyTwoDigits" min="1" max="32" step="1" type="range">
@@ -114,13 +121,13 @@
             <p>
                 <span>Output: </span>
                 <span style="color:purple;" id="62Output">Number not yet generated</span>
-                <button onclick="showHex();">Show conversions</button>
-                <div id="sixtyTwoCon" display="none">
-                    <p>Binary (base 2): </p><span id="sixtyTwoBi" color="purple">Number not yet generated</span>
-                    <p>Decimal (base 10): </p><span id="sixtyTwoDec" color="purple">Number not yet generated</span>
-                    <p>Hexadecimal (base 16): </p><span id="sixtyTwoHex" color="purple">Number not yet generated</span>
-                    <p>Base 31: </p><span id="sixtyTwoThirtyOne" color="purple">Number not yet generated</span>
-                </div>
+                <button onclick="showCon('sixtyTwoCon');">Show conversions</button>
+            <div id="sixtyTwoCon" display="none">
+                <p>Binary (base 2): </p><span id="sixtyTwoBi" color="purple">Number not yet generated</span>
+                <p>Decimal (base 10): </p><span id="sixtyTwoDec" color="purple">Number not yet generated</span>
+                <p>Hexadecimal (base 16): </p><span id="sixtyTwoHex" color="purple">Number not yet generated</span>
+                <p>Base 31: </p><span id="sixtyTwoThirtyOne" color="purple">Number not yet generated</span>
+            </div>
             </p>
         </div>
     </div>
@@ -132,25 +139,13 @@
     </footer>
 </body>
 <script>
-    
+
     const decValue = document.querySelector("#decDigValue");
     const decInput = document.querySelector("#decDigits");
     decValue.textContent = decInput.value;
     decInput.addEventListener("input", (event) => {
         decValue.textContent = event.target.value;
-    })
-
-    function genDec() {
-        let decValues = ["0", "1","2","3","4","5","6","7","8","9"];
-        let decDigits = document.getElementById("decDigits").value;
-        let decNum = "";
-        let DecCurDig = "";
-        for (let i = 0; i < decDigits; i++) {
-            decNum = decNum + decValues[Math.floor(Math.random() * 10) + 0];
-        }
-        document.getElementById("decOutput").innerText = decNum;
-    }
-    
+    });
     const hexValue = document.querySelector("#hexDigValue");
     const hexInput = document.querySelector("#hexDigits");
     hexValue.textContent = hexInput.value;
@@ -158,53 +153,19 @@
         hexValue.textContent = event.target.value;
     });
 
-    function genHex() {
-        let hexValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
-        let hexDigits = document.getElementById("hexDigits").value;
-        let hexNum = "";
-        let hexCurDig = "";
-        for (let i = 0; i < hexDigits; i++) {
-            hexNum = hexNum + hexValues[Math.floor(Math.random() * 16) + 0];
-        };
-        document.getElementById("hexOutput").innerText = "#" + hexNum;
-    };
-
     const biValue = document.querySelector("#biDigValue");
     const biInput = document.querySelector("#biDigits");
     biValue.textContent = biInput.value;
     biInput.addEventListener("input", (event) => {
         biValue.textContent = event.target.value;
-    })
-
-    function genBi() {
-        let biValues = ["0", "1"];
-        let biDigits = document.getElementById("biDigits").value;
-        let biNum = "";
-        let biCurDig = "";
-        for (let i = 0; i < biDigits; i++) {
-            biNum = biNum + biValues[Math.floor(Math.random() * 2) + 0];
-        }
-        document.getElementById("biOutput").innerText = biNum;
-    }
+    });
 
     const thirtyOneValue = document.querySelector("#thirtyOneDigValue");
     const thirtyOneInput = document.querySelector("#thirtyOneDigits");
     thirtyOneValue.textContent = thirtyOneInput.value;
     thirtyOneInput.addEventListener("input", (event) => {
         thirtyOneValue.textContent = event.target.value;
-    })
-
-    function genThirtyOne() {
-        let thirtyOneValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-        let thirtyOneDigits = document.getElementById("thirtyOneDigits").value;
-        let thirtyOneNum = "";
-        let thirtyOneCurDig = "";
-        for (let i = 0; i < thirtyOneDigits; i++) {
-            thirtyOneNum = thirtyOneNum + thirtyOneValues[Math.floor(Math.random() * 31) + 0];
-        }
-        document.getElementById("31Output").innerText = thirtyOneNum;
-    }
-
+    });
 
     const sixtyTwoValue = document.querySelector("#sixtyTwoDigValue");
     const sixtyTwoInput = document.querySelector("#sixtyTwoDigits");
@@ -213,15 +174,56 @@
         sixtyTwoValue.textContent = event.target.value;
     })
 
-    function genSixtyTwo() {
-        let sixtyTwoValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-        let sixtyTwoDigits = document.getElementById("sixtyTwoDigits").value;
-        let sixtyTwoNum = "";
-        let sixtyTwoCurDig = "";
-        for (let i = 0; i < sixtyTwoDigits; i++) {
-            sixtyTwoNum = sixtyTwoNum + sixtyTwoValues[Math.floor(Math.random() * 62) + 0];
+    function gen(which) {
+        if (which == "dec") {
+            let decValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+            let decDigits = document.getElementById("decDigits").value;
+            let decNum = "";
+            let DecCurDig = "";
+            for (let i = 0; i < decDigits; i++) {
+                decNum = decNum + decValues[Math.floor(Math.random() * 10) + 0];
+            }
+        } else if (which == "hex") {
+            let hexValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+            let hexDigits = document.getElementById("hexDigits").value;
+            let hexNum = "";
+            let hexCurDig = "";
+            for (let i = 0; i < hexDigits; i++) {
+                hexNum = hexNum + hexValues[Math.floor(Math.random() * 16) + 0];
+            };
+            document.getElementById("hexOutput").innerText = "#" + hexNum;
+        } else if (which == "bi") {
+            let biValues = ["0", "1"];
+            let biDigits = document.getElementById("biDigits").value;
+            let biNum = "";
+            let biCurDig = "";
+            for (let i = 0; i < biDigits; i++) {
+                biNum = biNum + biValues[Math.floor(Math.random() * 2) + 0];
+            }
+            document.getElementById("biOutput").innerText = biNum;
+        } else if (which == "genThirtyOne") {
+            let thirtyOneValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+            let thirtyOneDigits = document.getElementById("thirtyOneDigits").value;
+            let thirtyOneNum = "";
+            let thirtyOneCurDig = "";
+            for (let i = 0; i < thirtyOneDigits; i++) {
+                thirtyOneNum = thirtyOneNum + thirtyOneValues[Math.floor(Math.random() * 31) + 0];
+            }
+            document.getElementById("31Output").innerText = thirtyOneNum;
+        } else if (which == "sixtyTwo") {
+            let sixtyTwoValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+            let sixtyTwoDigits = document.getElementById("sixtyTwoDigits").value;
+            let sixtyTwoNum = "";
+            let sixtyTwoCurDig = "";
+            for (let i = 0; i < sixtyTwoDigits; i++) {
+                sixtyTwoNum = sixtyTwoNum + sixtyTwoValues[Math.floor(Math.random() * 62) + 0];
+            }
+            document.getElementById("62Output").innerText = sixtyTwoNum;
         }
-        document.getElementById("62Output").innerText = sixtyTwoNum;
+    }
+
+    function genSixtyTwo() {
+
     }
 
     function genDecVal(which, num) {
@@ -239,7 +241,14 @@
         let valLoc = which + "Output"
         document.getElementById(valLoc)
     }
-
+    function showCon(which) {
+        let thing = document.getElementById(which);
+        if (thing.display == 'none') {
+            thing.setAttribute('display', 'block');
+        } else {
+            thing.setAttribute('display', 'none');
+        };
+    }
     function con(which) {
         let decLoc = document.getElementById("dec")
     }
