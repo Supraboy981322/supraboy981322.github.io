@@ -210,30 +210,30 @@
             for (let i = 0; i < num.length; i++) {
                 r = (r + (num[i] * Math.pow(2, i)));
             };
-            document.getElementById(loc + which).innerText = r;
         } else if (which == "Dec") {
             let num = dec;
             for (let i = 0; i < num.length; i++) {
                 r = (r + (num[i] * Math.pow(10, i)));
             };
-            document.getElementById(loc + which).innerText = r;
         } else if (which == "Hex") {
             let num = hex;
             for (let i = 0; i < num.length; i++) {
                 r = (r + (num[i] * Math.pow(16, i)));
             };
-            document.getElementById(loc + which).innerText = r;
         } else if (which == "ThirtySix") {
             let num = thirtySix;
             for (let i = 0; i < num.length; i++) {
                 r = (r + (num[i] * Math.pow(36, i)));
             };
-            document.getElementById(loc + which).innerText = r;
         } else if (which == "SixtyTwo") {
             let num = sixtyTwo;
             for (let i = 0; i < num.length; i++) {
                 r = (r + (num[i] * Math.pow(62, i)));
             };
+        }
+        if (which == "out") {
+            document.getElementById().innerText = r;
+        } else {
             document.getElementById(loc + which).innerText = r;
         }
     }
