@@ -19,7 +19,7 @@
                 <label>Number of Digits</label>
                 <input id="decDigits" min="1" max="32" step="1" type="range">
                 <output id="decDigValue"></output>
-                <button onclick="gen('dec');">Generate</button>
+                <button onclick="gen('dec'); con('Bi', 'dec'); con('Hex', 'dec'); con('ThirtySix', 'dec'); con('SixtyTwo', 'dec');">Generate</button>
             </p>
             <p>
                 <span>Output: </span>
@@ -44,7 +44,7 @@
                 <label>Number of Digits</label>
                 <input id="hexDigits" min="1" max="32" step="1" type="range">
                 <output id="hexDigValue"></output>
-                <button onclick="gen('hex');">Generate</button>
+                <button onclick="gen('hex'); con('Bi', 'hex'); con('Dec', 'hex'); con('ThirtySix', 'hex'); con('SixtyTwo', 'hex');">Generate</button>
             </p>
             <p>
                 <span>Output: </span>
@@ -53,7 +53,7 @@
             <div id="hexCon" display="none">
                 <p>Binary (base 2): </p><span id="hexBi" color="purple">Number not yet generated</span>
                 <p>Decimal (base 10): </p><span id="hexDec" color="purple">Number not yet generated</span>
-                <p>Base 36: </p><span id="hexThirtyTwo" color="purple">Number not yet generated</span>
+                <p>Base 36: </p><span id="hexThirtySix" color="purple">Number not yet generated</span>
                 <p>Base 62: </p><span id="hexSixtyOne" color="purple">Number not yet generated</span>
             </div>
             </p>
@@ -68,7 +68,7 @@
                 <label>Number of Digits</label>
                 <input id="biDigits" min="1" max="32" step="1" type="range">
                 <output id="biDigValue"></output>
-                <button onclick="gen('bi');">Generate</button>
+                <button onclick="gen('bi'); con('Dec', 'bi'); con('Hex', 'bi'); con('ThirtySix', 'bi'); con('SixtyTwo', 'bi');">Generate</button>
             </p>
             <p>
                 <span>Output: </span>
@@ -92,7 +92,7 @@
                 <label>Number of digits</label>
                 <input id="thirtySixDigits" min="1" max="32" step="1" type="range">
                 <output id="thirtySixDigValue"></output>
-                <button onclick="gen('thirtySix');">Generate</button>
+                <button onclick="gen('thirtySix'); con('Dec', 'thirtySix'); con('Hex', 'thirtySix'); con('Bi', 'thirtySix'); con('SixtyTwo', 'thirtySix');">Generate</button>
             </p>
             <p>
                 <span>Output: </span>
@@ -116,7 +116,7 @@
                 <label>Number of digits</label>
                 <input id="sixtyTwoDigits" min="1" max="32" step="1" type="range">
                 <output id="sixtyTwoDigValue"></output>
-                <button onclick="gen('sixtyTwo');">Generate</button>
+                <button onclick="gen('sixtyTwo'); con('Dec', 'sixtyTwo'); con('Hex', 'sixtyTwo'); con('Bi', 'sixtyTwo'); con('ThirtySix', 'sixtyTwo');">Generate</button>
             </p>
             <p>
                 <span>Output: </span>
@@ -175,32 +175,19 @@
     })
 
     function gen(which) {
+        let numValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+            let numDigits = document.getElementById(which + "Digits").value;
+            let Num = "";
+            let numCurDig = "";
+            for (let i = 0; i < numDigits; i++) {
+                Num = Num + numValues[Math.floor(Math.random() * 10) + 0];
+        }
         if (which == "dec") {
-            let decValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-            let decDigits = document.getElementById("decDigits").value;
-            let decNum = "";
-            let DecCurDig = "";
-            for (let i = 0; i < decDigits; i++) {
-                decNum = decNum + decValues[Math.floor(Math.random() * 10) + 0];
-            }
+            con("out", "dec", Num);
         } else if (which == "hex") {
-            let hexValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
-            let hexDigits = document.getElementById("hexDigits").value;
-            let hexNum = "";
-            let hexCurDig = "";
-            for (let i = 0; i < hexDigits; i++) {
-                hexNum = hexNum + hexValues[Math.floor(Math.random() * 16) + 0];
-            };
-            document.getElementById("hexOutput").innerText = "#" + hexNum;
+            con("out", "hex", Num);
         } else if (which == "bi") {
-            let biValues = ["0", "1"];
-            let biDigits = document.getElementById("biDigits").value;
-            let biNum = "";
-            let biCurDig = "";
-            for (let i = 0; i < biDigits; i++) {
-                biNum = biNum + biValues[Math.floor(Math.random() * 2) + 0];
-            }
-            document.getElementById("biOutput").innerText = biNum;
+            con("out", "bi", "hex")
         } else if (which == "genthirtySix") {
             let thirtySixValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
             let thirtySixDigits = document.getElementById("thirtySixDigits").value;
@@ -230,28 +217,48 @@
             thing.setAttribute('display', 'none');
         };
     }
-    function con(which) {
-        let biLoc = document.getElementById("biOutput");
-        let decLoc = document.getElementById("decOutput");
-        let hexLoc = document.getElementById("hexOutput");
-        let thirtySixLoc = document.getElementById("36Output");
-        let sixtyTwoLoc = document.getElementById("62Output");
+    function con(which, loc, num) {
+        let bi = document.getElementById("biOutput").innerText;
+        let dec = document.getElementById("decOutput").innerText;
+        let hex = document.getElementById("hexOutput").innerText;
+        let thirtySix = document.getElementById("36Output").innerText;
+        let sixtyTwo = document.getElementById("62Output").innerText;
         let biDigs = ["0", "1"];
         let decDigs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
         let hexDigs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
         let thirtySixDigs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
         let sixtyTwoDigs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-        
-        if (which == "bi") {
-
-        } else if (which == "dec") {
-
-        } else if (which == "hex") {
-
-        } else if (which == "thirtySix") {
-
-        } else if (which == "sixtyTwo") {
-
+        let r = "";
+        if (which == "Bi") {
+            let num = bi;
+            for (let i = 0; i < num.length; i++) {
+                r = (r + (num[i] * Math.pow(2, i)));
+            };
+            document.getElementById(loc + which).innerText = r;
+        } else if (which == "Dec") {
+            let num = dec;
+            for (let i = 0; i < num.length; i++) {
+                r = (r + (num[i] * Math.pow(10, i)));
+            };
+            document.getElementById(loc + which).innerText = r;
+        } else if (which == "Hex") {
+            let num = hex;
+            for (let i = 0; i < num.length; i++) {
+                r = (r + (num[i] * Math.pow(16, i)));
+            };
+            document.getElementById(loc + which).innerText = r;
+        } else if (which == "ThirtySix") {
+            let num = thirtySix;
+            for (let i = 0; i < num.length; i++) {
+                r = (r + (num[i] * Math.pow(36, i)));
+            };
+            document.getElementById(loc + which).innerText = r;
+        } else if (which == "SixtyTwo") {
+            let num = sixtyTwo;
+            for (let i = 0; i < num.length; i++) {
+                r = (r + (num[i] * Math.pow(62, i)));
+            };
+            document.getElementById(loc + which).innerText = r;
         }
     }
 </script>
