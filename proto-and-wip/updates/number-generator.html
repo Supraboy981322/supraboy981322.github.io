@@ -182,31 +182,7 @@
             for (let i = 0; i < numDigits; i++) {
                 Num = Num + numValues[Math.floor(Math.random() * 10) + 0];
         }
-        if (which == "dec") {
-            con("out", "dec", Num);
-        } else if (which == "hex") {
-            con("out", "hex", Num);
-        } else if (which == "bi") {
-            con("out", "bi", "hex")
-        } else if (which == "genthirtySix") {
-            let thirtySixValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-            let thirtySixDigits = document.getElementById("thirtySixDigits").value;
-            let thirtySixNum = "";
-            let thirtySixCurDig = "";
-            for (let i = 0; i < thirtySixDigits; i++) {
-                thirtySixNum = thirtySixNum + thirtySixValues[Math.floor(Math.random() * 36) + 0];
-            }
-            document.getElementById("36Output").innerText = thirtySixNum;
-        } else if (which == "sixtyTwo") {
-            let sixtyTwoValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-            let sixtyTwoDigits = document.getElementById("sixtyTwoDigits").value;
-            let sixtyTwoNum = "";
-            let sixtyTwoCurDig = "";
-            for (let i = 0; i < sixtyTwoDigits; i++) {
-                sixtyTwoNum = sixtyTwoNum + sixtyTwoValues[Math.floor(Math.random() * 62) + 0];
-            }
-            document.getElementById("62Output").innerText = sixtyTwoNum;
-        }
+        con("out", which, Num);
     }
 
     function showCon(which) {
