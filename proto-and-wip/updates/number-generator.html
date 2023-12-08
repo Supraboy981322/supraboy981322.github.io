@@ -194,45 +194,43 @@
         };
     }
     function con(which, loc, num) {
-        let bi = document.getElementById("biOutput").innerText;
-        let dec = document.getElementById("decOutput").innerText;
-        let hex = document.getElementById("hexOutput").innerText;
-        let thirtySix = document.getElementById("36Output").innerText;
-        let sixtyTwo = document.getElementById("62Output").innerText;
-        let biDigs = ["0", "1"];
-        let decDigs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-        let hexDigs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
-        let thirtySixDigs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-        let sixtyTwoDigs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        let Bi = document.getElementById("biOutput").innerText;
+        let Dec = document.getElementById("decOutput").innerText;
+        let Hex = document.getElementById("hexOutput").innerText;
+        let ThirtySix = document.getElementById("36Output").innerText;
+        let SixtyTwo = document.getElementById("62Output").innerText;
+        let BiDigs = ["0", "1"];
+        let DecDigs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+        let HexDigs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+        let ThirtySixDigs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        let SixtyTwoDigs = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
         let r = "";
         if (which == "Bi") {
-            let num = bi;
-            for (let i = 0; i < num.length; i++) {
-                r = (r + (num[i] * Math.pow(2, i)));
-            };
+            let num = Bi;
+            let base = 2;
         } else if (which == "Dec") {
-            let num = dec;
-            for (let i = 0; i < num.length; i++) {
-                r = (r + (num[i] * Math.pow(10, i)));
-            };
+            let num = Dec;
+            let base = 10;
         } else if (which == "Hex") {
-            let num = hex;
-            for (let i = 0; i < num.length; i++) {
-                r = (r + (num[i] * Math.pow(16, i)));
-            };
+            let num = Hex;
+            let base = 16;
         } else if (which == "ThirtySix") {
-            let num = thirtySix;
-            for (let i = 0; i < num.length; i++) {
-                r = (r + (num[i] * Math.pow(36, i)));
-            };
+            let num = ThirtySix;
+            let base = 36;
         } else if (which == "SixtyTwo") {
-            let num = sixtyTwo;
-            for (let i = 0; i < num.length; i++) {
-                r = (r + (num[i] * Math.pow(62, i)));
-            };
+            let num = SixtyTwo;
+            let base = 62;
         }
         if (which == "out") {
-            document.getElementById().innerText = r;
+            let ()
+        } else {
+            for (let i = 0; i < num.length; i++) {
+                r = (r + (num[i] * Math.pow(base, i)));
+            };
+        }
+
+        if (which == "out") {
+            document.getElementById(loc + "Output").innerText = r;
         } else {
             document.getElementById(loc + which).innerText = r;
         }
