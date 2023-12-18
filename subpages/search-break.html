@@ -9,7 +9,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        margin-top: 25vh;
+        margin-top: calc(50vh - 137px);
     }
 
     body {
@@ -30,6 +30,7 @@
         position: absolute;
         margin-top: 0px;
         margin-right: 8vw;
+        cursor: pointer;
     }
 
     #searchBox {
@@ -45,6 +46,10 @@
         margin-left: 8vw;
         margin-right: 1vw;
     }
+
+    .pageTitle {
+        font-size: 60px;
+    }
 </style>
 
 <body>
@@ -55,9 +60,26 @@
         <br>
         <div id="searchBox" contenteditable>
         </div>
-        <div onclick="window.location.replace('https://www.google.com/search?q=' + document.getElementById('searchBox').innerHTML);" id="search"><span  onclick="window.location.replace('https://www.google.com/search?q=' + document.getElementById('searchBox').innerHTML);">Go</span></div>
+        <div onclick="search();" id="search"><span onclick="search();">Go</span>
+        </div>
         <br>
     </div>
 </body>
+<script>
+    var input = document.getElementById("searchBox");
+    var searchButton = document.getElementById("search");
+    
+    function search() {
+        window.location.replace("https://www.google.com/search?q=" + input.innerText);
+        searchButton.setAttribute("style", "background: rgba(162, 200, 225, 0.4);")
+    }
+
+    input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("search").click();
+        }
+    }); 
+</script>
 
 </html>
