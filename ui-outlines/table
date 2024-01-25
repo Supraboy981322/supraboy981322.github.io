@@ -5,8 +5,8 @@
 </div>
 <br>
 <div id="tab1" class="tabcontent textBox">
-    <h3>title</h3>
-    <p>description</p>
+    <h3>title1</h3>
+    <p>description1</p>
 </div>
 <div id="tab2" class="tabcontent textBox">
     <h3>title2</h3>
