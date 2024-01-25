@@ -1,0 +1,33 @@
+<div class="tab tabBar center">
+    <button class="tablinks centerV center" onclick="openTab(event, 'tab1')">Tab1</button>
+    <button class="tablinks centerV center" onclick="openTab(event, 'tab2')">Tab2</button>
+    <button class="tablinks centerV center" onclick="openTab(event, 'tab3')">Tab3</button>
+</div>
+<br>
+<div id="tab1" class="tabcontent textBox">
+    <h3>title</h3>
+    <p>description</p>
+</div>
+<div id="tab2" class="tabcontent textBox">
+    <h3>title2</h3>
+    <p>description2</p>
+</div>
+<div id="tab3" class="tabcontent textBox">
+    <h3>title3</h3>
+    <p>description3</p>
+</div>
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>

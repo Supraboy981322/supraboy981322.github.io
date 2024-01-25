@@ -143,6 +143,13 @@ footer h4 {
   background-color: rgba(200, 200, 200, 0.5);
 }
 
+center {
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
 /* Style the tab content */
 .tabcontent {
   display: none;

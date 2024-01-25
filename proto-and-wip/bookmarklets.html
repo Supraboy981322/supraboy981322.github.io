@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://supraboy981322.github.io/styles/stylesheet.css">
+
+<body>
+    <div class="main">
+        <div>
+            <h1 class="pageTitle"><b>Bookmarklet</b></h1>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <h2>What is a "bookmarklet?"</h2>
+            <p>A bookmarklet is a browser bookmark that contains javascript instead of a URL. This allows you to execute javascript code in your browser just by clicking the shortcut in your bookmarks bar.</p>
+            <br>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <h2>How do I add one?</h2>
+            <p>You can add a bookmarklet in one of two ways.</p>
+            <h3>Option 1</h3>
+            <div style="padding-left: 25vw; padding-right: 25vw;">
+                <li>Create a bookmark a page (it doesn't matter what page you bookmark because we'll replace the URL with the code)</li>
+                <li>Edit the bookmark</li>
+                <li>Remove the URL for the bookmark and paste the code into the text box</li>
+                <li>Double check that code begins with "javascript: " (if it does not, add it to the beginning)</li>
+                <li>The URL text input box should now contain the code. (Ex. "javascript:document.body.contentEditable = 'true'; document.designMode='on'; void 0")</li>
+                <li>Save the changes</li>
+            </div>
+            <h3>Option 3</h3>
+            <div style="padding-left: 25vw; padding-right: 25vw;">
+                <p>This method only applies if you have a link containing the code</p>
+                <li>If your bookmarks bar is visible, drag the link containing the code to the bookmark bar</li>
+                <li>If you cannot drag the link to your bookmark bar, your browser may have the option to barkmark it when right-clicking the link</li>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="textBox">
+            <br>
+            <h2>Bookmarklets</h2>
+            <div class="tab tabBar center">
+                <button class="tablinks centerV center" onclick="openTab(event, 'tab1')">Games</button>
+                <button class="tablinks centerV center" onclick="openTab(event, 'tab2')">Utilities</button>
+                <button class="tablinks centerV center" onclick="openTab(event, 'tab3')">Fun</button>
+                <button class="tablinks centerV center" onclick="openTab(event, 'tab4')">Pranks</button>
+                <button class="tablinks centerV center" onclick="opentab(event, 'tab5')">Misc.</button>
+            </div>
+            <br>
+            <div id="tab1" class="tabcontent textBox">
+                <h3>title</h3>
+                <p>description</p>
+            </div>
+            <div id="tab2" class="tabcontent textBox">
+                <h3>title2</h3>
+                <p>description2</p>
+            </div>
+            <div id="tab3" class="tabcontent textBox">
+                <h3>title3</h3>
+                <p>description2</p>
+            </div>
+            <script>
+                function openTab(evt, tabName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(tabName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+            </script>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h4>End of page</h4>
+        </div>
+    </footer>
+</body>
+
+</html>
