@@ -60,11 +60,9 @@
             let iframe = document.getElementById("searchFrame");
             let checkbox = document.getElementById("proxyCheckBox");
             if (checkbox.checked == true) {
-                iframe.setAttribute("is", "x-frame-bypass");
-                iframe.reload
+                document.location.replace(document.location + "?proxy=use");
             } else if (checkbox.checked == false) {
-                iframe.setAttribute("is", "allow-x-frame");
-                iframe.reload
+
             } else {
                 console.log("Failed to enable proxy. Info: iframe - " + iframe + "| actual - " + document.getElementById("searchFrame") + "|| checkbox value - " + checkbox.checked + "| actual - " + document.getElementById("proxyCheckBox"));
             }
@@ -75,9 +73,11 @@
             let proxy = params.get("proxy");
 
             if (proxy == null) {
-                changeChannel("https://supraboy981322.github.io/" + "home.html");
+                
+            } else if(proxy == "use") {
+                
             } else {
-                changeChannel("https://supraboy981322.github.io/" + decodeURI(p));
+
             }
         }
 
