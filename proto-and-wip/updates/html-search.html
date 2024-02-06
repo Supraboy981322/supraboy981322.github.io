@@ -12,16 +12,29 @@
 		#searchFrame {
 			background-color: white;
 			position: absolute;
-			height: 95%;
+			height: calc(100vh - 45px);
 			width: 100%;
 			border: none;
 		}
+        #menuBar {
+            height: 45px;
+            margin: 0px;
+            padding: 0px;
+        }
+        #menuBarC {
+            padding: 10px;
+        }
 	</style>
 	<body>
-		<div>
-			<center>
+		<div id="menuBar">
+			<center id="menuBarC">
                 <input placeholder="Enter URL" type="text" id="searchInput" name="input">
-                <button onclick="changeChannel()">Search</button>
+                <select id="searchEngine" name="searchEngineOptions">
+                    <option value="">Custom URL</option>
+                    <option value="https://www.bing.com/search?q=" selected>Bing</option>
+                    <option value="https://www.dogpile.com/serp?q=">DogPile</option>
+                </select>
+                <button onclick="changeChannel()">Go</button>
             </center>
         </div>
         <div>
