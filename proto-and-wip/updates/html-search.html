@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>HTML iFrame Search v2.5</title>
+	</head>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background: black;
+		}
+		#searchFrame {
+			background-color: white;
+			position: absolute;
+			height: 95%;
+			width: 100%;
+			border: none;
+		}
+	</style>
+	<body>
+		<div>
+			<center>
+                <input placeholder="Enter URL" type="text" id="searchInput" name="input">
+                <button onclick="changeChannel()">Search</button>
+            </center>
+        </div>
+        <div>
+            <iframe id="searchFrame" src="https://www.bing.com" scrolling="yes"></iframe>
+        </div>
+	</body>
+	<script>
+		document.getElementById("searchInput").addEventListener("keydown", function (e) {
+			if (e.code === "Enter") { //checks whether the pressed key is "Enter"
+				changeChannel ();
+			}
+		});
+		function changeChannel () {
+			event.preventDefault ();
+			document.getElementById("searchFrame").src = document.getElementById("searchInput").value;
+		}
+	</script>
+</html>
