@@ -33,14 +33,18 @@
                     <option value="">Custom URL</option>
                     <option value="https://www.bing.com/search?q=" selected>Bing</option>
                     <option value="https://www.dogpile.com/serp?q=">DogPile</option>
+                    <option value="http://frogfind.com/?q=">FrogFind!</option>
                 </select>
                 <button onclick="changeChannel()">Go</button>
+                <input type="checkbox" id="proxyCheckBox" name="proxyCheckBox">
+                <label for="proxyCheckBox">Proxy</label>
             </center>
         </div>
         <div>
-            <iframe id="searchFrame" src="https://www.bing.com" scrolling="yes"></iframe>
+            <iframe id="searchFrame" src="https://www.dogpile.com" scrolling="yes"></iframe>
         </div>
 	</body>
+    <script src="https://niutech.github.io/x-frame-bypass/x-frame-bypass.js" type="module"></script>
 	<script>
 		document.getElementById("searchInput").addEventListener("keydown", function (e) {
 			if (e.code === "Enter") { //checks whether the pressed key is "Enter"
@@ -51,5 +55,21 @@
 			event.preventDefault ();
 			document.getElementById("searchFrame").src = document.getElementById("searchInput").value;
 		}
+        document.addEventListener(document.getElementById("proxyCheckBox").checked, enableProxy());
+        function enableProxy() {
+            let iframe = document.getElementById("searchFrame");
+            let checkbox = document.getElementById("proxyCheckBox");
+            if (checkbox.checked == true) {
+                iframe.setAttribute("is", "x-frame-bypass");
+                iframe.reload
+            } else if (checkbox.checked == false) {
+                iframe.setAttribute("is", "allow-x-frame");
+                iframe.reload
+            } else {
+                console.log("Failed to enable proxy. Info: iframe - " + iframe + "| actual - " + document.getElementById("searchFrame") + "|| checkbox value - " + checkbox.checked + "| actual - " + document.getElementById("proxyCheckBox"));
+            }
+            
+        }
+
 	</script>
 </html>
