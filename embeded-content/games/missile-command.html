@@ -319,6 +319,7 @@ function loop(time) {
   explosions = explosions.filter(explosion => explosion.alive);
   cities = cities.filter(city => city.alive);
   silos = silos.filter(silo => silo.alive);
+  doneReloadThen();
 }
 
 // listen to mouse events to fire counter-missiles
@@ -356,6 +357,13 @@ canvas.addEventListener('click', e => {
     });
   }
 });
+function doneReloadThen () {
+  setTimeout(() => {    
+    if (missiles.filter(missiles => missiles.alive) == "") {
+      setTimeout(() => { document.location.reload(); }, 1000);
+    }
+  }, 3000);  
+}
 
 // start the game
 requestAnimationFrame(loop);
