@@ -15,7 +15,7 @@ store16(offset,value){if(offset>=this.size){return;}
 this.owner.memoryDirtied(this,offset>>this.blockSize);return this.blocks[offset>>this.blockSize].store16(offset&this.mask,value);}
 store32(offset,value){if(offset>=this.size){return;}
 this.owner.memoryDirtied(this,offset>>this.blockSize);return this.blocks[offset>>this.blockSize].store32(offset&this.mask,value);}
-invalidatePage(address){}};class GameBoyAdvanceRenderProxy{constructor(){this.worker=new Worker('https://andychase.me/gbajs2/js/video/worker.js');this.currentFrame=0;this.delay=0;this.skipFrame=false;this.dirty=null;var self=this;var handlers={finish:function(data){self.backing=data.backing;self.caller.finishDraw(self.backing);--self.delay;}};this.worker.onmessage=function(message){handlers[message.data['type']](message.data);};}
+invalidatePage(address){}};class GameBoyAdvanceRenderProxy{constructor(){this.worker=new Worker('https://supraboy981322.github.io/scripts/gbajs2-js-video-worker.js');this.currentFrame=0;this.delay=0;this.skipFrame=false;this.dirty=null;var self=this;var handlers={finish:function(data){self.backing=data.backing;self.caller.finishDraw(self.backing);--self.delay;}};this.worker.onmessage=function(message){handlers[message.data['type']](message.data);};}
 memoryDirtied(mem,block){this.dirty=this.dirty||{};this.dirty.memory=this.dirty.memory||{};if(mem===this.palette){this.dirty.memory.palette=mem.blocks[0].buffer;}
 if(mem===this.oam){this.dirty.memory.oam=mem.blocks[0].buffer;}
 if(mem===this.vram){this.dirty.memory.vram=this.dirty.memory.vram||[];this.dirty.memory.vram[block]=mem.blocks[block].buffer;}}
