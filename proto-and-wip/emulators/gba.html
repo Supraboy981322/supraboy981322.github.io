@@ -23,7 +23,10 @@
     <script src="https://andychase.me/gbajs2/resources/xhr.js"></script>
     <script src="https://andychase.me/gbajs2/resources/biosbin.js"></script>
     <script>
-        window.onload = (event) => { document.getElementsByClassName("pixelCheck", "soundCheck").checked = true;};
+        window.onload = (event) => {
+            document.getElementsByClassName("pixelCheck").checked = true;
+            document.getElementByClassName("soundCheck").checked = true;
+        };
         let gba
         let runCommands = [];
         let debug = null;
