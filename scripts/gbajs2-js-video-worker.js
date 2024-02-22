@@ -1,4 +1,4 @@
-importScripts('software.js');var video=new GameBoyAdvanceSoftwareRenderer();var proxyBacking=null;var currentFrame=0;self.finishDraw=function(pixelData){self.postMessage({type:'finish',backing:pixelData,frame:currentFrame});}
+importScripts('https://andychase.me/gbajs2/js/video/software.js');var video=new GameBoyAdvanceSoftwareRenderer();var proxyBacking=null;var currentFrame=0;self.finishDraw=function(pixelData){self.postMessage({type:'finish',backing:pixelData,frame:currentFrame});}
 function receiveDirty(dirty){for(var type in dirty){switch(type){case 'DISPCNT':video.writeDisplayControl(dirty[type]);break;case 'BGCNT':for(var i in dirty[type]){if(typeof(dirty[type][i])==='number'){video.writeBackgroundControl(i,dirty[type][i]);}}
 break;case 'BGHOFS':for(var i in dirty[type]){if(typeof(dirty[type][i])==='number'){video.writeBackgroundHOffset(i,dirty[type][i]);}}
 break;case 'BGVOFS':for(var i in dirty[type]){if(typeof(dirty[type][i])==='number'){video.writeBackgroundVOffset(i,dirty[type][i]);}}
