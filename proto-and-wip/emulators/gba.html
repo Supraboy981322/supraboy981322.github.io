@@ -23,10 +23,7 @@
     <script src="https://andychase.me/gbajs2/resources/xhr.js"></script>
     <script src="https://andychase.me/gbajs2/resources/biosbin.js"></script>
     <script>
-        window.onload = (event) => {
-            document.getElementsByClassName("pixelCheck").checked = true;
-            document.getElementByClassName("soundCheck").checked = true;
-        };
+        
         let gba
         let runCommands = [];
         let debug = null;
@@ -382,11 +379,11 @@
             <button onclick="screenshot()">Screenshot</button>
             <button onclick="fullScreen()">Full screen</button>
             <label id="pixelated">
-                <input class="pixelCheck" type="checkbox" onchange="setPixelated(this.checked)" />
+                <input class="pixelCheck" type="checkbox" onload="setPixelated(this.checked)" />
                 <p>Pixelated</p>
             </label>
             <div id="sound">
-                <input class="soundCheck" type="checkbox" onchange="gba.audio.masterEnable = this.checked; if (gba.audio.context.state !== 'running') {gba.audio.context.resume();}" />
+                <input class="soundCheck" type="checkbox" onload="gba.audio.masterEnable = this.checked; if (gba.audio.context.state !== 'running') {gba.audio.context.resume();}" />
                 <p>Sound</p>
                 <input type="range" min="0" max="1" value="1" step="any" onchange="setVolume(this.value)" oninput="setVolume(this.value)" />
             </div>
