@@ -15,6 +15,7 @@
         </div>
     </div>
     <script>
+
         // Prevent arrow and space keys from scrolling page
         window.addEventListener("keydown", function (e) {
             if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
@@ -29,6 +30,18 @@
             }
         }, false);
 
+        function loadSystem() {
+            let params = new URLSearchParams(document.location.search);
+            let s = params.get("s");
+
+            if (s == "gba") {
+                
+            } else if (s == "") {
+
+            }
+        }
+
+        addEventListener(window.onload, loadSystem());
     </script>
 </body>
 
