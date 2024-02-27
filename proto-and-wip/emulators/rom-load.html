@@ -10,12 +10,16 @@
         <div style="
                       margin: calc((100vh - 66px) / 2);
                       ">
+            <input type="file" id="input">
             <center>No ROM loaded</center>
             <center>Please click here to load a ROM</center>
         </div>
     </div>
     <script>
-
+        function loadListener(system) {
+            document.getElementById("input").addEventListener(onchange, )
+        };
+        
         // Prevent arrow and space keys from scrolling page
         window.addEventListener("keydown", function (e) {
             if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
