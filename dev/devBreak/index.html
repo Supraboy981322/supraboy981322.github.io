@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<body>
+	<div class="main">
+		<div class="box" id="dev">
+			<input class="url urlDevEnvironment" id="devEnvironmentURL" type="text">
+			<button class="bar" onclick="setFrame('devEnvironment');">Go</button>
+			<br>
+			<iframe class="frame" id="devEnvironmentFrame" src=""></iframe>
+		</div>
+		<div class="box" id="preview">
+			<input class="url urlPreview" id="previewURL" type="text">	
+			<button class="bar" onclick="setFrame('preview');">Go</button>
+			<button class="bar" id="reload" onclick="refreshPreview()">&#x27F3;</button>
+			<br>
+			<iframe class="frame" id="previewFrame"></iframe>
+		</div>
+	</div>
+</body>
+<script src="script.js"></script>
+</html>
