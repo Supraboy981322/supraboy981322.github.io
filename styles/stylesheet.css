@@ -23,11 +23,12 @@ center {
 }
 
 body {
-  background-image: url('/embeded-content/background.png');
+  /*background-image: url('/embeded-content/background.png');*/
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: right;
+  background-color: #3b4252;
 }
 
 .textBox {
