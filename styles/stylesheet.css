@@ -67,7 +67,7 @@ body {
 
 .pageTitle {
   text-align: center;
-  background: rgba(192, 243, 252, 0.55);
+  background: #5e81ac;
   backdrop-filter: blur(3px);
   overflow: hidden;
   border-radius: 14px;
@@ -77,14 +77,14 @@ body {
 }
 
 .pageTitle strong {
-  color: purple;
+  color: white;
 }
 
 footer {
   margin: 5px 15px 20px 15px;
   padding: 2px;
   padding-top: 3px;
-  background: rgba(192, 243, 252, 0.1);
+  background: #566176;
   backdrop-filter: blur(3px);
   border-radius: 14px;
   border-radius: 25px;
@@ -93,6 +93,7 @@ footer {
 footer h4 {
   font-size: 20px;
   text-align: center;
+  color: #88c0d0;
 }
 
 .pill {
