@@ -98,7 +98,7 @@ footer h4 {
 }
 
 .pill {
-  background: rgba(0, 200, 250, 0.3);
+  background: #67748e;
   border-radius: 14px;
   height: auto;
   text-align: center;
@@ -112,7 +112,7 @@ footer h4 {
 .nav-pill {
   font-size: 20px;
   font-weight: bold;
-  color: blue;
+  color: #a3be8c;
   border: 0px;
   background-color: transparent;
 }
