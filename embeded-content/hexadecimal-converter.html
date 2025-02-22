@@ -24,6 +24,11 @@
 			src: url(/styles/fonts/D-DINExp-Bold.otf);
 		}
 
+		html, body, h1, h2, h3, h4, h5, h6 {
+			font-family: D-DINExp-Bold;
+			color:#d8dee9;
+		}
+
 		h1 {
 			font-size: 1.6rem;
 		}
@@ -106,12 +111,11 @@
 										<input type="text" id="x" name="x" class="form-control form-control-lg" required
 											autofocus>
 										<div class="input-group-append">
+
+									<button type="button" title="Convert" class="btn btn-success"
+									onclick="convert()"><span>=</span> Convert</button>
 										</div>
 									</div>
-								</div>
-								<div class="form-group">
-									<button type="button" title="Convert" class="btn btn-success"
-										onclick="convert()"><span>=</span> Convert</button>
 								</div>
 								<div class="form-group">
 									<label for="y" id="ylabel">Decimal number</label>
