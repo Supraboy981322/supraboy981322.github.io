@@ -116,11 +116,13 @@ footer h4 {
   color: #a3be8c;
   border: 0px;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .nav-pill p {
   margin: -17px 0px 0px 0px;
   color: black;
+  cursor: pointer;
 }
 
 /* Style the tab */
