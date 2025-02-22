@@ -86,6 +86,10 @@ body {
   color: #b48ead;
 }
 
+.textBox a {
+  color:#81a1c1;
+}
+
 footer {
   margin: 35px 15px 20px 15px;
   padding: 2px;
