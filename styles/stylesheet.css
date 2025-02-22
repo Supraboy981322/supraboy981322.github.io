@@ -121,7 +121,7 @@ footer h4 {
 
 .nav-pill p {
   margin: -17px 0px 0px 0px;
-  color: black;
+  color: #e5e9f0;
   cursor: pointer;
 }
 
@@ -172,7 +172,7 @@ center {
   backdrop-filter: blur(3px);
   border-radius: 14px;
   border-radius: 25px;
-  color: purple;
+  color: #b48ead;
   text-align: center;
   border-radius: 25px;
   margin-left: 25%;
@@ -255,7 +255,7 @@ center {
 }
 
 .textBox h3 {
-  color: purple;
+  color: #b48ead;
   text-align: center;
 }
 
