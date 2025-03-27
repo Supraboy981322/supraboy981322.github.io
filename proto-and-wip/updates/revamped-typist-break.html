@@ -216,13 +216,18 @@ function loadFile(fileLocation, autoTrigger) {
                 .then(t => load(t))
         }, false);
     } else {
-        //function () {
-            // change the preloadedText's src to be the "result" of reading the uploaded file (below)
-			console.log(Object.values(file));
-            fetch(reader.result)
-                .then(r => r.text())
-                .then(t => load(t))
-        //}
+		// read text from URL location
+		var request = new XMLHttpRequest();
+    	request.open('GET', 'file', true);
+    	request.send(null);
+    	request.onreadystatechange = function () {
+        	if (request.readyState === 4 && request.status === 200) {
+            	var type = request.getResponseHeader('Content-Type');
+            	if (type.indexOf("text") !== 1) {
+              		loadText(request.responseText);
+            	}
+        	}
+    	}
     }
     // if there's a file, tell the reader to read the data
     // which triggers the load event above
