@@ -186,52 +186,66 @@
 </body>
 <script>
     function loadText() {
-        let params = new URLSearchParams(document.location.search);
-        let text = params.get("location");
-        if (text != null) {
-            loadFile(decodeURI(text), true);
-            console.log("attempted to load the text");
-        }
+    let params = new URLSearchParams(document.location.search);
+    let text = params.get("location");
+    if (text != null) {
+        loadFile(text, true);
+        console.log("attempted to load the text");
     }
+}
 
-    addEventListener(window.onload, loadText());
-	
-    function loadFile(fileLocation, autoTrigger) {
-        const doc = document.getElementById('docContent');
-        if (autoTrigger) {
-            var file = fileLocation;
-        } else {
-            var file = document.getElementById('file').files[0];
-        }
-		const reader = new FileReader();
+addEventListener(window.onload, loadText());
 
-		// listen for 'load' events on the FileReader
-		 reader.addEventListener("load", function () {
-			// change the preloadedText's src to be the "result" of reading the uploaded file (below)
-			fetch(reader.result)
-				.then(r => r.text())
-				.then(t => load(t))
-		}, false);
-		// if there's a file, tell the reader to read the data
-		// which triggers the load event above
-		if (file) {
-			reader.readAsDataURL(file);
-		}
-	}
+function loadFile(fileLocation, autoTrigger) {
+    const doc = document.getElementById('docContent');
+    if (autoTrigger) {
+        var triggeredAutomatically = true;
+        var file = fileLocation;
+    } else {
+        var triggeredAutomatically = false;
+        var file = document.getElementById('file').files[0];
+    }
+    const reader = new FileReader();
 
-	function load(text) {
-		document.getElementById("docContent").innerText = text;
-	}
+    // listen for 'load' events on the FileReader
+    if (!triggeredAutomatically) {
+        reader.addEventListener("load", function () {
+            // change the preloadedText's src to be the "result" of reading the uploaded file (below)
+            fetch(reader.result)
+                .then(r => r.text())
+                .then(t => load(t))
+        }, false);
+    } else {
+        //function () {
+            // change the preloadedText's src to be the "result" of reading the uploaded file (below)
+			console.log(Object.values(file));
+            fetch(reader.result)
+                .then(r => r.text())
+                .then(t => load(t))
+        //}
+    }
+    // if there's a file, tell the reader to read the data
+    // which triggers the load event above
+    if (file && !triggeredAutomatically) {
+        reader.readAsDataURL(file);
+    } else if (file && triggeredAutomatically) {
+        return(reader.file);
+    }
+}
 
-	function saveDocument() {
-		var link = document.getElementById("saveButton");
-		var docC = document.getElementById("docContent");
-		var fileName = document.getElementById("fileName").value;
-		var fileType = document.getElementById("fileType").value;
-		mimetype = "text/plain";
-		link.setAttribute("download", fileName + fileType);
-		link.setAttribute("href", "data:" + mimetype + "charset=utf-8," + docC.innerText);
-	};
+function load(text) {
+    document.getElementById("docContent").innerText = text;
+}
+
+function saveDocument() {
+    var link = document.getElementById("saveButton");
+    var docC = document.getElementById("docContent");
+    var fileName = document.getElementById("fileName").value;
+    var fileType = document.getElementById("fileType").value;
+    mimetype = "text/plain";
+    link.setAttribute("download", fileName + fileType);
+    link.setAttribute("href", "data:" + mimetype + "charset=utf-8," + docC.innerText);
+};
 </script>
 
 </html>
