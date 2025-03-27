@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://supraboy981322.github.io/styles/stylesheet.css"> -->
+<style>
+    @font-face {
+        font-family: D-DINExp-Bold;
+        src: url(https://supraboy981322.github.io/styles/fonts/D-DINExp-Bold.otf);
+    }
+
+    html, body, h1, h2, h3, h4, h5, h6 {
+        font-family: D-DINExp-Bold;
+    }
+
+    body {
+        background-color: #2e3440;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+	.toolBar {
+		background-color: #434c5e;
+		width: 99.5vw;
+		margin: 0px 0px 0px 0px;
+		float: left;
+		padding: 5px 0px 5px 5px;
+	}
+
+    .button {
+		background-color: #2e3440;
+		color: white;
+		border-radius: 10px;
+        border: none;
+    }
+
+    .button:hover {
+        background-color: #d8dee9;
+        color:#2e3440;
+        transition: 0.25s;
+    }
+
+    .button:active {
+        background-color: #d8dee9;
+        color:#2e3440;
+        border: none;
+    }
+
+	#saveButton {
+		float: top;
+		border: 0px;
+		padding: 8px 15px 7.5px 15px;
+		font-size: 15px;
+		text-decoration: none;
+		margin: 0px;
+		font-weight: bold;
+		cursor: pointer;
+		font-size: 13px;
+	}
+
+	#docContent {
+		min-height: 100vh;
+		height: auto;
+		width: 75vw;
+		float: left;
+		border-radius: 14px;
+		padding: 14px;
+		background-color: #434c5e;
+		font-weight: bold;
+		font: ariel;
+        color: white;
+	}
+
+	#fileType {
+		float: top;
+		border: 0px;
+		padding: 6.75px 5px 7px 5px;
+		text-decoration: none;
+		margin: 0px;
+		width: 50px;
+		font-weight: bold;
+		cursor: carrot;
+	}
+
+	.toolBar span {
+		padding: 0vh 10px 0vh 10px;
+		font-weight: bold;
+        color: white;
+	}
+
+	#file {
+		padding: 4px 0px 0px 4px;
+		border-radius: 6px;
+		height: 26px;
+		font-weight: bold;
+	}
+    
+	#fileName {
+		border: 0px;
+		padding: 1px 6px 1px 6px;
+		font-weight: bold;
+		text-decoration: none;
+		margin: 0px;
+		padding: 7px 0px 7px 10px;
+	}
+
+	#loadFileButton {
+		padding: 7px 10px 7px 10px;
+		border: none;
+		font-weight: bold;
+	}
+
+	.buttonCursor {
+		cursor: pointer;
+	}
+
+	/*.textCursor {
+		background-color: #dddddd;
+	} */
+
+	@media (min-width: 721px) {
+		.changeOnSize {
+			display: inline;
+		}
+
+		#file {
+			margin: 0px;
+		}
+
+		.hideUnder700 {
+			display: inline;
+		}
+
+		.hideOver700 {
+			display: none;
+		}
+
+		#docContent {
+			margin: 1em 11vw 12px 11vw;
+		}
+	}
+
+	@media (max-width: 720px) {
+		#file {
+			margin: 5px 0px 0px 0px;
+		}
+
+		#docContent {
+			margin: 13px 11vw 12px 11vw;
+		}
+
+		.changeOnSize {
+			display: block;
+		}
+
+		.hideUnder700 {
+			display: none;
+			;
+		}
+
+		.hideOver700 {
+			display: block;
+		}
+	}
+</style>
+
+<body class="main">
+	<div class="toolBar">
+		<input id="fileName" class="textCursor button" type="text" value="Unnamed Document"></input>
+		<input id="fileType" class="textCursor button" type="text" value=".txt"></input>
+		<span> | </span>
+		<a id="saveButton" class="buttonCursor button" download="ILoveTheBible.txt" onclick="saveDocument()">Save</a>
+		<span class="hideUnder700"> | </span>
+		<div class="changeOnSize">
+			<input id="file" class="buttonCursor button" type="file"></input>
+			<button id="loadFileButton" class="buttonCursor button"
+				onclick="loadFile(document.getElementById('file').value)">Load
+				file</button>
+		</div>
+	</div>
+	<br>
+	<div style="margin:-8px;">
+		<div style="overflow:wrap;" id="docContent" contenteditable="true"></div>
+	</div>
+</body>
+<script>
+    function loadText() {
+        let params = new URLSearchParams(document.location.search);
+        let text = params.get("location");
+        if (text != null) {
+            loadFile(decodeURI(text), true);
+            console.log("attempted to load the text");
+        }
+    }
+
+    addEventListener(window.onload, loadText());
+	
+    function loadFile(fileLocation, autoTrigger) {
+        const doc = document.getElementById('docContent');
+        if (autoTrigger) {
+            var file = fileLocation;
+        } else {
+            var file = document.getElementById('file').files[0];
+        }
+		const reader = new FileReader();
+
+		// listen for 'load' events on the FileReader
+		 reader.addEventListener("load", function () {
+			// change the preloadedText's src to be the "result" of reading the uploaded file (below)
+			fetch(reader.result)
+				.then(r => r.text())
+				.then(t => load(t))
+		}, false);
+		// if there's a file, tell the reader to read the data
+		// which triggers the load event above
+		if (file) {
+			reader.readAsDataURL(file);
+		}
+	}
+
+	function load(text) {
+		document.getElementById("docContent").innerText = text;
+	}
+
+	function saveDocument() {
+		var link = document.getElementById("saveButton");
+		var docC = document.getElementById("docContent");
+		var fileName = document.getElementById("fileName").value;
+		var fileType = document.getElementById("fileType").value;
+		mimetype = "text/plain";
+		link.setAttribute("download", fileName + fileType);
+		link.setAttribute("href", "data:" + mimetype + "charset=utf-8," + docC.innerText);
+	};
+</script>
+
+</html>
