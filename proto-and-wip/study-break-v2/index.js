@@ -1,6 +1,6 @@
 //lists for the questions and answers
-const questions = ["Adulation", "Anachronistic", "Antagonize", "Assert", "Befall", "Burgeon", "Complement", "Correlate", "Cumbersome", "Demean", "Devoid", "Diffuse", "Eminent", "Engross", "Exploit", "Facilitate", "Feign", "Fleeting", "Impervious"];
-const answers = ["excessive flattery", "belonging to a period other than that being portrayed", "cause someone to become hostile", "state a fact", "having something bad happen to someone", "begin to growth rapidly", "a thing that completes or brings to perfection", "having mutual relationship or connection", "large, heavy, or difficult", "cause severe loss of dignity", "entirely lacking, empty", "spread over a wide area", "famous or respected within a specific sphere", "absorb all the attention or interest", "make full use of", "make an action easy or easier", "pretend to be affected by", "lasting for a very short time", "not allowing fluid to pass through"];
+const questions = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6"];
+const answers = ["Answer to question 1", "Answer to question 2", "Answer to question 3", "Answer to question 4", "Answer to question 5", "Answer to question 6"];
 const optionAmounts = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4];
 //define the elements for where the questions and options go.
 const optionLocs = [document.getElementById("option1"), document.getElementById("option2"), document.getElementById("option3"), document.getElementById("option4")];
