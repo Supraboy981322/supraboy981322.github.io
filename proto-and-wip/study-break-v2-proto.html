@@ -212,6 +212,7 @@
     function incorrect(selected,umAkchuly) {
         viewport.setAttribute("style", "background-color:  #fc433d");
         questionTopBar.setAttribute("style", "background-color:  #b53847; color: #fad7d8;");
+        document.body.setAttribute("style", "background-color: #fc433d");
         questionLoc.setAttribute("style", "color:  #61181a");
         optionLocs[selected - 1].setAttribute("style", "background-color: black; color: #fc433d;");
         optionLocs[umAkchuly - 1].setAttribute("style", "background-color: white; color: #fc433d;");
@@ -237,6 +238,7 @@
     function correct(selected) {
         viewport.setAttribute("style", "background-color:  #90fc88");
         questionTopBar.setAttribute("style", "background-color:  #41b538; color: #d9fad7;");
+        document.body.setAttribute("style", "background-color: #90fc88");
         questionLoc.setAttribute("style", "color:  #1d6118");
         optionLocs[selected - 1].setAttribute("style", "background-color: white; color: #1d6118");
         let amountOfOptions = optionAmounts[questionNumber];
@@ -261,6 +263,7 @@
     function resetStyling () {
         viewport.removeAttribute("style");
         questionTopBar.removeAttribute("style");
+        document.body.removeAttribute("style");
         questionLoc.removeAttribute("style");
         optionLocs[0].removeAttribute("style");
         optionLocs[1].removeAttribute("style");
