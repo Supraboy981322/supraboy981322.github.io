@@ -31,6 +31,7 @@ body {
     font-size: 2vh;
     height: 3.5vh;
     overflow-y: hidden;
+    cursor:default;
 }
 
 #questionTopBar p {
@@ -49,13 +50,14 @@ body {
     float: none;
     display: flex;
     margin-bottom: 0px;
-    justify-content: center;
+    justify-content:  center;
     width: 100vw;
     text-align: center;
     align-items: center;
     font-size: 5vh;
     margin-left: auto;
     margin-right: auto;
+    cursor: default;
 }
 
 #answerOptions {
@@ -116,15 +118,93 @@ body {
     margin-bottom:  5vh;
 }
 
-#congrats {
+#completed {
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    /*float: none;*/
+    z-index: 999;
     text-align: center;
+    text-align: center;
+    align-content: center;
+    align-self:center;
+    align-items: center;
     vertical-align: middle;
+    height: 100vh;
+    width: 100vw;
+    transition: 0.5s;
+    background-color: transparent;
+}
+
+#congrats {
+    color: #0094ff;
+    display: block;
+    text-align: center;
+    align-content: center;
+    align-self:center;
+    align-items: center;
+    /*vertical-align: middle;*/
+    /*margin-top: 35vh;*/
+    font-size: 10vh;
+    margin-top: 40vh;
+    margin-left: auto;
+    width: 100vw;
+    opacity: 0;
+    /*float: none;*/
+    transition: 0.5s;
+}
+
+#grade {
+    opacity: 0;
+    color: #0094ff;
+    display: block;
+    text-align: center;
+    align-content: center;
+    align-self:center;
+    align-items: center;
+    /*vertical-align: middle;*/
+    color: #0094ff;
+    /*float: none;*/
+    transition: 0.5s;
+    margin-top: -15vh;
+    /*position:fixed;*/
+    font-size: 10vh;
+}
+
+#numberCorrect {
+    opacity: 0;
+    color: #0094ff;
+    display: block;
+    /*position: fixed;*/
+    text-align: center;
+    align-content: center;
+    align-self:center;
+    align-items: center;
+    /*vertical-align: middle;*/
+    color: #0094ff;
+    float: none;
+    /*margin-top: 40vh;*/
+    font-size: 10vh;
+    transition: 0.5s;
+}
+
+
+#restart {
+    transition: 0.5s;
+    background-color: #0094ff;
+    color: #c9ffff;
+    display: block;
+    text-align: center;
+    align-content: center;
+    align-self:center;
+    align-items: center;
+    padding: 1vh;
+    font-size: 8vh;
+    opacity: 0;
+    border-radius: 1vw;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    cursor: pointer;
 }
 
 .studioName {
