@@ -14,13 +14,11 @@ body {
     background-color: #c9ffff;
     color: #c9ffff;
     transition: 0.25s;
-    overflow: hidden;
 }
 
 #viewport {
     margin-bottom: 0px;
     padding-bottom: 0px;
-    height: 200vh;
 }
 
 #questionTopBar {
@@ -70,7 +68,7 @@ body {
 #answerOptions div {
     background-color: #0094ff;
     width: 40%;
-    height: 35%;
+    height: 33%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,20 +79,20 @@ body {
 }
 
 #answerOptions .left {
-    margin-left: 9vw;
+    margin-left: 8.5vw;
     border-radius: 10em 5em 5em 10em;
 }
 
 #answerOptions .bottom {
-    margin-top: 2.5vh;
+    margin-top: 3vh;
 }
 
 #answerOptions .top {
-    margin-bottom: 2.5vh;
+    margin-bottom: 3vh;
 }
 
 #answerOptions .right {
-    margin-right: 9vw;
+    margin-right: 8.5vw;
     border-radius: 5em 9em 9em 5em;
 }
 
@@ -120,7 +118,6 @@ body {
 
 #completed {
     display: flex;
-    /*float: none;*/
     z-index: 999;
     text-align: center;
     text-align: center;
@@ -141,14 +138,11 @@ body {
     align-content: center;
     align-self:center;
     align-items: center;
-    /*vertical-align: middle;*/
-    /*margin-top: 35vh;*/
     font-size: 10vh;
     margin-top: 40vh;
     margin-left: auto;
     width: 100vw;
     opacity: 0;
-    /*float: none;*/
     transition: 0.5s;
 }
 
@@ -160,12 +154,9 @@ body {
     align-content: center;
     align-self:center;
     align-items: center;
-    /*vertical-align: middle;*/
     color: #0094ff;
-    /*float: none;*/
     transition: 0.5s;
     margin-top: -15vh;
-    /*position:fixed;*/
     font-size: 10vh;
 }
 
@@ -173,15 +164,12 @@ body {
     opacity: 0;
     color: #0094ff;
     display: block;
-    /*position: fixed;*/
     text-align: center;
     align-content: center;
     align-self:center;
     align-items: center;
-    /*vertical-align: middle;*/
     color: #0094ff;
     float: none;
-    /*margin-top: 40vh;*/
     font-size: 10vh;
     transition: 0.5s;
 }
@@ -207,6 +195,27 @@ body {
     cursor: pointer;
 }
 
+#toLibrary {
+    transition: 0.5s;
+    background-color: #0094ff;
+    color: #c9ffff;
+    display: block;
+    text-align: center;
+    align-content: center;
+    align-self:center;
+    align-items: center;
+    padding: 1vh;
+    font-size: 8vh;
+    opacity: 0;
+    border-radius: 1vw;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -15vh;
+    cursor: pointer;
+    z-index: -1;
+}
+
 .studioName {
     color: #ff6969;
     background-color: #ffdb99;
@@ -225,6 +234,89 @@ body {
     padding:2vw 0.5vw 0vw 0.5vw;
     font-size:2vh;
     padding-bottom: 0vw;
+}
+
+#libraryScreen .English {
+    background-color:#c739cc;
+    color: #efc9ff;
+}
+
+#libraryScreen .Math {
+    background-color: #3db334;
+    color: #c1ffbd;
+}
+
+#libraryScreen .History {
+    background-color: #ff9326;
+    color: #ffdebd;
+}
+
+#libraryScreen .misc {
+    background-color: #3991cc;
+    color: #bdd4ff;
+}
+
+body {
+    font-family: D-DINExp-Bold;
+    background-color: #c9ffff;
+    margin: 0px;
+    padding: 0px;
+}
+
+#libraryScreen #item {
+    border-radius: 1vw;
+    width: 43.25vw;
+    height: fit-content;
+    padding: 1vw;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    display:inline-table;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+
+#libraryScreen .teacher {
+    font-size: 3.5vw;
+}
+
+#libraryScreen #item .title {
+    font-size: 4vw;
+}
+
+#libraryScreen #item .category {
+    font-size: 3.5vw;
+}
+
+#libraryScreen #item .type {
+    font-size: 2.5vw;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+#left {
+    float: left;
+    margin-right: 1.5vw;
+    margin-left: 3vw;
+}
+
+#right {
+    float: right;
+    margin-left: 1.5vw;
+    margin-right: 3vw;
+}
+
+#libraryScreen #item * {
+    cursor: pointer;
+}
+
+#libraryScreen {
+    margin-top: 2vw;
+    color: black;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
 }
 
 @media (min-width: 721px) {}

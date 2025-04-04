@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- version 2.0 -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="index.css">
@@ -20,7 +19,10 @@
 
             </p>
         </div>
-        <div id="questionScreen">
+        <div id="libraryScreen" hidden>
+            nothing loaded.
+        </div>
+        <div id="questionScreen" hidden>
             <div id="question">Question 1 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum viverra varius."</div>
             <div id="answerOptions">
                 <div class="left top" onclick="" id="option1">option 1</div>
@@ -31,11 +33,10 @@
         </div>
         <div id="resultsScreen" hidden>
             <span id="congrats">Completed.</span>
-            <!-- <br id="resultsBreak1" hidden> -->
             <span id="grade">???%</span>
-            <!-- <br id="resultsBreak2" hidden> -->
             <span id="numberCorrect">?/?</span>
-            <span id="restart" onclick="document.location.reload();">Redo</span>
+            <span id="restart" onclick="initialize(currentQuestionSet);">Redo</span>
+            <span id="toLibrary" onclick="document.location.reload();">Library</span>
         </div>
     </div>
 </body>
