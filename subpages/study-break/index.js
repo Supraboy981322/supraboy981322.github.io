@@ -430,7 +430,7 @@ function newQuestion() {
         //remove the question from the queue of questions
         questionQueue = questionQueue.filter(item => item !== questionQueue[picked]);
         //if the correct answer is not option 1...
-        if (correct != 1 && amountOfOptions >= 1) {
+        if (correct != 1 /*&& amountOfOptions >= 1*/) {
             //pick a random answer from the incorrect answers list
             let pickedForOption1 = getRandomInt(1,incorrectAnswers.length - 1);
             //set the text of the option to the incorrect answer that was picked
@@ -445,7 +445,7 @@ function newQuestion() {
             //I don't remember (my memory terrible) and I am afraid to remove it
             optionLocs[0].setAttribute("hidden", "true");
         }
-        if (correct != 2 && amountOfOptions >= 2) {
+        if (correct != 2 /*&& amountOfOptions >= 2*/) {
             //pick a random answer from the incorrect answers list
             let pickedForOption2 = getRandomInt(1,incorrectAnswers.length - 1)
             //set the text of the option to the incorrect answer that was picked
@@ -460,7 +460,7 @@ function newQuestion() {
             //I don't remember (my memory terrible) and I am afraid to remove it
             optionLocs[1].setAttribute("hidden", "true");
         }
-        if (correct != 3 && amountOfOptions >= 3) {
+        if (correct != 3 /*&& amountOfOptions >= 3*/) {
             //pick a random answer from the incorrect answers list
             let pickedForOption3 = getRandomInt(1,incorrectAnswers.length - 1)
             //set the text of the option to the incorrect answer that was picked
@@ -475,7 +475,7 @@ function newQuestion() {
             //I don't remember (my memory terrible) and I am afraid to remove it
             optionLocs[2].setAttribute("hidden", "true");
         }
-        if (correct != 4 && amountOfOptions >= 4) {
+        if (correct != 4 /*&& amountOfOptions >= 4*/) {
             //pick a random answer from the incorrect answers list
             let pickedForOption4 = getRandomInt(1,incorrectAnswers.length - 1)
             //set the text of the option to the incorrect answer that was picked
