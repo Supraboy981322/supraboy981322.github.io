@@ -1,4 +1,4 @@
-//v2.0.9
+//v2.0.10
 
 //define the library
 var library = [
@@ -21,7 +21,7 @@ var library = [
         //(Don't remove it or leave blank, it will not generate answer options if you do)
         //(it currently is just a check. I will add functionality that uses this in a later version)
         [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]   
-    ], [ //teacher 2  Math Final Exam (2025)
+    ], [ //teacher 2 Math Final Exam (2025)
         //title of question set
         ["teacher 2 Math Final Exam (2025)"],
         //subject of question set
@@ -78,7 +78,7 @@ var library = [
         //(Don't remove it or leave blank, it will not generate answer options if you do)
         //(it currently is just a check. I will add functionality that uses this in a later version)
         [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]   
-    ], [ //teacher 2 Final Exam (2025)
+    ], [ //teacher 2 Math Final Exam (2025)
         //title of question set
         ["teacher 2 Math Final Exam Part 2 (2025)"],
         //subject of question set
@@ -92,7 +92,7 @@ var library = [
         //The questions
         ["5 * 73 = ?", "73 / 5 = ?", "9374 * 29859 / 34852", "123 / 8734 * 782723 / 923 * 984"],
         //the answers
-        ["365", "14.6", "8031.05319637", "123 / 8734 * 782723 / 923 * 984"],
+        ["365", "14.6", "8031.05319637", "11751.5030284"],
         //the amount of answer options for individual quesitions
         //(Don't remove it or leave blank, it will not generate answer options if you do)
         //(it currently is just a check. I will add functionality that uses this in a later version)
