@@ -52,7 +52,7 @@ var library = [
         //The questions
         ["What is the name of the first civilization to use writing?", "What is the name of the first empire to control a large area of land?", "What is the name of the first empire to control a large area of sea?", "What is the name of the first empire to control a large area of air?"],
         //the answers
-        ["the Sumerians", "Akkadian Empire", "Akkadian Empire", "Akkadian Empire"],
+        ["the Sumerians", "Akkadian Empire", "Akkadian Empire again", "Akkadian Empire for the 3rd time"],
         //the amount of answer options for individual quesitions
         //(Don't remove it or leave blank, it will not generate answer options if you do)
         //(it currently is just a check. I will add functionality that uses this in a later version)
@@ -270,16 +270,16 @@ function incorrect(selected,umAkchuly) {
     let amountOfOptions = optionAmounts[questionNumber];
     //for each option, if the selected option is not that one
     //fade the color to red, so it is not visible against the background
-    if (selected != 1 && umAkchuly != 1 && amountOfOptions >= 1) {
+    if (selected != 1 && umAkchuly != 1 /* && amountOfOptions >= 1 */) {
         optionLocs[0].setAttribute("style", "background-color: #fc433d; color: #fc433d;");
     }
-    if (selected != 2 && umAkchuly != 2 && amountOfOptions >= 2) {
+    if (selected != 2 && umAkchuly != 2 /* && amountOfOptions >= 2 */) {
         optionLocs[1].setAttribute("style", "background-color: #fc433d; color: #fc433d;");
     }
-    if (selected != 3 && umAkchuly != 3 && amountOfOptions >= 3) {
+    if (selected != 3 && umAkchuly != 3 /* && amountOfOptions >= 3 */) {
         optionLocs[2].setAttribute("style", "background-color: #fc433d; color: #fc433d;");
     }
-    if (selected != 4 && umAkchuly != 4 && amountOfOptions >= 4) {
+    if (selected != 4 && umAkchuly != 4 /* && amountOfOptions >= 4 */) {
         optionLocs[3].setAttribute("style", "background-color: #fc433d; color: #fc433d;");
     }
     //after 1.5 seconds, generate a new question
@@ -315,16 +315,16 @@ function correct(selected) {
     let amountOfOptions = optionAmounts[questionNumber - 1];
     //for each option, if it's not the selected one,
     //fade the color to green, so it's invisible against the background
-    if (selected != 1 && amountOfOptions >= 1) {
+    if (selected != 1 /* && amountOfOptions >= 1 */) {
         optionLocs[0].setAttribute("style", "background-color: #90fc88; color: #90fc88;");
     }
-    if (selected != 2 && amountOfOptions >= 2) {
+    if (selected != 2 /* && amountOfOptions >= 2 */) {
         optionLocs[1].setAttribute("style", "background-color: #90fc88; color: #90fc88;");
     }
-    if (selected != 3 && amountOfOptions >= 3) {
+    if (selected != 3 /* && amountOfOptions >= 3 */) {
         optionLocs[2].setAttribute("style", "background-color: #90fc88; color: #90fc88;");
     }
-    if (selected != 4 && amountOfOptions >= 4) {
+    if (selected != 4 /* && amountOfOptions >= 4 */) {
         optionLocs[3].setAttribute("style", "background-color: #90fc88; color: #90fc88;");
     }
     //increment the number of questions answered correctly
@@ -408,7 +408,7 @@ function newQuestion() {
         resetStyling();
         document.body.setAttribute("style", "height: 100vh; overflow: hidden !important;");
         //define how many options need to be changed
-        let amountOfOptions = optionAmounts[questionNumber];
+        //let amountOfOptions = optionAmounts[questionNumber];
         //set the indicator for what the current question number is
         document.getElementById("qNum").innerText = questionNumber;
         //set the indicator for the total number of questions
@@ -430,7 +430,7 @@ function newQuestion() {
         //remove the question from the queue of questions
         questionQueue = questionQueue.filter(item => item !== questionQueue[picked]);
         //if the correct answer is not option 1...
-        if (correct != 1 /*&& amountOfOptions >= 1*/) {
+        if (correct != 1 /* && amountOfOptions >= 1 */) {
             //pick a random answer from the incorrect answers list
             let pickedForOption1 = getRandomInt(1,incorrectAnswers.length - 1);
             //set the text of the option to the incorrect answer that was picked
@@ -445,7 +445,7 @@ function newQuestion() {
             //I don't remember (my memory terrible) and I am afraid to remove it
             optionLocs[0].setAttribute("hidden", "true");
         }
-        if (correct != 2 /*&& amountOfOptions >= 2*/) {
+        if (correct != 2 /* && amountOfOptions >= 2 */) {
             //pick a random answer from the incorrect answers list
             let pickedForOption2 = getRandomInt(1,incorrectAnswers.length - 1)
             //set the text of the option to the incorrect answer that was picked
@@ -460,7 +460,7 @@ function newQuestion() {
             //I don't remember (my memory terrible) and I am afraid to remove it
             optionLocs[1].setAttribute("hidden", "true");
         }
-        if (correct != 3 /*&& amountOfOptions >= 3*/) {
+        if (correct != 3 /* && amountOfOptions >= 3 */) {
             //pick a random answer from the incorrect answers list
             let pickedForOption3 = getRandomInt(1,incorrectAnswers.length - 1)
             //set the text of the option to the incorrect answer that was picked
@@ -475,7 +475,7 @@ function newQuestion() {
             //I don't remember (my memory terrible) and I am afraid to remove it
             optionLocs[2].setAttribute("hidden", "true");
         }
-        if (correct != 4 /*&& amountOfOptions >= 4*/) {
+        if (correct != 4 /* && amountOfOptions >= 4 */) {
             //pick a random answer from the incorrect answers list
             let pickedForOption4 = getRandomInt(1,incorrectAnswers.length - 1)
             //set the text of the option to the incorrect answer that was picked
