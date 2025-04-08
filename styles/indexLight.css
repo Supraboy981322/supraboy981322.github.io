@@ -1,25 +1,25 @@
-/* dark grey *//*  Blue   *//*  White  */
-/*  #4c566a  *//* #87bdff *//* #eceff4 */
+/* dark grey *//*  Blue   *//* Light Blue *//* Deep Blue*//*  White  */
+/*  #4c566a  *//* #87bdff *//*   #c9ffff  *//*  #0094ff *//* #eceff4 */
 
 .sidenav {
-    background-color: #87bdff ;
-    color: #4c566a;
+    background-color: #c9ffff ;
+    color: #eceff4;
 }
 
 .sidenav a {
-    color: #4c566a;
+    color: #0094ff;
 }
 
 .sidenav a:hover {
-    color: #eceff4;
+    color: #4c566a;
 }
 
 .sidenav .closebtn:hover {
-    color: #eceff4;
+    color: #4c566a;
 }
 
 .sidenav .closebtn {
-    color: #4c566a;
+    color: #0094ff;
 }
 
 @media screen and (max-height: 450px) {
