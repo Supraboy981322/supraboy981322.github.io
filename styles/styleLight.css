@@ -20,7 +20,7 @@ body {
 .pageTitle {
     background: transparent;
     border: 0.5em solid #c655fa;
-    color: #c655fa;
+    color: #c655fa; /* #440e61 */
 }
 
 .pageTitle strong {
