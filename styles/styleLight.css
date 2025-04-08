@@ -1,11 +1,11 @@
 body {
     /*background-image: url('/embeded-content/background.png');*/
-    background-color: #c9ffff;
+    background-color: #87bdff;
 }
 
 .textBox {
-    background: transparent;
-    border: 1em solid #0094ff;
+    background: #4c566a;
+    /*border: 1em solid #0094ff;*/
 }
 
 .textBox h2 {
