@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head id="head">
   <title>Zane's Website</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/styles/fontAwesome.css">
+  <link id="style" rel="stylesheet" href="/styles/indexLight.css">
 </head>
 
 <body>
-  <style>
+  <style id ="style">
   @font-face {
     font-family: D-DINExp-Bold;
     src: url(https://supraboy981322.github.io/styles/fonts/D-DINExp-Bold.otf);
@@ -177,13 +178,30 @@
     function loadIframe() {
       let params = new URLSearchParams(document.location.search);
       let p = params.get("p");
+      let darkMode = params.get("d");
 
       if (p == null) {
         changeChannel("https://supraboy981322.github.io/" + "home.html");
       } else {
         changeChannel("https://supraboy981322.github.io/" + decodeURI(p));
       }
+      if (darkMode != null || darkMode) {
+        document.getElementById("style").setAttribute("href", "/styles/indexDark.css");
+      }
     }
+    function checkDarkMode() {
+      let params = new URLSearchParams(document.location.search);
+      let darkMode = params.get("d");
+      if (darkMode || darkMode != null) {
+        if (!document.getElementById("pageContentFrame").getAttribute("src").includes("?")) {
+          changeChannel(document.getElementById("pageContentFrame").getAttribute("src") + "?d")
+        } else {
+          changeChannel(document.getElementById("pageContentFrame").getAttribute("src") + "&d")
+        }
+      }
+    }
+
+    addEventListener(document.getElementById("pageContentFrame").onload, checkDarkMode());
     addEventListener(window.onload, loadIframe());
   </script>
 </body>
