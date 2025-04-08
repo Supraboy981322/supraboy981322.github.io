@@ -21,7 +21,7 @@ body {
 }
 
 .sidenav {
-    height: 100%;
+    height: fit-content;
     width: 0;
     position: fixed;
     z-index: 1;
@@ -30,7 +30,9 @@ body {
     backdrop-filter: blur(3px);
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 2em;
 }
 
 .sidenav a {

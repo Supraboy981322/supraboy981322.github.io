@@ -10,8 +10,7 @@
 /* #eceff4 */
 
 .sidenav {
-    background-color: #c9ffff;
-    color: #eceff4;
+    border: solid 1em #4c566a;
 }
 
 .sidenav a {
