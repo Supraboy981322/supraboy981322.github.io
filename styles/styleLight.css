@@ -27,11 +27,17 @@ body {
 }
 
 .textBox strong {
-    color: #fcb3ef;
+    background-color: #ffa526;
+}
+
+.textBox h2 strong {
+    background-color: #c9ffff;
+    color: #ffa526;
 }
 
 p strong {
-    color: #d08770 !important
+    background-color: transparent;
+    color: #c9ffff !important
 }
 
 .textBox a {
