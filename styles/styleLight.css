@@ -20,7 +20,8 @@ body {
 .pageTitle {
     background: transparent;
     border: 0.5em solid #c655fa;
-    color: #c655fa; /* #440e61 */
+    color: #c655fa;
+    /* #440e61 */
 }
 
 .pageTitle strong {
@@ -46,11 +47,12 @@ p strong {
 }
 
 footer {
-    background: #566176;
+    background: transparent;
+    border: 0.5em solid #566176;
 }
 
 footer h4 {
-    color: #88c0d0;
+    color: #566176;
 }
 
 .pill {
