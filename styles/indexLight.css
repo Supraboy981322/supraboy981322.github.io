@@ -11,6 +11,7 @@
 
 .sidenav {
     border:none;
+    background-color: rgba(201, 255, 255,50);
 }
 
 .sidenav a {
@@ -18,7 +19,8 @@
 }
 
 .sidenav a:hover {
-    color: #0094ff;
+    filter: invert(1);
+    mix-blend-mode: difference;
 }
 
 .sidenav .closebtn:hover {
