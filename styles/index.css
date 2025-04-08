@@ -91,11 +91,12 @@ body {
     z-index: 0;
     left: -20px;
     padding: 8px 20px 8px 35px;
-    top: 3em;
+    top: 1.5em;
     border-radius: 1em;
     backdrop-filter: blur(3px);
     height: fit-content;
     transition: 0.15s;
+    font-size: 1.25em;
 }
 
 #sidebarButton:hover {
