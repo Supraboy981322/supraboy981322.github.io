@@ -18,8 +18,9 @@ body {
 }
 
 .pageTitle {
-    background: #5e81ac;
-    color: white;
+    background: transparent;
+    border: 1em solid #c655fa;
+    color: #c655fa;
 }
 
 .pageTitle strong {

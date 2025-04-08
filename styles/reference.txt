@@ -13,3 +13,6 @@ Color table
 |----------|
 |White     |
 |#eceff4   |
+|----------|
+|Yellow    |
+|#ffa526   |
