@@ -36,10 +36,11 @@
 }
 
 #sidebarButton {
-    background: #87bdff;
+    background: #0094ff ;
     color: #4c566a;
 }
 
 #sidebarButton:hover {
-    color: #eceff4;
+    background: #4c566a ;
+    color: #0094ff;
 }
