@@ -1,20 +1,20 @@
 body {
     /*background-image: url('/embeded-content/background.png');*/
-    background-color: #87bdff;
+    background-color: #c9ffff;
 }
 
 .textBox {
-    background: #4c566a;
+    background: #0094ff;
     /*border: 1em solid #0094ff;*/
 }
 
 .textBox h2 {
-    background: #0094ff;
-    color: #c9ffff;
+    background: #c9ffff;
+    color: #0094ff;
 }
 
 .textBox p {
-    color: #d8dee9;
+    color: #c9ffff;
 }
 
 .pageTitle {
