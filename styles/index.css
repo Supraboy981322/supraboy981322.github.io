@@ -89,18 +89,22 @@ body {
     z-index: 0;
     left: -20px;
     padding: 8px 20px 8px 35px;
-    top: 45px;
-    border-radius: 20px;
+    top: 3em;
+    border-radius: 1em;
     backdrop-filter: blur(3px);
     height: fit-content;
-    transition: 0.5s
+    transition: 0.15s;
+}
+
+#sidebarButton:hover {
+    top: 2.875em;
 }
 
 iframe {
-    display:block;
-    margin:-8px;
-    width:100vw;
-    height:100vh;
+    display: block;
+    margin: -8px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .sidebarButton span {

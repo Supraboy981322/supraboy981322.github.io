@@ -1,8 +1,16 @@
-/* dark grey *//*  Blue   *//* Light Blue *//* Deep Blue*//*  White  */
-/*  #4c566a  *//* #87bdff *//*   #c9ffff  *//*  #0094ff *//* #eceff4 */
+/* dark grey */
+/*  Blue   */
+/* Light Blue */
+/* Deep Blue*/
+/*  White  */
+/*  #4c566a  */
+/* #87bdff */
+/*   #c9ffff  */
+/*  #0094ff */
+/* #eceff4 */
 
 .sidenav {
-    background-color: #c9ffff ;
+    background-color: #c9ffff;
     color: #eceff4;
 }
 
@@ -26,6 +34,7 @@
     .sidenav {
         color: #eceff4;
     }
+
     .sidenav a {
         color: #eceff4;
     }
@@ -36,11 +45,12 @@
 }
 
 #sidebarButton {
-    background: #0094ff ;
-    color: #4c566a;
+    background: #4c566a;
+    color: #c9ffff;
 }
 
 #sidebarButton:hover {
-    background: #4c566a ;
-    color: #0094ff;
+    background: #c9ffff;
+    color: #4c566a;
+    border: 0.25em solid #4c566a;
 }
