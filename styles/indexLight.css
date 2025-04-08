@@ -7,19 +7,19 @@
 }
 
 .sidenav a {
-    color: #0094ff;
+    color: #4c566a;
 }
 
 .sidenav a:hover {
-    color: #4c566a;
+    color: #0094ff;
 }
 
 .sidenav .closebtn:hover {
-    color: #4c566a;
+    color: #0094ff;
 }
 
 .sidenav .closebtn {
-    color: #0094ff;
+    color: #4c566a;
 }
 
 @media screen and (max-height: 450px) {
