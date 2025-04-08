@@ -95,3 +95,16 @@ body {
     height: fit-content;
     transition: 0.5s
 }
+
+iframe {
+    display:block;
+    margin:-8px;
+    width:100vw;
+    height:100vh;
+}
+
+.sidebarButton span {
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0px;
+}
