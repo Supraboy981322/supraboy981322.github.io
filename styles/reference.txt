@@ -1,0 +1,15 @@
+Color table
+|dark grey |
+|#4c566a   |
+|----------|
+|Blue      |
+|#87bdff   |
+|----------|
+|Light Blue|
+|#c9ffff   |
+|----------|
+|Deep Blue |
+|#0094ff   |
+|----------|
+|White     |
+|#eceff4   |

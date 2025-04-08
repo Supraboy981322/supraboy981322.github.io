@@ -5,11 +5,12 @@ body {
 
 .textBox {
     background: #4c566a;
+    border: 1em solid #0094ff;
 }
 
 .textBox h2 {
-    background: #67748e;
-    color: #ebcb8b;
+    background: #0094ff;
+    color: #c9ffff;
 }
 
 .textBox p {
