@@ -63,9 +63,8 @@ body {
 
 .textBox {
   backdrop-filter: blur(3px);
-  border-radius: 14px;
   margin: 20px;
-  border-radius: 25px;
+  border-radius: 2em;
   padding: 10px;
   margin-bottom: 0px;
 }
@@ -97,7 +96,7 @@ body {
   text-align: center;
   backdrop-filter: blur(3px);
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 1em;
   margin: auto;
   padding: 12px;
   width: 70%;
@@ -113,8 +112,7 @@ footer {
   padding: 2px;
   padding-top: 3px;
   backdrop-filter: blur(3px);
-  border-radius: 14px;
-  border-radius: 25px;
+  border-radius: 2em;
 }
 
 footer h4 {
