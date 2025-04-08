@@ -151,12 +151,12 @@
     //set the width of the navBar and hide the sideBarButton
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("sidebarButton").setAttribute("hidden", true);
+      document.getElementById("sidebarButton").style.width = "0px";
     }
 
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("sidebarButton").removeAttribute("hidden");
+      document.getElementById("sidebarButton").style.width = "fit-content";
     }
   </script>
   <script>
