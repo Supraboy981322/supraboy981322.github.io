@@ -1,6 +1,37 @@
+/*!
+ * Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2024 Fonticons, Inc.
+ */
+ @font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-display: block;
+  font-weight: 400;
+  src: url("fonts/fontAwesome/webfonts/fa-brands-400.woff2") format("woff2"), url("fonts/fontAwesome/webfonts/fa-brands-400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-display: block;
+  font-weight: 900;
+  src: url("fonts/fontAwesome/webfonts/fa-solid-900.woff2") format("woff2"), url("fonts/fontAwesome/webfonts/fa-solid-900.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-display: block;
+  font-weight: 400;
+  src: url("fonts/fontAwesome/webfonts/fa-regular-400.woff2") format("woff2"), url("fonts/fontAwesome/webfonts/fa-regular-400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: D-DINExp;
+  src: url(https://supraboy981322.github.io/styles/fonts/D-DINExp.otf);
+}
+
 @font-face {
   font-family: D-DINExp-Bold;
-  src: url(/styles/fonts/D-DINExp-Bold.otf);
+  src: url(https://supraboy981322.github.io/styles/fonts/D-DINExp-Bold.otf);
 }
 
 html,
@@ -10,8 +41,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: D-DINExp-Bold;
+h6,
+span {
+  font-family: D-DINExp;
 }
 
 center {
@@ -76,6 +108,7 @@ body {
   padding: 12px;
   width: 70%;
   color: white;
+  font-family: D-DINExp-Bold;
 }
 
 .pageTitle strong {
@@ -83,7 +116,12 @@ body {
 }
 
 .textBox strong {
-  color: #b48ead;
+  color: #fcb3ef;
+  font-family: D-DINExp-Bold;
+}
+
+p strong {
+  color: #d08770 !important
 }
 
 .textBox a {
@@ -180,7 +218,7 @@ center {
   backdrop-filter: blur(3px);
   border-radius: 14px;
   border-radius: 25px;
-  color: #b48ead;
+  color: #fcb3ef;
   text-align: center;
   border-radius: 25px;
   margin-left: 25%;
@@ -260,10 +298,11 @@ center {
   margin: auto;
   padding: 12px;
   width: 40%;
+  font-family: D-DINExp-Bold;
 }
 
 .textBox h3 {
-  color: #b48ead;
+  color: #fcb3ef;
   text-align: center;
   margin-top: 25px;
 }
@@ -276,4 +315,4 @@ center {
   border-radius: 25px;
   padding: 10px;
   height: calc(100vh - 60px);
-}
+} 

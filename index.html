@@ -5,20 +5,28 @@
   <title>Zane's Website</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/fontAwesome.css">
 </head>
 
 <body>
   <style>
-    html,
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Roboto", sans-serif;
-    }
+  @font-face {
+    font-family: D-DINExp-Bold;
+    src: url(https://supraboy981322.github.io/styles/fonts/D-DINExp-Bold.otf);
+  }
+  
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    font-family: D-DINExp-Bold;
+  }
+  
 
     body {
       font-family: "Lato", sans-serif;
@@ -101,11 +109,12 @@
       position: absolute;
       z-index: 0;
       left: -20px;
-      padding: 8px 20px 5px 35px;
+      padding: 8px 20px 8px 35px;
       top: 45px;
       border-radius: 20px;
       background: #4c566a;
       backdrop-filter: blur(3px);
+      height: fit-content;
     }
   </style>
   <!-- Sidebar -->
@@ -121,7 +130,7 @@
   <div class="hs1-main">
     <!-- Sidebar open button -->
     <div id="sidebarButton">
-      <span style="font-size:30px;cursor:pointer;color: #eceff4;" onclick="openNav()">&#9776;</span>
+      <span style="font-size:30px;cursor:pointer;color: #eceff4 !important;margin:0px;" onclick="openNav()" class="fa-solid fa-bars"></span>
     </div>
     <!-- Main content -->
     <iframe id="pageContentFrame" src="home.html" frameborder="0" scrolling="yes" seamless="seamless" index="1"
