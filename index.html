@@ -149,10 +149,12 @@
     }
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("sidebarButton").setAttribute("hidden", true);
     }
 
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("sidebarButton").removeAttribute("hidden");
     }
   </script>
   <script>
