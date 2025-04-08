@@ -1,0 +1,111 @@
+body {
+    /*background-image: url('/embeded-content/background.png');*/
+    background-color: #3b4252;
+}
+
+.textBox {
+    background: #4c566a;
+}
+
+.textBox h2 {
+    background: #67748e;
+    color: #ebcb8b;
+}
+
+.textBox p {
+    color: #d8dee9;
+}
+
+.pageTitle {
+    background: #5e81ac;
+    color: white;
+}
+
+.pageTitle strong {
+    color: white;
+}
+
+.textBox strong {
+    color: #fcb3ef;
+}
+
+p strong {
+    color: #d08770 !important
+}
+
+.textBox a {
+    color: #81a1c1;
+}
+
+footer {
+    background: #566176;
+}
+
+footer h4 {
+    color: #88c0d0;
+}
+
+.pill {
+    background: #67748e;
+}
+
+.nav-pill {
+    color: #a3be8c;
+    background-color: transparent;
+}
+
+.nav-pill p {
+    color: #e5e9f0;
+}
+
+/* Style the tab */
+.tab {
+    background-color: rgba(192, 243, 252, 0.1);
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: rgba(220, 220, 210, 0.5);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+.tabcontent h3 {
+    background: rgba(200, 223, 102, 0.5);
+    color: #fcb3ef;
+}
+
+.tabBar {
+    background: rgba(192, 243, 252, 0.55);
+}
+
+.gridBox {
+    background: rgba(255, 255, 255, 0.40);
+    color: black;
+}
+
+.contentGrid table,
+.contentGrid td {
+    border: 0.5vw solid transparent;
+}
+
+.contentGrid thead,
+.contentGrid tfoot {
+    background-color: #333;
+    color: #fff;
+
+    .pageSubTitle {
+        background: rgba(222, 213, 202, 0.55);
+    }
+
+    .textBox h3 {
+        color: #fcb3ef;
+    }
+
+    .coverScreen {
+        background: rgba(255, 255, 255, 0.40);
+    }
+}

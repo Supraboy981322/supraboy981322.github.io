@@ -1,0 +1,97 @@
+@font-face {
+    font-family: D-DINExp-Bold;
+    src: url(https://supraboy981322.github.io/styles/fonts/D-DINExp-Bold.otf);
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+    font-family: D-DINExp-Bold;
+}
+
+
+body {
+    font-family: D-DINExp-Bold;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(3px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.15s;
+    font-weight: bold;
+}
+
+.sidenav a:hover {
+    font-size: 30px;
+}
+
+.sidenav .closebtn:hover {
+    font-size: 40px;
+    right: 23.84165px;
+    top: -2.3167px;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.sidenav h1 {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.sidenav img {
+    width: 200px;
+    margin: 0px 0px 15px 25px;
+}
+
+#sidebarButton {
+    position: absolute;
+    z-index: 0;
+    left: -20px;
+    padding: 8px 20px 8px 35px;
+    top: 45px;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    height: fit-content;
+    transition: 0.5s
+}

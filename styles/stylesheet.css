@@ -55,16 +55,13 @@ center {
 }
 
 body {
-  /*background-image: url('/embeded-content/background.png');*/
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: right;
-  background-color: #3b4252;
 }
 
 .textBox {
-  background: #4c566a;
   backdrop-filter: blur(3px);
   border-radius: 14px;
   margin: 20px;
@@ -78,7 +75,6 @@ body {
   backdrop-filter: blur(3px);
   border-radius: 14px;
   border-radius: 25px;
-  color: #ebcb8b;
   text-align: center;
   border-radius: 25px;
   margin-left: 25%;
@@ -95,44 +91,27 @@ body {
   padding-left: 20px;
   font-weight: bold;
   margin: 0px;
-  color: #d8dee9;
 }
 
 .pageTitle {
   text-align: center;
-  background: #5e81ac;
   backdrop-filter: blur(3px);
   overflow: hidden;
   border-radius: 14px;
   margin: auto;
   padding: 12px;
   width: 70%;
-  color: white;
   font-family: D-DINExp-Bold;
-}
-
-.pageTitle strong {
-  color: white;
 }
 
 .textBox strong {
-  color: #fcb3ef;
   font-family: D-DINExp-Bold;
-}
-
-p strong {
-  color: #d08770 !important
-}
-
-.textBox a {
-  color:#81a1c1;
 }
 
 footer {
   margin: 35px 15px 20px 15px;
   padding: 2px;
   padding-top: 3px;
-  background: #566176;
   backdrop-filter: blur(3px);
   border-radius: 14px;
   border-radius: 25px;
@@ -141,11 +120,9 @@ footer {
 footer h4 {
   font-size: 20px;
   text-align: center;
-  color: #88c0d0;
 }
 
 .pill {
-  background: #67748e;
   border-radius: 14px;
   height: auto;
   text-align: center;
@@ -159,22 +136,18 @@ footer h4 {
 .nav-pill {
   font-size: 20px;
   font-weight: bold;
-  color: #a3be8c;
   border: 0px;
-  background-color: transparent;
   cursor: pointer;
 }
 
 .nav-pill p {
   margin: -17px 0px 0px 0px;
-  color: #e5e9f0;
   cursor: pointer;
 }
 
 /* Style the tab */
 .tab {
   overflow: hidden;
-  background-color: rgba(192, 243, 252, 0.1);
 }
 
 /* Style the buttons inside the tab */
@@ -187,16 +160,6 @@ footer h4 {
   border-radius: 25px;
   font-weight: bold;
   margin: 0.1vw;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: rgba(220, 220, 210, 0.5);
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: rgba(200, 200, 200, 0.5);
 }
 
 center {
@@ -214,11 +177,9 @@ center {
 }
 
 .tabcontent h3 {
-  background: rgba(200, 223, 102, 0.5);
   backdrop-filter: blur(3px);
   border-radius: 14px;
   border-radius: 25px;
-  color: #fcb3ef;
   text-align: center;
   border-radius: 25px;
   margin-left: 25%;
@@ -239,7 +200,6 @@ center {
 
 .tabBar {
   text-align: center;
-  background: rgba(192, 243, 252, 0.55);
   backdrop-filter: blur(3px);
   overflow: hidden;
   border-radius: 14px;
@@ -249,12 +209,10 @@ center {
 }
 
 .gridBox {
-  background: rgba(255, 255, 255, 0.40);
   backdrop-filter: blur(3px);
   border-radius: 25px;
   padding: 10px;
   overflow: hidden;
-  color: black;
 }
 
 .gridBox img {
@@ -273,16 +231,9 @@ center {
 
 .contentGrid table,
 .contentGrid td {
-  border: 0.5vw solid transparent;
   width: 100vw;
   right: 8px;
   margin: -8px;
-}
-
-.contentGrid thead,
-.contentGrid tfoot {
-  background-color: #333;
-  color: #fff;
 }
 
 .modal {
@@ -291,7 +242,6 @@ center {
 
 .pageSubTitle {
   text-align: center;
-  background: rgba(222, 213, 202, 0.55);
   backdrop-filter: blur(3px);
   overflow: hidden;
   border-radius: 14px;
@@ -302,13 +252,11 @@ center {
 }
 
 .textBox h3 {
-  color: #fcb3ef;
   text-align: center;
   margin-top: 25px;
 }
 
 .coverScreen {
-  background: rgba(255, 255, 255, 0.40);
   backdrop-filter: blur(3px);
   border-radius: 14px;
   margin: 20px;

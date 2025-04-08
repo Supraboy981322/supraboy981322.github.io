@@ -1,0 +1,34 @@
+.sidenav {
+    background-color: #434c5e;
+    color: #eceff4;
+}
+.sidenav a {
+    color: #eceff4;
+}
+.sidenav a:hover {
+    color: #87bdff;
+}
+.sidenav .closebtn:hover {
+    color: #87bdff;
+}
+.sidenav .closebtn {
+    color: #eceff4;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {
+        color: #eceff4;
+    }
+    .sidenav a {
+        color: #eceff4;
+    }
+}
+.sidenav h1 {
+    color: purple;
+}
+#sidebarButton {
+    background: #4c566a;
+    color: #eceff4;
+}
+#sidebarButton:hover {
+    color: #87bdff;
+}
