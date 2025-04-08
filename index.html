@@ -115,6 +115,7 @@
       background: #4c566a;
       backdrop-filter: blur(3px);
       height: fit-content;
+      color: #eceff4;
     }
 
 
@@ -132,10 +133,10 @@
     <a onclick="changeChannel('youtube-videos.html');closeNav();">My YouTube Videos</a>
   </div>
 
-  <div class="hs1-main">
+  <div class="hs1-main" onclick="openNav()">
     <!-- Sidebar open button -->
     <div id="sidebarButton">
-      <span style="font-size:30px;cursor:pointer;color: #eceff4;margin:0px;" onclick="openNav()" class="fa-solid fa-bars"></span>
+      <span style="font-size:30px;cursor:pointer;margin:0px;" onclick="openNav()" class="fa-solid fa-bars"></span>
     </div>
     <!-- Main content -->
     <iframe id="pageContentFrame" src="home.html" frameborder="0" scrolling="yes" seamless="seamless" index="1"
