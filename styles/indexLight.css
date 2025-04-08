@@ -1,9 +1,9 @@
-/* dark grey *//*  Blue   */
-/*  #4c566a  *//* #87bdff */
+/* dark grey *//*  Blue   *//*  White  */
+/*  #4c566a  *//* #87bdff *//* #eceff4 */
 
 .sidenav {
-    background-color: #434c5e;
-    color: #eceff4;
+    background-color: #87bdff ;
+    color: #4c566a;
 }
 
 .sidenav a {
@@ -11,7 +11,7 @@
 }
 
 .sidenav a:hover {
-    color: #4c566a;
+    color: #eceff4;
 }
 
 .sidenav .closebtn:hover {
@@ -37,9 +37,9 @@
 
 #sidebarButton {
     background: #87bdff;
-    color: #eceff4;
+    color: #4c566a;
 }
 
 #sidebarButton:hover {
-    color: #87bdff;
+    color: #eceff4;
 }
