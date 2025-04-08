@@ -3,7 +3,7 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2024 Fonticons, Inc.
  */
- @font-face {
+@font-face {
   font-family: 'Font Awesome 5 Brands';
   font-display: block;
   font-weight: 400;
@@ -93,6 +93,10 @@ body {
   padding: 12px;
   width: 70%;
   font-family: D-DINExp-Bold;
+}
+
+b {
+  font-family: D-DINExp-Bold !important;
 }
 
 .textBox strong {
@@ -261,4 +265,4 @@ center {
   border-radius: 25px;
   padding: 10px;
   height: calc(100vh - 60px);
-} 
+}
