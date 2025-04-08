@@ -1,19 +1,27 @@
+/* dark grey *//*  Blue   */
+/*  #4c566a  *//* #87bdff */
+
 .sidenav {
     background-color: #434c5e;
     color: #eceff4;
 }
+
 .sidenav a {
     color: #eceff4;
 }
+
 .sidenav a:hover {
-    color: #87bdff;
+    color: #4c566a;
 }
+
 .sidenav .closebtn:hover {
     color: #87bdff;
 }
+
 .sidenav .closebtn {
     color: #eceff4;
 }
+
 @media screen and (max-height: 450px) {
     .sidenav {
         color: #eceff4;
@@ -22,13 +30,16 @@
         color: #eceff4;
     }
 }
+
 .sidenav h1 {
     color: purple;
 }
+
 #sidebarButton {
-    background: #4c566a;
+    background: #87bdff;
     color: #eceff4;
 }
+
 #sidebarButton:hover {
     color: #87bdff;
 }
