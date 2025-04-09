@@ -36,23 +36,17 @@
     }
     //set the width of the navBar and hide the sideBarButton
     function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("mySidenav").style.border = "solid 1em #4c566a";
-      document.getElementById("mySidenav").style.left = "1em";
-      document.getElementById("mySidenav").style.top = "1em";
-      document.getElementById("sidebarButton").style.opacity = "0";
-      document.getElementById("sidebarButtonText").style.opacity = "0";
+      document.getElementById("mySidenav").style = "transition: 0.5s; width: 250px; border: solid 1em #4c566a; left: 1em; top: 1em;";
+      document.getElementById("sidebarButton").style = "transition: 0.5s; opacity: 0;";
+      document.getElementById("sidebarButtonText").style = "transition: 0.5s; opacity: 0;";
       document.getElementById("sidebarButton").removeAttribute("onclick");
       document.getElementById("sidebarButtonText").removeAttribute("onclick");
     }
 
     function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("mySidenav").style.border = "none";
-      document.getElementById("mySidenav").style.left = "0";
-      document.getElementById("mySidenav").style.top = "0";
-      document.getElementById("sidebarButton").style.opacity = "100";
-      document.getElementById("sidebarButtonText").style.opacity = "100";
+      document.getElementById("mySidenav").style = "transition: 0.5s; width: 0px; border: solid 0em #4c566a; left: 0em; top: 0em;";
+      document.getElementById("sidebarButton").style = "transiton: 0.5s; opacity: 100;";
+      document.getElementById("sidebarButtonText").style = "transition: 0.5s; opacity: 100;";
       document.getElementById("sidebarButton").setAttribute("onclick", "openNav();");
       document.getElementById("sidebarButtonText").setAttribute("onclick", "openNav();");
     }
