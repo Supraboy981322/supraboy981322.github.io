@@ -36,11 +36,14 @@
 
 * {
   font-family: D-DINExp;
-  font-size: 16px;
 }
 
 center {
   text-align: center;
+}
+
+p, b, i, a {
+  font-size: 16px;
 }
 
 .main {
