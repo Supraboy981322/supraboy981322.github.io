@@ -145,6 +145,7 @@ footer h4 {
 .nav-pill p {
   margin: -17px 0px 0px 0px;
   cursor: pointer;
+  font-weight: normal;
 }
 
 /* Style the tab */

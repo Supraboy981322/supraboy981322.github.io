@@ -56,16 +56,16 @@ footer h4 {
 }
 
 .pill {
-    background: #67748e;
+    background: #c9ffff;
 }
 
 .nav-pill {
-    color: #a3be8c;
+    color: #0094ff;
     background-color: transparent;
 }
 
 .nav-pill p {
-    color: #e5e9f0;
+    color: #c9ffff;
 }
 
 /* Style the tab */
