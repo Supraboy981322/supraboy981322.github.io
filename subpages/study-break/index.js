@@ -398,6 +398,14 @@ function completed() {
     }, 3000);
 }
 
+function shuffleArrays() {
+    for (let i = questionQueue.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [questionQueue[i], questionQueue[j]] = [questionQueue[j], questionQueue[i]]; // Swap elements
+      [answerQueue[i], answerQueue[j]] = [answerQueue[j], answerQueue[i]]; //swap elements
+    }
+}
+
 //function that generates a new question
 function newQuestion() {
     //increment the question number counter
@@ -406,6 +414,7 @@ function newQuestion() {
     if (questionNumber > questions.length) {
         completed();
     } else { //otherwise...
+        shuffleArrays();
         //reset the styling
         resetStyling();
         document.body.setAttribute("style", "height: 100vh; overflow: hidden !important;");
