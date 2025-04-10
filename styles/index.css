@@ -21,6 +21,10 @@ body {
     background-color: #c9ffff;
 }
 
+iframe {
+    background-color: #c9ffff;
+}
+
 .sidenav {
     height: fit-content;
     width: 0;
