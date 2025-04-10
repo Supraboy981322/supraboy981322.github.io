@@ -98,6 +98,7 @@ body {
     height: fit-content;
     transition: 0.15s;
     font-size: 1.5em;
+    cursor: pointer;
 }
 
 #sidebarButton:hover {
