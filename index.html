@@ -50,8 +50,8 @@
       sideNav.style = "transition: 0.5s !important; width: 0px; border: solid 0em transparent; left: 0em; top: 0em;";
       sidebarButton.style = "transition: 0.5s !important; opacity: 100;";
       sidebarButtonText.style = "transition: 0.5s !important; opacity: 100;";
-      sidebarButton.onclick = "openNav();";
-      sidebarButtonText.onclick = "openNav();";
+      sidebarButton.setAttribute("onclick", "openNav();");
+      sidebarButtonText.setAttribute("onclick", "openNav();");
       setTimeout(() => {
         sidebarButton.style.transition = "0.15s";
       }, 500)
