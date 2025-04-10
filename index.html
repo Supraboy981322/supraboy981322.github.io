@@ -31,24 +31,30 @@
     <!-- END MAIN -->
   </div>
   <script>
+    const sideNav = document.getElementById("mySidenav");
+    const sidebarButton = document.getElementById("sidebarButton");
+    const sidebarButtonText = document.getElementById("sidebarButtonText");
     function changeChannel(channelURL) {
       document.getElementById("pageContentFrame").src = channelURL
     }
     //set the width of the navBar and hide the sideBarButton
     function openNav() {
-      document.getElementById("mySidenav").style = "transition: 0.5s !important; width: 250px; border: solid 1em #4c566a; left: 1em; top: 1em;";
-      document.getElementById("sidebarButton").style = "transition: 0.5s !important; opacity: 0;";
-      document.getElementById("sidebarButtonText").style = "transition: 0.5s !important; opacity: 0;";
-      document.getElementById("sidebarButton").removeAttribute("onclick");
-      document.getElementById("sidebarButtonText").removeAttribute("onclick");
+      sideNav.style = "transition: 0.5s !important; width: 250px; border: solid 1em #4c566a; left: 1em; top: 1em;";
+      sidebarButton.style = "transition: 0.5s !important; opacity: 0;";
+      sidebarButtonText.style = "transition: 0.5s !important; opacity: 0;";
+      sidebarButton.removeAttribute("onclick");
+      sidebarButtonText.removeAttribute("onclick");
     }
 
     function closeNav() {
-      document.getElementById("mySidenav").style = "transition: 0.5s !important; width: 0px; border: solid 0em transparent; left: 0em; top: 0em;";
-      document.getElementById("sidebarButton").style = "transition: 0.5s !important; opacity: 100;";
-      document.getElementById("sidebarButtonText").style = "transition: 0.5s !important; opacity: 100;";
-      document.getElementById("sidebarButton").setAttribute("onclick", "openNav();");
-      document.getElementById("sidebarButtonText").setAttribute("onclick", "openNav();");
+      sideNav.style = "transition: 0.5s !important; width: 0px; border: solid 0em transparent; left: 0em; top: 0em;";
+      sidebarButton.style = "transition: 0.5s !important; opacity: 100;";
+      sidebarButtonText.style = "transition: 0.5s !important; opacity: 100;";
+      sidebarButton.onclick = "openNav();";
+      sidebarButtonText.onclick = "openNav();";
+      setTimeout(() => {
+        sidebarButton.style.transition = "0.15s";
+      }, 500)
     }
   </script>
   <script>
