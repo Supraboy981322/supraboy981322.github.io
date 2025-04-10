@@ -102,6 +102,7 @@ body {
 
 #sidebarButton:hover {
     top: 1.375em;
+    transition: 0.15s;
 }
 
 iframe {
