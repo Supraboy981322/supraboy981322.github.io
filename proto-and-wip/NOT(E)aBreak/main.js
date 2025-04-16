@@ -27,7 +27,7 @@ function loadLibrary() {
 function loadNote() {
   document.body.innerHTML =
     "<p style='margin-top:calc(50vh - 1em);text-align:center;'>Function <code>loadNote()</code> began, but halted immediately.<p>";
-  getFileContent("file:///media/fuse/drivefs-de9ccece94e8e375690ed4b87beb8466/root/VS%20Code/NOTaBreak/notes/test.nBreak");
+  getFileContent("notes/test.nBreak");
 }
 
 async  function getFileContent(url) {
