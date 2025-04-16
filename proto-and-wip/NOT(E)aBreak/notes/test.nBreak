@@ -4,12 +4,12 @@
 <l2>list nested item</l2>
 <l3>list nested item within nested item</l3>
 <l4>list nested item within nested item within nested item</l4>
-<c>code<c>
-<cBox>test<cBox>
-<cBox checked>test<cBox>
-<strike>test number the I don't know<strike>
-<u>test number the who cares now<u>
-<a>link<a>
-farts<exp>exponents 1, 2, 3, 4<exp>
+<c>code</c>
+<cBox>test</cBox>
+<cBox checked>test</cBox>
+<strike>test number the I don't know</strike>
+<u>test number the who cares now</u>
+<a>link</a>
+farts<exp>exponents 1, 2, 3, 4</exp>
 <!-- regular line -->
 <!-- !line! -->
