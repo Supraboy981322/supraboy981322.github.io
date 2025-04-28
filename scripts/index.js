@@ -130,7 +130,8 @@ function drawFavicon(text, color) {
     canvas.height = 32;
     ctx.fillStyle = color;
     ctx.roundRect(0, 0, 32, 32, [5]);
-    ctx.fillStyle = 'white';
+    ctx.stroke("#c9ffff")
+    ctx.fillStyle = '#c9ffff';
     ctx.font = '10px Arial';
     ctx.textAlign = 'center';
     ctx.fillText(text, 16, 12);
