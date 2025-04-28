@@ -101,7 +101,8 @@ var faviconTick = 0;
 //onload, change the favicon every 83.33ms (12fps), to the next item in the list
 window.onload = () => { setInterval(faviconInterval(), 83.33) };
 
-function faviconInterval() {faviconLoc.setAttribute("href", (faviconDir + faviconNames[faviconTick] + faviconFileExtension));
+function faviconInterval() {
+    faviconLoc.setAttribute("href", (faviconDir + faviconNames[faviconTick] + faviconFileExtension));
     faviconTick++;
     if (favicon = faviconNames.length) {
         faviconTick = 0;
