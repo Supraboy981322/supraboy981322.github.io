@@ -132,7 +132,7 @@ function drawFavicon(text, color) {
     ctx.roundRect(0, 0, 32, 32, [5]);
     ctx.stroke("#c9ffff")
     ctx.fillStyle = '#c9ffff';
-    ctx.font = '10px Arial';
+    ctx.font = '23px Arial';
     ctx.textAlign = 'center';
     ctx.fillText(text, 16, 12);
     favicon.href = canvas.toDataURL('image/png');
