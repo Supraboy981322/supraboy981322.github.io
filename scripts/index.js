@@ -126,14 +126,14 @@ const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 const favicon = document.getElementById('favicon');
 function drawFavicon(text, color) {
-    canvas.width = 16;
-    canvas.height = 16;
+    canvas.width = 32;
+    canvas.height = 32;
     ctx.fillStyle = color;
-    ctx.fillRect(0, 0, 16, 16);
+    ctx.roundRect(0, 0, 32, 32, [5]);
     ctx.fillStyle = 'white';
     ctx.font = '10px Arial';
     ctx.textAlign = 'center';
-    ctx.fillText(text, 8, 12);
+    ctx.fillText(text, 16, 12);
     favicon.href = canvas.toDataURL('image/png');
 }
 let counter = 0;
