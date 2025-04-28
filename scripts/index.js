@@ -1,6 +1,4 @@
-/******************
-*** scriptSet 1 ***
-******************/
+/* scriptSet 1 */
 
 //define the location of the favicon element
 const faviconLoc = document.getElementById("favicon");
@@ -27,9 +25,7 @@ window.onload(() => {
 
 
 
-/******************
-*** scriptSet 2 ***
-******************/
+/* scriptSet 2 */
 
 //define the location of the sideNav
 const sideNav = document.getElementById("mySidenav");
@@ -67,9 +63,7 @@ function closeNav() {
 
 
 
-/******************
-*** scriptSet 3 ***
-******************/
+/* scriptSet 3 */
 
 //prevent arrow and space keys from scrolling page
 window.addEventListener("keydown", function (e) {
