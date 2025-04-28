@@ -128,6 +128,7 @@ const favicon = document.getElementById('favicon');
 function drawFavicon(text, color) {
     canvas.width = 32;
     canvas.height = 32;
+    ctx.beginPath();
     ctx.fillStyle = colors[color];
     ctx.roundRect(0, 0, 32, 32, [5]);
     ctx.stroke = "#c9ffff"
