@@ -121,14 +121,14 @@ const colors = [
     "#bcb900",
     "#e2ae00",
     "#ffa526"
-]
+];
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 const favicon = document.getElementById('favicon');
 function drawFavicon(text, color) {
     canvas.width = 32;
     canvas.height = 32;
-    ctx.fillStyle = color;
+    ctx.fillStyle = colors[color];
     ctx.roundRect(0, 0, 32, 32, [5]);
     ctx.stroke("#c9ffff")
     ctx.fillStyle = '#c9ffff';
@@ -139,6 +139,6 @@ function drawFavicon(text, color) {
 }
 let counter = 0;
 setInterval(() => {
-    drawFavicon("z", colors[counter]);
+    drawFavicon("z", counter);
     counter = (counter + 1) % 10;
 }, 83.33);
