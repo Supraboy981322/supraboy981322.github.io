@@ -27,39 +27,7 @@ window.onload(() => {
 
 /* scriptSet 2 */
 
-//define the location of the sideNav
-const sideNav = document.getElementById("mySidenav");
-//define the location of the sidebarButton
-const sidebarButton = document.getElementById("sidebarButton");
-//define the location of the sideBarButtonText
-const sidebarButtonText = document.getElementById("sidebarButtonText");
 
-//a function that changes the src of the iframe for whatever page the user is currently on
-function changeChannel(channelURL) {
-    document.getElementById("pageContentFrame").src = channelURL
-}
-
-//to open the sideNav, set the width of the navBar and hide the sideBarButton
-function openNav() {
-    sideNav.style = "transition: 0.5s !important; width: 250px; border: solid 1em #4c566a; left: 1em; top: 1em;";
-    sidebarButton.style = "transition: 0.5s !important; opacity: 0;";
-    sidebarButtonText.style = "transition: 0.5s !important; opacity: 0;";
-    sidebarButton.removeAttribute("onclick");
-    sidebarButtonText.removeAttribute("onclick");
-}
-
-//to close the sidenav, set the width of the navBar, and show the sideBarButton
-function closeNav() {
-    sideNav.style = "transition: 0.5s !important; width: 0px; border: solid 0em transparent; left: 0em; top: 0em;";
-    sidebarButton.style = "transition: 0.5s !important; opacity: 100;";
-    sidebarButtonText.style = "transition: 0.5s !important; opacity: 100;";
-    sidebarButton.setAttribute("onclick", "openNav();");
-    sidebarButtonText.setAttribute("onclick", "openNav();");
-    setTimeout(() => {
-        sidebarButton.style.transition = "0.15s";
-        sidebarButtonText.style.transition = "0.15s";
-    }, 500)
-}
 
 
 
