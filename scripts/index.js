@@ -110,13 +110,25 @@ addEventListener(window.onload, loadIframe());
 //}
 
 //Example using canvas
+const colors = [
+    "#0094ff",
+    "#00a6e4",
+    "#00b1ca",
+    "#00bbb2",
+    "#00c493",
+    "#44c668",
+    "#8bc139",
+    "#bcb900",
+    "#e2ae00",
+    "#ffa526"
+]
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 const favicon = document.getElementById('favicon');
-function drawFavicon(text) {
+function drawFavicon(text, color) {
     canvas.width = 16;
     canvas.height = 16;
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = color;
     ctx.fillRect(0, 0, 16, 16);
     ctx.fillStyle = 'white';
     ctx.font = '10px Arial';
@@ -126,6 +138,6 @@ function drawFavicon(text) {
 }
 let counter = 0;
 setInterval(() => {
-    drawFavicon(counter.toString());
+    drawFavicon("z", colors[counter]);
     counter = (counter + 1) % 10;
 }, 83.33);
