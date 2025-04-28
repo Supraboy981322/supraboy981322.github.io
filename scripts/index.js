@@ -100,7 +100,7 @@ const faviconNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "
 var faviconTick = 0;
 //onload, change the favicon every 200ms (12fps), to the next item in the list
 window.onload(() => {
-    window.setInterval(() => {
+    setInterval(() => {
         faviconLoc.setAttribute("href", (faviconDir + faviconNames[faviconTick] + faviconFileExtension));
         faviconTick++;
         if (favicon = faviconNames.length) {
